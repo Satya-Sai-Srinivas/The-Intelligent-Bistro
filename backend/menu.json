@@ -1,0 +1,4528 @@
+[
+  {
+    "name": "Crispy Calamari with Spicy Aioli",
+    "description": "Golden-fried calamari rings are tossed in a zesty blend of spices and served with a side of house-made spicy aioli for a delightful kick. Perfectly crisp and tender, this dish is a crowd-pleaser.",
+    "price": 14.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Calamari",
+      "Flour",
+      "Spices",
+      "Garlic",
+      "Lemon juice",
+      "Aioli sauce",
+      "Parsley"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Truffle Parmesan Fries",
+    "description": "Hand-cut fries seasoned with truffle oil and topped with freshly grated Parmesan cheese. These crispy delights are served with a garlic aioli for dipping, making them a luxurious start to any meal.",
+    "price": 9.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Potatoes",
+      "Truffle oil",
+      "Parmesan cheese",
+      "Garlic",
+      "Aioli",
+      "Parsley",
+      "Salt"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Korean BBQ Chicken Wings",
+    "description": "Juicy chicken wings tossed in a sticky Korean BBQ sauce featuring a blend of sweet, savory, and spicy flavors. Grilled to perfection, these wings are garnished with sesame seeds and green onions.",
+    "price": 13.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Chicken wings",
+      "Korean BBQ sauce",
+      "Sesame seeds",
+      "Green onions",
+      "Garlic",
+      "Ginger"
+    ],
+    "allergens": [
+      "Soy",
+      "Sesame"
+    ]
+  },
+  {
+    "name": "Avocado and Crab Wontons",
+    "description": "These golden-fried wontons are filled with creamy avocado and sweet lump crab meat. The crispy exterior and the rich filling are enhanced by a side of sweet chili dipping sauce.",
+    "price": 12.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Wonton wrappers",
+      "Avocado",
+      "Crab meat",
+      "Cream cheese",
+      "Sweet chili sauce",
+      "Green onions",
+      "Garlic"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Mediterranean Hummus Trio",
+    "description": "A trio of hummus flavors served with warm pita bread: classic, roasted red pepper, and spicy harissa. Each variety is crafted with premium chickpeas, tahini, and spices for a delightful dipping experience.",
+    "price": 11.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Chickpeas",
+      "Tahini",
+      "Garlic",
+      "Lemon",
+      "Roasted red pepper",
+      "Harissa",
+      "Pita bread"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Bourbon Glazed Pork Belly Bites",
+    "description": "Succulent pork belly bites slow-cooked and glazed with a rich bourbon sauce. These tender morsels offer a perfect balance of sweet and savory, accented with a hint of smoked paprika.",
+    "price": 15.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Pork belly",
+      "Bourbon",
+      "Brown sugar",
+      "Garlic",
+      "Smoked paprika",
+      "Onion",
+      "Black pepper"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Baked Artichoke and Spinach Dip",
+    "description": "Creamy and cheesy, this baked dip is filled with tender artichoke hearts and fresh spinach. Served bubbling hot, with a side of crispy baguette slices for dipping.",
+    "price": 10.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Artichoke hearts",
+      "Spinach",
+      "Cream cheese",
+      "Parmesan cheese",
+      "Baguette",
+      "Garlic",
+      "Onion"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Buffalo Cauliflower Bites",
+    "description": "Cauliflower florets are battered and fried until crispy, then tossed in a tangy buffalo sauce. Served with celery sticks and a side of ranch dressing for a healthier take on a classic favorite.",
+    "price": 9.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Cauliflower",
+      "Buffalo sauce",
+      "Flour",
+      "Celery",
+      "Ranch dressing",
+      "Garlic powder",
+      "Paprika"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Shrimp Scampi Flatbread",
+    "description": "This sizzling flatbread features garlic-marinated shrimp, fresh tomatoes, and a blend of mozzarella and Parmesan cheeses, all atop a crispy thin crust. A drizzle of pesto completes the savory masterpiece.",
+    "price": 16.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Shrimp",
+      "Flatbread",
+      "Mozzarella cheese",
+      "Parmesan cheese",
+      "Tomatoes",
+      "Pesto"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Jalapeño Cheddar Poppers",
+    "description": "Stuffed with sharp cheddar and cream cheese, these jalapeños are breaded and fried to perfection. Served with a tangy ranch dipping sauce to balance the spicy heat.",
+    "price": 10.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Jalapeños",
+      "Cheddar cheese",
+      "Cream cheese",
+      "Breadcrumbs",
+      "Ranch dressing",
+      "Garlic powder"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Mini Beef Sliders with Caramelized Onions",
+    "description": "Three juicy beef sliders topped with melted Swiss cheese and sweet caramelized onions, served on freshly baked mini brioche buns. A perfect start to your meal.",
+    "price": 12.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Ground beef",
+      "Swiss cheese",
+      "Brioche buns",
+      "Onions",
+      "Butter",
+      "Garlic",
+      "Salt"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Coconut Shrimp with Mango Chutney",
+    "description": "Lightly battered shrimp coated in crunchy coconut flakes, fried to a golden brown and served with a bright mango chutney. A tropical escape in every bite.",
+    "price": 14.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Shrimp",
+      "Coconut flakes",
+      "Flour",
+      "Eggs",
+      "Mango",
+      "Chutney spices",
+      "Cilantro"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Tree Nuts",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Prosciutto-Wrapped Asparagus Spears",
+    "description": "Tender asparagus spears wrapped in savory prosciutto and baked until crisp. This enticing appetizer is finished with a balsamic reduction and shaved Parmesan.",
+    "price": 13.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Asparagus",
+      "Prosciutto",
+      "Parmesan cheese",
+      "Balsamic vinegar",
+      "Olive oil",
+      "Black pepper"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Crispy Brussels Sprouts with Bacon",
+    "description": "Fresh Brussels sprouts fried until crispy, then tossed with bits of smoky bacon and a drizzle of maple glaze. This savory-sweet combination will have you reaching for seconds.",
+    "price": 11.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Brussels sprouts",
+      "Bacon",
+      "Maple syrup",
+      "Olive oil",
+      "Salt",
+      "Pepper"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Firecracker Shrimp",
+    "description": "Crispy battered shrimp tossed in a sweet and spicy chili sauce, delivering a burst of flavor with every bite. Served on a bed of fresh cabbage slaw, it's an appetizer with a kick.",
+    "price": 13.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Shrimp",
+      "Flour",
+      "Chili sauce",
+      "Cabbage",
+      "Carrots",
+      "Green onions",
+      "Garlic"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Loaded Potato Skins",
+    "description": "Crispy potato skins filled with melted cheddar cheese, crispy bacon, and chives. Topped with a dollop of sour cream for a classic, hearty starter.",
+    "price": 10.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Potatoes",
+      "Cheddar cheese",
+      "Bacon",
+      "Sour cream",
+      "Chives",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Sesame Seared Ahi Tuna",
+    "description": "Perfectly seared ahi tuna crusted with black and white sesame seeds, served with wasabi aioli and Asian slaw. A refined and refreshing appetizer.",
+    "price": 17.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Ahi tuna",
+      "Sesame seeds",
+      "Cabbage",
+      "Wasabi",
+      "Soy sauce",
+      "Ginger",
+      "Garlic"
+    ],
+    "allergens": [
+      "Fish",
+      "Sesame",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Antipasto Skewers",
+    "description": "Colorful skewers featuring cured meats, marinated mozzarella balls, cherry tomatoes, and basil. Drizzled with olive oil and balsamic glaze for a fresh and vibrant start to your meal.",
+    "price": 12.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Salami",
+      "Mozzarella",
+      "Cherry tomatoes",
+      "Basil",
+      "Olive oil",
+      "Balsamic glaze"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Chorizo-Stuffed Mushrooms",
+    "description": "Button mushrooms stuffed with spicy chorizo, cream cheese, and herbs, then baked to golden perfection. These bites pack a punch of flavor in every mouthful.",
+    "price": 11.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Button mushrooms",
+      "Chorizo",
+      "Cream cheese",
+      "Parmesan cheese",
+      "Garlic",
+      "Onion"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Zucchini Fritters with Tzatziki",
+    "description": "Perfectly crispy zucchini fritters served with a side of cool tzatziki sauce. These golden morsels are packed with fresh herbs and a hint of lemon zest.",
+    "price": 9.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Zucchini",
+      "Flour",
+      "Eggs",
+      "Mint",
+      "Dill",
+      "Tzatziki",
+      "Lemon zest"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Spicy Tuna Roll Tacos",
+    "description": "A fusion twist featuring spicy tuna tartare, avocado, and cucumber wrapped in mini crispy taco shells. Garnished with spicy mayo and tobiko for an extra pop.",
+    "price": 15.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Tuna",
+      "Avocado",
+      "Cucumber",
+      "Spicy mayo",
+      "Taco shells",
+      "Tobiko"
+    ],
+    "allergens": [
+      "Fish",
+      "Eggs",
+      "Seaweed"
+    ]
+  },
+  {
+    "name": "Gingersnap Ribs",
+    "description": "Slow-cooked ribs glazed with a unique ginger and molasses barbecue sauce, offering a blend of sweet and tangy flavors. These tender ribs are fall-off-the-bone delicious.",
+    "price": 16.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Pork ribs",
+      "Ginger",
+      "Molasses",
+      "Soy sauce",
+      "Garlic",
+      "Onion"
+    ],
+    "allergens": [
+      "Soy"
+    ]
+  },
+  {
+    "name": "Whipped Feta with Honey and Charred Pita",
+    "description": "Creamy whipped feta drizzled with honey and served with warm, charred pita slices. This dish boasts a balance of salty and sweet, enhanced by a hint of lemon zest.",
+    "price": 12.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Feta cheese",
+      "Honey",
+      "Pita bread",
+      "Olive oil",
+      "Lemon zest",
+      "Black pepper"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Duck Confit Spring Rolls",
+    "description": "Crispy spring rolls filled with tender duck confit, cabbage, and julienned carrots. Served with a tangy plum dipping sauce, these rolls offer an exotic crunch and flavor.",
+    "price": 14.49,
+    "category": "Appetizers",
+    "ingredients": [
+      "Duck confit",
+      "Spring roll wrappers",
+      "Cabbage",
+      "Carrots",
+      "Plum sauce",
+      "Ginger"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Burrata and Heirloom Tomato Bruschetta",
+    "description": "Creamy burrata cheese accompanied by heirloom tomatoes atop crusty artisan bread. Finished with a balsamic glaze and fresh basil, this appetizer showcases simplicity at its finest.",
+    "price": 13.99,
+    "category": "Appetizers",
+    "ingredients": [
+      "Burrata cheese",
+      "Heirloom tomatoes",
+      "Basil",
+      "Artisan bread",
+      "Balsamic glaze",
+      "Olive oil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Tuscan Grilled Chicken Salad",
+    "description": "Tender grilled chicken breast served atop a bed of crisp mixed greens, cherry tomatoes, red onions, and kalamata olives. Tossed in a zesty lemon-oregano vinaigrette and topped with shaved parmesan and warm garlic croutons.",
+    "price": 18.95,
+    "category": "Salads",
+    "ingredients": [
+      "grilled chicken",
+      "mixed greens",
+      "cherry tomatoes",
+      "red onions",
+      "kalamata olives",
+      "lemon-oregano vinaigrette",
+      "parmesan",
+      "garlic croutons"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Asian Sesame Crunch Salad",
+    "description": "Crispy romaine hearts and napa cabbage mingled with shredded carrots, edamame, and red bell peppers. Finished with a drizzle of sesame-ginger dressing and topped with crunchy wonton strips and toasted sesame seeds.",
+    "price": 15.5,
+    "category": "Salads",
+    "ingredients": [
+      "romaine hearts",
+      "napa cabbage",
+      "carrots",
+      "edamame",
+      "red bell peppers",
+      "sesame-ginger dressing",
+      "wonton strips",
+      "sesame seeds"
+    ],
+    "allergens": [
+      "Soy",
+      "Sesame",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Southwest Fiesta Quinoa Bowl",
+    "description": "A refreshing blend of tri-color quinoa served with spicy black beans, roasted corn, avocado, and cherry tomatoes. Spiced up with chipotle lime dressing and crowned with crispy tortilla strips.",
+    "price": 16.25,
+    "category": "Salads",
+    "ingredients": [
+      "tri-color quinoa",
+      "black beans",
+      "roasted corn",
+      "avocado",
+      "cherry tomatoes",
+      "chipotle lime dressing",
+      "tortilla strips"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Mediterranean Shrimp & Orzo Salad",
+    "description": "Succulent shrimp, chargrilled to perfection, nestled on a bed of orzo, cucumbers, and cherry tomatoes. Drizzled with a tangy dill and feta dressing and garnished with fresh mint leaves.",
+    "price": 19.5,
+    "category": "Salads",
+    "ingredients": [
+      "shrimp",
+      "orzo",
+      "cucumbers",
+      "cherry tomatoes",
+      "dill and feta dressing",
+      "mint leaves"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "California Cobb Salad",
+    "description": "A classic favorite with a West Coast twist, featuring generous portions of smoked turkey, bacon, hard-boiled eggs, and creamy avocado slices on a bed of mixed greens. Drizzled with buttermilk blue cheese dressing.",
+    "price": 17.75,
+    "category": "Salads",
+    "ingredients": [
+      "smoked turkey",
+      "bacon",
+      "hard-boiled eggs",
+      "avocado",
+      "mixed greens",
+      "buttermilk blue cheese dressing"
+    ],
+    "allergens": [
+      "Eggs",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Greek Isle Salad",
+    "description": "An island-inspired mix of crisp romaine, kalamata olives, cucumbers, and cherry tomatoes. Finished with a hearty sprinkle of feta cheese and a drizzle of our house-made Greek vinaigrette.",
+    "price": 14.5,
+    "category": "Salads",
+    "ingredients": [
+      "romaine lettuce",
+      "kalamata olives",
+      "cucumbers",
+      "cherry tomatoes",
+      "feta cheese",
+      "Greek vinaigrette"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Steakhouse Wedge Salad",
+    "description": "A colossal wedge of iceberg lettuce dressed in creamy blue cheese, crumbled bacon, cherry tomatoes, and chopped chives. Perfectly paired with charred prime steak strips for an indulgent touch.",
+    "price": 21,
+    "category": "Salads",
+    "ingredients": [
+      "iceberg lettuce",
+      "blue cheese dressing",
+      "bacon",
+      "cherry tomatoes",
+      "chives",
+      "prime steak strips"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Thai Mango Chicken Salad",
+    "description": "Juicy grilled chicken tossed with sweet mango slices, julienne carrots, and crisp green papaya. Finished with a zesty chili-lime dressing and topped with crushed peanuts.",
+    "price": 18.25,
+    "category": "Salads",
+    "ingredients": [
+      "grilled chicken",
+      "mango slices",
+      "carrots",
+      "green papaya",
+      "chili-lime dressing",
+      "peanuts"
+    ],
+    "allergens": [
+      "Peanuts"
+    ]
+  },
+  {
+    "name": "Roasted Beet & Goat Cheese Salad",
+    "description": "Sweet, earthy roasted beets contrast beautifully with creamy goat cheese, candied walnuts, and arugula. Drizzled with a balsamic reduction for a perfect blend of flavors.",
+    "price": 16.75,
+    "category": "Salads",
+    "ingredients": [
+      "roasted beets",
+      "goat cheese",
+      "candied walnuts",
+      "arugula",
+      "balsamic reduction"
+    ],
+    "allergens": [
+      "Dairy",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Classic Caesar with Grilled Salmon",
+    "description": "Fresh romaine hearts, parmesan shavings, and garlic croutons, elevated by the addition of perfectly grilled salmon. Tossed in our signature Caesar dressing for a delightful classic.",
+    "price": 22,
+    "category": "Salads",
+    "ingredients": [
+      "romaine hearts",
+      "parmesan",
+      "garlic croutons",
+      "grilled salmon",
+      "Caesar dressing"
+    ],
+    "allergens": [
+      "Dairy",
+      "Fish",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Pomegranate Kale Superfood Salad",
+    "description": "A nutrient-packed blend of kale, baby spinach, and quinoa, mixed with pomegranate seeds, almond slivers, and shaved carrots. Vinaigrette made from pomegranate and apple cider vinegar adds a sweet tang.",
+    "price": 17,
+    "category": "Salads",
+    "ingredients": [
+      "kale",
+      "baby spinach",
+      "quinoa",
+      "pomegranate seeds",
+      "almond slivers",
+      "carrots",
+      "pomegranate vinaigrette"
+    ],
+    "allergens": [
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Balsamic Grilled Vegetable Salad",
+    "description": "A medley of balsamic-marinated zucchini, bell peppers, eggplant, and asparagus, grilled and placed over mixed greens. Topped with crumbled feta and a balsamic glaze.",
+    "price": 15.25,
+    "category": "Salads",
+    "ingredients": [
+      "zucchini",
+      "bell peppers",
+      "eggplant",
+      "asparagus",
+      "mixed greens",
+      "feta",
+      "balsamic glaze"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Spicy Tuna Poke Bowl",
+    "description": "A fresh twist on traditional Japanese flavors with ahi tuna chunks, pickled cucumber, and avocado over jasmine rice. Finished with a drizzle of spicy sriracha mayo and a sprinkle of furikake seasoning.",
+    "price": 20.5,
+    "category": "Salads",
+    "ingredients": [
+      "ahi tuna",
+      "pickled cucumber",
+      "avocado",
+      "jasmine rice",
+      "sriracha mayo",
+      "furikake seasoning"
+    ],
+    "allergens": [
+      "Fish",
+      "Eggs",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Summer Berry & Grilled Chicken Salad",
+    "description": "Seasonal mixed berries, marinated grilled chicken breast, and goat cheese crumbles over a bed of fresh spinach. Tossed in a house-made honey-balsamic dressing for an unparalleled burst of flavor.",
+    "price": 19,
+    "category": "Salads",
+    "ingredients": [
+      "mixed berries",
+      "grilled chicken",
+      "goat cheese",
+      "spinach",
+      "honey-balsamic dressing"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Warm Lentil & Roasted Veggie Salad",
+    "description": "An autumn-inspired dish with hearty lentils, roasted sweet potatoes, and Brussels sprouts. Tossed in a tangy Dijon mustard vinaigrette and served slightly warm for a cozy embrace of flavors.",
+    "price": 16,
+    "category": "Salads",
+    "ingredients": [
+      "lentils",
+      "sweet potatoes",
+      "Brussels sprouts",
+      "Dijon mustard vinaigrette"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Lemon Herb Falafel Salad",
+    "description": "House-made falafel patties paired with cucumber and tomato salad, served over lush greens. Complemented by a creamy tahini dressing and a sprinkle of fresh dill.",
+    "price": 14.75,
+    "category": "Salads",
+    "ingredients": [
+      "falafel patties",
+      "cucumber",
+      "tomatoes",
+      "greens",
+      "tahini dressing",
+      "dill"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Vietnamese Rice Noodle Salad",
+    "description": "Vibrant rice noodles tossed with julienned vegetables, mint, and cilantro in a spicy lime dressing. Served with crispy shredded chicken and finished with chopped peanuts for an extra crunch.",
+    "price": 18.75,
+    "category": "Salads",
+    "ingredients": [
+      "rice noodles",
+      "vegetables",
+      "mint",
+      "cilantro",
+      "lime dressing",
+      "shredded chicken",
+      "peanuts"
+    ],
+    "allergens": [
+      "Peanuts"
+    ]
+  },
+  {
+    "name": "Avocado Shrimp Louie",
+    "description": "Juicy shrimp and creamy avocado chunks over crisp iceberg lettuce, topped with sliced hard-boiled eggs. Dressed with a tangy Louie dressing and garnished with capers and chives.",
+    "price": 20,
+    "category": "Salads",
+    "ingredients": [
+      "shrimp",
+      "avocado",
+      "iceberg lettuce",
+      "hard-boiled eggs",
+      "Louie dressing",
+      "capers",
+      "chives"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Zucchini Noodle Caprese Salad",
+    "description": "Refreshing zucchini noodles tossed with cherry tomatoes, pearls of mozzarella, and a hint of basil. Drizzled with a light balsamic glaze for a taste of the Mediterranean.",
+    "price": 15,
+    "category": "Salads",
+    "ingredients": [
+      "zucchini noodles",
+      "cherry tomatoes",
+      "mozzarella pearls",
+      "basil",
+      "balsamic glaze"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Crispy Duck & Citrus Salad",
+    "description": "Crispy duck confit paired with segments of grapefruit and orange over a bed of arugula. Finished with a drizzle of star anise vinaigrette for a touch of Asian-inspired sweetness.",
+    "price": 22.5,
+    "category": "Salads",
+    "ingredients": [
+      "duck confit",
+      "grapefruit",
+      "orange",
+      "arugula",
+      "star anise vinaigrette"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Wild Mushroom & Quinoa Salad",
+    "description": "Earthy wild mushrooms sautéed with garlic and tossed with fluffy quinoa, baby kale, and pumpkin seeds. Dressed in a lemon-truffle oil vinaigrette for a sophisticated touch.",
+    "price": 18,
+    "category": "Salads",
+    "ingredients": [
+      "wild mushrooms",
+      "quinoa",
+      "baby kale",
+      "pumpkin seeds",
+      "lemon-truffle oil vinaigrette"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Nicoise Tuna Salad",
+    "description": "A traditional French salad with seared tuna, fingerling potatoes, green beans, and black olives. Served with a boiled egg and a tangy mustard vinaigrette.",
+    "price": 19.75,
+    "category": "Salads",
+    "ingredients": [
+      "seared tuna",
+      "fingerling potatoes",
+      "green beans",
+      "black olives",
+      "boiled egg",
+      "mustard vinaigrette"
+    ],
+    "allergens": [
+      "Fish",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Honey Roasted Pear & Walnut Salad",
+    "description": "Sweet honey-roasted pears atop mixed greens, paired with crumbled blue cheese and candied walnuts. Drizzled with a light honey-wine reduction for a flourish of flavor.",
+    "price": 17.5,
+    "category": "Salads",
+    "ingredients": [
+      "honey-roasted pears",
+      "mixed greens",
+      "blue cheese",
+      "candied walnuts",
+      "honey-wine reduction"
+    ],
+    "allergens": [
+      "Dairy",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Cuban Mojo Pork Salad",
+    "description": "Shredded mojo-marinated pork tossed with black beans, corn, and romaine. Accented with sliced avocados and a citrus-cumin dressing.",
+    "price": 18.5,
+    "category": "Salads",
+    "ingredients": [
+      "mojo-marinated pork",
+      "black beans",
+      "corn",
+      "romaine",
+      "avocados",
+      "citrus-cumin dressing"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Turkish Bulgur & Mint Salad",
+    "description": "A hearty salad of bulgur wheat tossed with fresh mint, parsley, and diced tomatoes. Drizzled with a lemon-infused olive oil dressing and topped with spicy grilled chicken strips.",
+    "price": 17.25,
+    "category": "Salads",
+    "ingredients": [
+      "bulgur wheat",
+      "mint",
+      "parsley",
+      "diced tomatoes",
+      "lemon-infused olive oil dressing",
+      "grilled chicken"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Smoky Maple Bacon Burger",
+    "description": "A grilled-to-perfection Angus beef patty topped with crispy maple-smoked bacon, melted sharp cheddar, and caramelized onions. Served on a toasted brioche bun with a dollop of our house-made bourbon BBQ sauce.",
+    "price": 18.95,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Angus beef patty",
+      "maple-smoked bacon",
+      "sharp cheddar",
+      "caramelized onions",
+      "brioche bun",
+      "bourbon BBQ sauce"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Mediterranean Chicken Pita",
+    "description": "Juicy grilled chicken breast marinated in lemon and herbs, nestled inside a warm pita with hummus, fresh cucumber, tomato, and crumbled feta. Finished with a drizzle of tzatziki sauce for a refreshing taste.",
+    "price": 16.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Chicken breast",
+      "pita bread",
+      "hummus",
+      "cucumber",
+      "tomato",
+      "feta cheese",
+      "tzatziki sauce"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Korean BBQ Short Rib Sandwich",
+    "description": "Tender braised short rib, coated in a sweet and savory Korean BBQ glaze, served on a toasted ciabatta roll with crunchy Asian slaw and a hint of spicy sriracha mayo.",
+    "price": 19.75,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Short rib",
+      "Korean BBQ glaze",
+      "ciabatta roll",
+      "Asian slaw",
+      "sriracha mayo"
+    ],
+    "allergens": [
+      "Gluten",
+      "Eggs",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Cajun Shrimp Po' Boy",
+    "description": "Succulent Cajun-spiced shrimp fried to a golden crisp, packed into a crusty French baguette with shredded lettuce, tomatoes, and a zesty remoulade sauce for the perfect southern kick.",
+    "price": 17.85,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Cajun-spiced shrimp",
+      "French baguette",
+      "lettuce",
+      "tomatoes",
+      "remoulade sauce"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Swiss Mushroom Melt",
+    "description": "A juicy beef patty layered with sautéed mushrooms, gooey Swiss cheese, and crispy fried onions. Toasted sourdough bread hugs it all together with a touch of garlic aioli.",
+    "price": 17.25,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Beef patty",
+      "sautéed mushrooms",
+      "Swiss cheese",
+      "fried onions",
+      "sourdough bread",
+      "garlic aioli"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Buffalo Chicken Wrap",
+    "description": "Crispy chicken tenders tossed in a spicy buffalo sauce, rolled in a flour tortilla with romaine lettuce, diced tomatoes, and a cooling blue cheese dressing.",
+    "price": 15.95,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Chicken tenders",
+      "buffalo sauce",
+      "flour tortilla",
+      "romaine lettuce",
+      "tomatoes",
+      "blue cheese dressing"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Pulled Pork Sliders",
+    "description": "Slow-cooked pulled pork with our signature BBQ sauce, piled high on slider buns and topped with tangy coleslaw. A perfect combination of sweet and savory.",
+    "price": 16,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Pulled pork",
+      "BBQ sauce",
+      "slider buns",
+      "coleslaw"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Falafel and Avocado Sandwich",
+    "description": "Crispy falafel patties topped with creamy avocado, fresh arugula, and a hint of spicy harissa mayo. All crammed into a warm, fluffy pita for a perfect vegetarian delight.",
+    "price": 15.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Falafel patties",
+      "avocado",
+      "arugula",
+      "harissa mayo",
+      "pita bread"
+    ],
+    "allergens": [
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Steakhouse Sandwich",
+    "description": "Grilled flank steak slices topped with melted provolone, sautéed peppers and onions, and creamy horseradish sauce. Served on a rustic hoagie roll for a true beef lover's treat.",
+    "price": 21,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Flank steak",
+      "provolone cheese",
+      "sautéed peppers",
+      "onions",
+      "horseradish sauce",
+      "hoagie roll"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Truffle Burger",
+    "description": "A decadent treat featuring a juicy beef burger, truffle-infused aioli, sautéed wild mushrooms, and melted Gruyère cheese. All sandwiched in a buttery brioche bun for an unforgettable bite.",
+    "price": 22.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Beef burger",
+      "truffle aioli",
+      "wild mushrooms",
+      "Gruyère cheese",
+      "brioche bun"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Caprese Chicken Panini",
+    "description": "Grilled chicken breast, fresh mozzarella, and vine-ripened tomatoes layered with basil pesto and pressed between artisan focaccia. Served with a balsamic reduction drizzle.",
+    "price": 18.25,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Chicken breast",
+      "mozzarella cheese",
+      "tomatoes",
+      "basil pesto",
+      "focaccia",
+      "balsamic reduction"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "BBQ Brisket Sandwich",
+    "description": "Juicy smoked brisket, slathered with tangy BBQ sauce, and topped with crispy onion strings. Served on a toasted pretzel bun for that perfect bite of smoky and salty flavors.",
+    "price": 20,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Smoked brisket",
+      "BBQ sauce",
+      "onion strings",
+      "pretzel bun"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Tandoori Chicken Burger",
+    "description": "Zesty tandoori-marinated chicken patty, grilled to perfection, accompanied by cucumber raita and fresh spinach on a naan bun for an Indian-inspired twist.",
+    "price": 17.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Tandoori chicken patty",
+      "cucumber raita",
+      "spinach",
+      "naan bun"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Veggie Delight Burger",
+    "description": "A grilled, plant-based patty topped with roasted red peppers, creamy guacamole, and baby greens. Served on a whole grain bun with a spread of sundried tomato aioli.",
+    "price": 16.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Plant-based patty",
+      "roasted red peppers",
+      "guacamole",
+      "baby greens",
+      "whole grain bun",
+      "sundried tomato aioli"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "The Cuban Ciabatta",
+    "description": "Roasted pork loin, shaved ham, Swiss cheese, and dill pickles pressed with yellow mustard between crusty ciabatta bread. A Cuban classic that melts in your mouth.",
+    "price": 18,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Roasted pork loin",
+      "ham",
+      "Swiss cheese",
+      "dill pickles",
+      "yellow mustard",
+      "ciabatta bread"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Turkey Avocado Club",
+    "description": "Sliced turkey breast, crispy bacon, sliced avocado, and mixed greens stacked high on toasted multigrain bread with a slather of lemon aioli.",
+    "price": 17,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Turkey breast",
+      "bacon",
+      "avocado",
+      "mixed greens",
+      "multigrain bread",
+      "lemon aioli"
+    ],
+    "allergens": [
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Miso Portobello Sandwich",
+    "description": "Grilled Portobello mushroom marinated in miso glaze, paired with pickled vegetables and arugula, all sandwiched in a soft ciabatta roll for an umami-packed bite.",
+    "price": 15.75,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Portobello mushroom",
+      "miso glaze",
+      "pickled vegetables",
+      "arugula",
+      "ciabatta roll"
+    ],
+    "allergens": [
+      "Gluten",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Spicy Chorizo Burger",
+    "description": "Spicy chorizo patty topped with melted pepper jack cheese, jalapeños, and avocado slices on a potato bun with chipotle mayo to ignite your taste buds.",
+    "price": 18.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Chorizo patty",
+      "pepper jack cheese",
+      "jalapeños",
+      "avocado",
+      "potato bun",
+      "chipotle mayo"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Philly Cheese Steak",
+    "description": "Thinly sliced ribeye steak, sautéed onions, and melted provolone cheese stuffed into a warm hoagie roll. Finished with a touch of garlic butter for that extra flavor burst.",
+    "price": 19,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Ribeye steak",
+      "onions",
+      "provolone cheese",
+      "hoagie roll",
+      "garlic butter"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "The Baja Fish Taco Wrap",
+    "description": "Grilled white fish, pico de gallo, and shredded cabbage wrapped in a flour tortilla with lime crema. A delightful fusion of fresh and zesty flavors.",
+    "price": 16.95,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "White fish",
+      "pico de gallo",
+      "cabbage",
+      "flour tortilla",
+      "lime crema"
+    ],
+    "allergens": [
+      "Gluten",
+      "Fish"
+    ]
+  },
+  {
+    "name": "Italian Sausage Hoagie",
+    "description": "Juicy Italian sausage, roasted peppers, and onions covered with melted mozzarella, served in a toasted hoagie roll for a hearty classic Italian-American experience.",
+    "price": 17.75,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Italian sausage",
+      "roasted peppers",
+      "onions",
+      "mozzarella cheese",
+      "hoagie roll"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "The Reuben Reimagined",
+    "description": "Corned beef and pastrami layered with sauerkraut, Swiss cheese, and Russian dressing on grilled rye bread. A classic sandwich with an elevated twist.",
+    "price": 19.25,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Corned beef",
+      "pastrami",
+      "sauerkraut",
+      "Swiss cheese",
+      "Russian dressing",
+      "rye bread"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Chipotle Black Bean Burger",
+    "description": "A hearty chipotle-seasoned black bean patty topped with avocado slices, roasted corn salsa, and cilantro-lime aioli. Packed in a toasted brioche bun for a veggie fiesta.",
+    "price": 16.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Black bean patty",
+      "avocado",
+      "roasted corn salsa",
+      "cilantro-lime aioli",
+      "brioche bun"
+    ],
+    "allergens": [
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Banh Mi Chicken Sandwich",
+    "description": "Grilled lemongrass chicken garnished with pickled daikon radish, carrots, fresh cilantro, and spicy sriracha mayo. Served in a crisp baguette for a Vietnamese classic.",
+    "price": 17.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Lemongrass chicken",
+      "pickled daikon",
+      "carrots",
+      "cilantro",
+      "sriracha mayo",
+      "baguette"
+    ],
+    "allergens": [
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "The Greek Gyro Wrap",
+    "description": "Savory lamb gyro slices topped with fresh tomato, red onion, and tzatziki sauce, all wrapped up in a soft, warm pita. A perfect blend of Mediterranean flavors.",
+    "price": 16.5,
+    "category": "Burgers & Sandwiches",
+    "ingredients": [
+      "Lamb gyro",
+      "tomato",
+      "red onion",
+      "tzatziki sauce",
+      "pita bread"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Tuscan Sun Penne",
+    "description": "Penne pasta tossed in a sun-dried tomato and basil cream sauce, accentuated with garlic-roasted mushrooms and spinach. Finished with a sprinkle of Grana Padano cheese for an extra touch of flavor.",
+    "price": 21,
+    "category": "Pasta",
+    "ingredients": [
+      "penne pasta",
+      "sun-dried tomatoes",
+      "basil",
+      "cream",
+      "garlic",
+      "mushrooms",
+      "spinach",
+      "Grana Padano cheese"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Truffle & Parmesan Linguine",
+    "description": "Linguine pasta draped in a luxurious truffle oil and parmesan sauce, garnished with shaved black truffles and arugula. A decadent dish that delights the senses.",
+    "price": 28,
+    "category": "Pasta",
+    "ingredients": [
+      "linguine",
+      "truffle oil",
+      "parmesan cheese",
+      "black truffles",
+      "arugula",
+      "butter",
+      "garlic"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Shrimp Scampi Farfalle",
+    "description": "Fresh shrimp sautéed in garlic and white wine, paired with tender farfalle pasta, cherry tomatoes, and baby spinach. A squeeze of lemon and a scattering of parsley complete this delightful dish.",
+    "price": 24,
+    "category": "Pasta",
+    "ingredients": [
+      "farfalle pasta",
+      "shrimp",
+      "garlic",
+      "white wine",
+      "cherry tomatoes",
+      "baby spinach",
+      "lemon",
+      "parsley"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Cajun Chicken Fettuccine Alfredo",
+    "description": "Fettuccine pasta swirled in our creamy Alfredo sauce, topped with spicy Cajun chicken strips. Finished with a hint of fresh parsley and cracked black pepper for a spicy kick.",
+    "price": 23,
+    "category": "Pasta",
+    "ingredients": [
+      "fettuccine",
+      "chicken breast",
+      "Cajun seasoning",
+      "cream",
+      "parmesan cheese",
+      "parsley",
+      "black pepper"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Rustic Bolognese Radiatori",
+    "description": "Radiatori pasta enveloped in a rich beef and pork ragù, slow-cooked with aromatic herbs. Topped with a shaving of Pecorino Romano for a comforting yet sophisticated finish.",
+    "price": 25,
+    "category": "Pasta",
+    "ingredients": [
+      "radiatori pasta",
+      "ground beef",
+      "ground pork",
+      "tomato sauce",
+      "onion",
+      "carrot",
+      "celery",
+      "Pecorino Romano"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Lobster Ravioli in Saffron Cream",
+    "description": "Delicate lobster-stuffed ravioli bathed in a fragrant saffron cream sauce, accented with fresh dill and chopped chives. A luxurious treat for the seafood lover.",
+    "price": 32,
+    "category": "Pasta",
+    "ingredients": [
+      "lobster",
+      "ravioli",
+      "saffron",
+      "cream",
+      "dill",
+      "chives",
+      "shallots",
+      "lemon zest"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Mediterranean Orzo Primavera",
+    "description": "Bright, flavorful orzo mingled with roasted vegetables, kalamata olives, and feta cheese, lightly tossed in a lemon-garlic vinaigrette. An ode to the vibrant flavors of the Mediterranean.",
+    "price": 19,
+    "category": "Pasta",
+    "ingredients": [
+      "orzo",
+      "zucchini",
+      "bell peppers",
+      "kalamata olives",
+      "feta cheese",
+      "lemon",
+      "garlic",
+      "olive oil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Pesto Genovese Tagliatelle",
+    "description": "Fresh tagliatelle coated in a classic Genovese pesto, garnished with toasted pine nuts and shaved parmesan. A simple yet delightful harmony of basil, garlic, and pine nuts.",
+    "price": 20,
+    "category": "Pasta",
+    "ingredients": [
+      "tagliatelle",
+      "basil",
+      "garlic",
+      "parmesan cheese",
+      "pine nuts",
+      "olive oil",
+      "lemon"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Black Pepper Cacio e Pepe",
+    "description": "Spaghetti cooked to perfection and tossed with cracked black pepper and Pecorino Romano cheese, creating a creamy, peppery masterpiece. Elegance meets simplicity in every bite.",
+    "price": 18,
+    "category": "Pasta",
+    "ingredients": [
+      "spaghetti",
+      "black pepper",
+      "Pecorino Romano cheese",
+      "butter",
+      "olive oil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Vegan Thai Peanut Noodles",
+    "description": "Rice noodles drenched in a savory peanut sauce with a zesty hint of lime, accompanied by crunchy vegetables and topped with crushed peanuts for added texture.",
+    "price": 16,
+    "category": "Pasta",
+    "ingredients": [
+      "rice noodles",
+      "peanut butter",
+      "soy sauce",
+      "lime juice",
+      "carrots",
+      "bell peppers",
+      "scallions",
+      "crushed peanuts"
+    ],
+    "allergens": [
+      "Soy",
+      "Peanuts"
+    ]
+  },
+  {
+    "name": "Carbonara with Pancetta & Peas",
+    "description": "Linguine coated in a creamy carbonara sauce with crispy pancetta and sweet green peas. Topped with a dusting of parmesan and a sprinkle of cracked black pepper for a classic Italian taste.",
+    "price": 22,
+    "category": "Pasta",
+    "ingredients": [
+      "linguine",
+      "pancetta",
+      "peas",
+      "egg yolks",
+      "parmesan cheese",
+      "black pepper",
+      "cream"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Spicy Arrabbiata Rigatoni",
+    "description": "Rigatoni pasta tossed in a fiery arrabbiata sauce made with tomatoes, red chili flakes, and garlic. Finished with fresh basil for a burst of aromatic flavor.",
+    "price": 17,
+    "category": "Pasta",
+    "ingredients": [
+      "rigatoni",
+      "tomatoes",
+      "red chili flakes",
+      "garlic",
+      "basil",
+      "olive oil"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Seafood Marinara Bucatini",
+    "description": "A seafood lover's dream, with bucatini nested in a rich marinara sauce brimming with mussels, clams, and shrimp. A hint of garlic and white wine provides an aromatic depth.",
+    "price": 30,
+    "category": "Pasta",
+    "ingredients": [
+      "bucatini",
+      "mussels",
+      "clams",
+      "shrimp",
+      "marinara sauce",
+      "garlic",
+      "white wine"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Smoked Salmon Fettuccine",
+    "description": "Fettuccine pasta ensconced in a light dill cream sauce and crowned with tender slices of smoked salmon and capers. A gourmet blend of fresh and smoky flavors.",
+    "price": 29,
+    "category": "Pasta",
+    "ingredients": [
+      "fettuccine",
+      "smoked salmon",
+      "cream",
+      "dill",
+      "capers",
+      "lemon"
+    ],
+    "allergens": [
+      "Fish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Porcini Mushroom Risotto",
+    "description": "Carnaroli rice simmered slowly with earthy porcini mushrooms, white wine, and parmesan cheese, finished with a drizzle of truffle oil for an aromatic touch.",
+    "price": 26,
+    "category": "Pasta",
+    "ingredients": [
+      "Carnaroli rice",
+      "porcini mushrooms",
+      "white wine",
+      "parmesan cheese",
+      "onion",
+      "truffle oil"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Lemon Garlic Shrimp Spaghetti",
+    "description": "Tender spaghetti adorned with sautéed shrimp in a buttery lemon-garlic sauce, highlighted by fresh parsley and a dash of chili flakes. A perfect balance of zest and heat.",
+    "price": 26,
+    "category": "Pasta",
+    "ingredients": [
+      "spaghetti",
+      "shrimp",
+      "lemon",
+      "garlic",
+      "butter",
+      "parsley",
+      "chili flakes"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Four Cheese Tortellini",
+    "description": "Cheese-filled tortellini swimming in a creamy blend of mozzarella, fontina, parmesan, and gorgonzola cheeses. Topped with a sprinkle of nutmeg for a richer flavor profile.",
+    "price": 24,
+    "category": "Pasta",
+    "ingredients": [
+      "tortellini",
+      "mozzarella cheese",
+      "fontina cheese",
+      "parmesan cheese",
+      "gorgonzola cheese",
+      "cream",
+      "nutmeg"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Squid Ink Tagliolini with Calamari",
+    "description": "An intriguing dish featuring squid ink tagliolini with tender calamari rings, tossed in a garlic and white wine sauce. A sprinkle of fresh parsley enhances the oceanic essence.",
+    "price": 34,
+    "category": "Pasta",
+    "ingredients": [
+      "squid ink tagliolini",
+      "calamari",
+      "garlic",
+      "white wine",
+      "parsley",
+      "lemon"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Tuscan Kale & Sausage Orecchiette",
+    "description": "Orecchiette pasta paired with spicy Italian sausage and Tuscan kale, tossed in a light garlic olive oil sauce. A harmony of bold flavors with a rustic touch.",
+    "price": 22,
+    "category": "Pasta",
+    "ingredients": [
+      "orecchiette",
+      "Italian sausage",
+      "Tuscan kale",
+      "garlic",
+      "olive oil",
+      "red pepper flakes"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Roasted Red Pepper & Artichoke Fusilli",
+    "description": "Fusilli pasta enveloped in a creamy roasted red pepper and artichoke sauce, enhanced with sundried tomatoes and fresh basil. A delightful symphony of Mediterranean flavors.",
+    "price": 20,
+    "category": "Pasta",
+    "ingredients": [
+      "fusilli",
+      "red peppers",
+      "artichokes",
+      "cream",
+      "sundried tomatoes",
+      "basil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Lamb Ragu Pappardelle",
+    "description": "Pappardelle pasta drenched in a savory lamb ragu, slow-cooked with red wine, tomatoes, and rosemary. This hearty dish is topped with grated Pecorino for a savory treat.",
+    "price": 31,
+    "category": "Pasta",
+    "ingredients": [
+      "pappardelle",
+      "lamb",
+      "red wine",
+      "tomatoes",
+      "rosemary",
+      "Pecorino Romano",
+      "carrot"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Spinach & Ricotta Cannelloni",
+    "description": "Baked cannelloni filled with a creamy mix of spinach and ricotta, adorned with a rich tomato and basil sauce. A classic baked pasta that is comforting and flavorful.",
+    "price": 22,
+    "category": "Pasta",
+    "ingredients": [
+      "cannelloni",
+      "spinach",
+      "ricotta cheese",
+      "tomato sauce",
+      "basil",
+      "parmesan cheese"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Basil & Lemon Shrimp Bucatini",
+    "description": "A vibrant dish with bucatini pasta and succulent shrimp, harmonized with basil pesto and a refreshing lemon zest. A burst of summer in every bite.",
+    "price": 27,
+    "category": "Pasta",
+    "ingredients": [
+      "bucatini",
+      "shrimp",
+      "basil pesto",
+      "lemon zest",
+      "olive oil",
+      "parmesan cheese"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Ratatouille Penne Al Forno",
+    "description": "Oven-baked penne pasta mixed with a medley of ratatouille vegetables and mozzarella cheese, topped with crunchy breadcrumbs. A delightful vegetarian option.",
+    "price": 21,
+    "category": "Pasta",
+    "ingredients": [
+      "penne",
+      "eggplant",
+      "zucchini",
+      "bell peppers",
+      "tomatoes",
+      "mozzarella",
+      "breadcrumbs"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Sicilian Eggplant Caponata Spaghetti",
+    "description": "Spaghetti tossed with Sicilian-style eggplant caponata, featuring capers, olives, and pine nuts for a sweet and tangy twist. An exquisite balance of flavors.",
+    "price": 19,
+    "category": "Pasta",
+    "ingredients": [
+      "spaghetti",
+      "eggplant",
+      "capers",
+      "olives",
+      "pine nuts",
+      "tomato paste",
+      "onion"
+    ],
+    "allergens": [
+      "Gluten",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Citrus Herb Rotisserie Chicken",
+    "description": "Juicy rotisserie chicken slow-cooked to perfection, infused with a luscious blend of citrus and aromatic herbs. Served with creamy garlic mashed potatoes and seasonal roasted vegetables.",
+    "price": 28.99,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Citrus Marinade",
+      "Herbs",
+      "Garlic",
+      "Potatoes",
+      "Butter",
+      "Seasonal Vegetables"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Spicy Korean Fried Chicken",
+    "description": "Crispy fried chicken tossed in a fiery Gochujang sauce, garnished with sesame seeds and green onions. Accompanied by pickled radish and a side of steamed jasmine rice.",
+    "price": 22.49,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Gochujang",
+      "Sesame Seeds",
+      "Green Onions",
+      "Radish",
+      "Rice",
+      "Soy Sauce"
+    ],
+    "allergens": [
+      "Soy",
+      "Sesame",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Tuscan Chicken Parmesan",
+    "description": "Tender chicken breast breaded and fried, topped with marinara, melted mozzarella, and fresh basil. Served over a bed of linguine and garlic bread.",
+    "price": 26.75,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Breast",
+      "Breadcrumbs",
+      "Mozzarella",
+      "Marinara Sauce",
+      "Basil",
+      "Linguine",
+      "Garlic Bread"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Honey Garlic Glazed Chicken",
+    "description": "Succulent chicken thighs glazed with a sweet and savory honey garlic sauce, garnished with toasted sesame and served with jasmine rice and steamed broccoli.",
+    "price": 21.99,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Thighs",
+      "Honey",
+      "Garlic",
+      "Sesame Oil",
+      "Broccoli",
+      "Rice",
+      "Soy Sauce"
+    ],
+    "allergens": [
+      "Soy",
+      "Sesame"
+    ]
+  },
+  {
+    "name": "Thai Basil Chicken Stir-Fry",
+    "description": "Sautéed chicken breast strips tossed with fresh basil, bell peppers, and onions in a spicy Thai chili sauce. Served over fluffy white rice with a lime wedge.",
+    "price": 19.49,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Breast",
+      "Thai Basil",
+      "Bell Peppers",
+      "Onions",
+      "Thai Chili Sauce",
+      "Rice",
+      "Lime"
+    ],
+    "allergens": [
+      "Soy"
+    ]
+  },
+  {
+    "name": "Mediterranean Grilled Chicken Skewers",
+    "description": "Marinated chicken skewers grilled to perfection, accompanied by a refreshing cucumber-yogurt sauce and served with a side of tabbouleh salad and warm pita bread.",
+    "price": 24,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Cucumber",
+      "Yogurt",
+      "Tabbouleh",
+      "Pita Bread",
+      "Lemon",
+      "Olive Oil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Southern Buttermilk Fried Chicken",
+    "description": "Crispy buttermilk-marinated chicken, fried golden brown and seasoned with our signature blend of spices. Served with buttery cornbread and creamy coleslaw.",
+    "price": 23.5,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Buttermilk",
+      "Flour",
+      "Spices",
+      "Cornbread",
+      "Cabbage",
+      "Carrots"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Lemon Thyme Roast Chicken",
+    "description": "Oven-roasted chicken infused with lemon and thyme, delivering a burst of fresh flavor. Paired with rosemary potatoes and roasted asparagus.",
+    "price": 27.5,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Lemon",
+      "Thyme",
+      "Potatoes",
+      "Rosemary",
+      "Asparagus",
+      "Olive Oil"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Buffalo Chicken Mac & Cheese",
+    "description": "Creamy mac & cheese with chunks of spicy buffalo chicken, topped with crispy breadcrumbs and served with celery sticks and ranch dressing.",
+    "price": 20.75,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Macaroni",
+      "Cheese",
+      "Buffalo Sauce",
+      "Breadcrumbs",
+      "Celery",
+      "Ranch Dressing"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Chicken Marsala",
+    "description": "Sautéed chicken breasts in a rich Marsala wine sauce with mushrooms and shallots. Served with angel hair pasta and freshly grated Parmesan cheese.",
+    "price": 25.99,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Breast",
+      "Marsala Wine",
+      "Mushrooms",
+      "Shallots",
+      "Pasta",
+      "Parmesan Cheese",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Smoky Chipotle Chicken Tacos",
+    "description": "Soft corn tortillas filled with smoky chipotle-marinated chicken, topped with a tangy slaw and fresh cilantro. Served with a side of black beans and lime wedges.",
+    "price": 18.25,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Chipotle Sauce",
+      "Corn Tortillas",
+      "Cabbage",
+      "Cilantro",
+      "Black Beans",
+      "Lime"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Maple Dijon Glazed Chicken",
+    "description": "Grilled chicken breasts brushed with a sweet and tangy maple Dijon glaze. Served with apple-cider braised cabbage and roasted fingerling potatoes.",
+    "price": 29,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Breast",
+      "Maple Syrup",
+      "Dijon Mustard",
+      "Cabbage",
+      "Apple Cider",
+      "Fingerling Potatoes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Tandoori Spiced Chicken",
+    "description": "Chicken marinated in aromatic tandoori spices, chargrilled and served with basmati rice, naan bread, and a cooling mint yogurt sauce.",
+    "price": 30.5,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Tandoori Spices",
+      "Basmati Rice",
+      "Naan Bread",
+      "Mint",
+      "Yogurt",
+      "Cilantro"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Cajun Blackened Chicken Alfredo",
+    "description": "Blackened chicken breast tossed in a creamy Cajun Alfredo sauce over fettuccine. Garnished with scallions and served with garlic toast.",
+    "price": 26.95,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Breast",
+      "Cajun Spices",
+      "Fettuccine",
+      "Cream",
+      "Parmesan Cheese",
+      "Scallions",
+      "Garlic Toast"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Hawaiian Huli Huli Chicken",
+    "description": "Juicy grilled chicken thighs coated in a sweet and tangy huli huli sauce. Served with tropical pineapple salsa and coconut rice.",
+    "price": 22.75,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Thighs",
+      "Huli Huli Sauce",
+      "Pineapple",
+      "Coconut",
+      "Rice",
+      "Soy Sauce",
+      "Red Onions"
+    ],
+    "allergens": [
+      "Soy"
+    ]
+  },
+  {
+    "name": "Moroccan Harissa Chicken",
+    "description": "Sautéed chicken thighs enveloped in a warm, spicy harissa rub, served with aromatic couscous and grilled vegetables.",
+    "price": 31.2,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Thighs",
+      "Harissa",
+      "Couscous",
+      "Zucchini",
+      "Bell Peppers",
+      "Onions",
+      "Cilantro"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Garlic Lime Cilantro Chicken",
+    "description": "Sizzling grilled chicken marinated with citrus and garlic, served over a bed of Mexican rice and black beans, garnished with fresh cilantro and lime.",
+    "price": 19.95,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Garlic",
+      "Lime",
+      "Cilantro",
+      "Rice",
+      "Black Beans"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Balsamic Glazed Chicken with Mushrooms",
+    "description": "Flavorful chicken breasts drizzled with a rich balsamic glaze, complemented by sautéed mushrooms and onions. Served with garlic mashed potatoes.",
+    "price": 28.5,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Breast",
+      "Balsamic Vinegar",
+      "Mushrooms",
+      "Onions",
+      "Potatoes",
+      "Garlic"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Coconut Curry Chicken",
+    "description": "Hearty chicken simmered in coconut milk and curry spices, finished with sweet peas and carrots. Served with basmati rice and naan.",
+    "price": 27,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Coconut Milk",
+      "Curry Powder",
+      "Peas",
+      "Carrots",
+      "Basmati Rice",
+      "Naan"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Avocado Lime Grilled Chicken",
+    "description": "Tender grilled chicken breasts topped with a creamy avocado lime sauce, served with quinoa salad and roasted cherry tomatoes.",
+    "price": 24.99,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Breast",
+      "Avocado",
+      "Lime",
+      "Quinoa",
+      "Cherry Tomatoes",
+      "Cilantro"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Teriyaki Chicken and Vegetable Bowl",
+    "description": "Grilled chicken glazed in teriyaki sauce, served over a bed of brown rice with stir-fried vegetables and sesame seeds.",
+    "price": 21.75,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Teriyaki Sauce",
+      "Brown Rice",
+      "Broccoli",
+      "Carrots",
+      "Sesame Seeds"
+    ],
+    "allergens": [
+      "Soy",
+      "Sesame"
+    ]
+  },
+  {
+    "name": "Creamy Pesto Chicken Penne",
+    "description": "Grilled chicken tossed in a creamy pesto sauce with penne pasta, sun-dried tomatoes, and Parmesan cheese. Served with garlic bread.",
+    "price": 25.5,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Penne Pasta",
+      "Pesto Sauce",
+      "Sun-Dried Tomatoes",
+      "Parmesan Cheese",
+      "Garlic"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Jamaican Jerk Chicken",
+    "description": "Spicy jerk-marinated chicken grilled to perfection, served with a side of coconut rice and beans, fried plantains, and a mango chutney.",
+    "price": 29.5,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Jerk Seasoning",
+      "Coconut Rice",
+      "Black Beans",
+      "Plantains",
+      "Mango"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Sun-Dried Tomato Chicken Roulade",
+    "description": "Rolled chicken breasts filled with sun-dried tomatoes and spinach, enveloped in a creamy white wine sauce. Accompanied by rosemary-infused orzo.",
+    "price": 32.75,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken Breast",
+      "Sun-Dried Tomatoes",
+      "Spinach",
+      "White Wine",
+      "Orzo",
+      "Rosemary"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Pollo Asado Street Tacos",
+    "description": "Marinated grilled chicken topped with fresh pico de gallo and avocado, served in soft corn tortillas with a spicy chipotle aioli.",
+    "price": 17.5,
+    "category": "Chicken Dishes",
+    "ingredients": [
+      "Chicken",
+      "Pico de Gallo",
+      "Avocado",
+      "Corn Tortillas",
+      "Chipotle Aioli"
+    ],
+    "allergens": [
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Garlic Herb Ribeye",
+    "description": "A succulent and juicy ribeye steak, grilled to perfection and infused with a rich garlic herb butter. Served with roasted garlic mashed potatoes and seasonal vegetables.",
+    "price": 38,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Ribeye steak",
+      "Garlic",
+      "Butter",
+      "Rosemary",
+      "Thyme",
+      "Mashed potatoes",
+      "Seasonal vegetables"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Bourbon Glazed Pork Chop",
+    "description": "Thick-cut pork chop marinated in bourbon whiskey, then grilled and brushed with a smoky-sweet glaze. Accompanied by creamy coleslaw and cornbread muffins.",
+    "price": 28,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Pork chop",
+      "Bourbon whiskey",
+      "Brown sugar",
+      "Soy sauce",
+      "Cornbread",
+      "Cabbage",
+      "Carrots"
+    ],
+    "allergens": [
+      "Soy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Coffee-Crusted Filet Mignon",
+    "description": "A luxurious 8 oz. filet mignon crusted with freshly ground coffee and spices, seared to a tender finish. Served with horseradish mash and sautéed asparagus.",
+    "price": 42,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Filet mignon",
+      "Coffee grounds",
+      "Black pepper",
+      "Garlic",
+      "Horseradish",
+      "Potatoes",
+      "Asparagus"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Maple-Bourbon Beef Tenderloin Tips",
+    "description": "Juicy beef tenderloin tips, pan-seared and glazed with a savory maple-bourbon sauce. Served over a bed of wild rice pilaf and garnished with crispy fried onions.",
+    "price": 34,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Beef tenderloin",
+      "Maple syrup",
+      "Bourbon",
+      "Wild rice",
+      "Onions",
+      "Garlic",
+      "Parsley"
+    ],
+    "allergens": [
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Pistachio-Crusted Lamb Chops",
+    "description": "Tender lamb chops encrusted with roasted pistachios and herbs, seared to golden brown. Paired with mint chimichurri sauce and roasted fingerling potatoes.",
+    "price": 39,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Lamb chops",
+      "Pistachios",
+      "Mint",
+      "Parsley",
+      "Fingerling potatoes",
+      "Olive oil",
+      "Garlic"
+    ],
+    "allergens": [
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Smokey Chipotle Skirt Steak",
+    "description": "Skirt steak marinated in chipotle and lime, grilled to a smoky finish. Served with cilantro lime rice and black beans.",
+    "price": 32,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Skirt steak",
+      "Chipotle peppers",
+      "Lime",
+      "Cilantro",
+      "Rice",
+      "Black beans",
+      "Garlic"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Blue Cheese Crusted New York Strip",
+    "description": "A classic New York strip topped with a tangy blue cheese crust and finished with a balsamic reduction. Accompanied by garlic-roasted broccoli and sweet potato fries.",
+    "price": 40,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "New York strip",
+      "Blue cheese",
+      "Balsamic vinegar",
+      "Broccoli",
+      "Sweet potatoes",
+      "Garlic",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Blackened Cajun T-Bone",
+    "description": "A robust T-bone steak blackened with our house Cajun spice blend, delivering a flavorful kick. Paired with maque choux and jalapeño cornbread.",
+    "price": 41,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "T-bone steak",
+      "Cajun spices",
+      "Bell peppers",
+      "Corn",
+      "Jalapeños",
+      "Cornmeal",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Herb-Roasted Veal Chop",
+    "description": "A tender veal chop seasoned with fresh herbs, roasted to a juicy finish. Presented with a garlic cream sauce, sautéed spinach, and Parmesan polenta.",
+    "price": 37,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Veal chop",
+      "Thyme",
+      "Rosemary",
+      "Garlic",
+      "Spinach",
+      "Parmesan cheese",
+      "Polenta"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Szechuan Peppercorn Sirloin",
+    "description": "A sirloin steak rubbed with Szechuan peppercorns and spices, pan-seared and deglazed with soy ginger sauce. Served with jasmine rice and stir-fried vegetables.",
+    "price": 30,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Sirloin steak",
+      "Szechuan peppercorns",
+      "Soy sauce",
+      "Ginger",
+      "Jasmine rice",
+      "Bell peppers",
+      "Snow peas"
+    ],
+    "allergens": [
+      "Soy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Mediterranean Lamb Shank",
+    "description": "Slow-braised lamb shank infused with Mediterranean spices, served on a bed of couscous with fresh tzatziki and grilled vegetables.",
+    "price": 36,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Lamb shank",
+      "Couscous",
+      "Greek yogurt",
+      "Cucumber",
+      "Garlic",
+      "Zucchini",
+      "Eggplant"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Charcoal-Grilled Bison Rib",
+    "description": "Bison rib marinated in a smoky chipotle marinade, charcoal-grilled to intensify the flavors. Accompanied by caramelized onions and oven-roasted carrots.",
+    "price": 35,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Bison rib",
+      "Chipotle peppers",
+      "Brown sugar",
+      "Onions",
+      "Carrots",
+      "Olive oil",
+      "Garlic"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Balsamic Fig Pork Tenderloin",
+    "description": "A succulent pork tenderloin marinated in a balsamic fig glaze, slow-roasted and served with creamy goat cheese polenta and arugula salad.",
+    "price": 29,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Pork tenderloin",
+      "Balsamic vinegar",
+      "Figs",
+      "Goat cheese",
+      "Polenta",
+      "Arugula",
+      "Lemon"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Truffle Butter Prime Rib",
+    "description": "Indulgently rich prime rib seasoned and roasted, topped with decadent truffle butter. Served with a side of Yukon gold mashed potatoes and green beans.",
+    "price": 41,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Prime rib",
+      "Truffle butter",
+      "Yukon gold potatoes",
+      "Heavy cream",
+      "Green beans",
+      "Garlic",
+      "Rosemary"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Honey Garlic Lamb Ribs",
+    "description": "Tender lamb ribs braised in a sweet and savory honey garlic sauce, then grilled for a caramelized finish. Served with roasted root vegetables.",
+    "price": 33,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Lamb ribs",
+      "Honey",
+      "Garlic",
+      "Soy sauce",
+      "Carrots",
+      "Parsnips",
+      "Turnips"
+    ],
+    "allergens": [
+      "Soy"
+    ]
+  },
+  {
+    "name": "Teriyaki Flank Steak",
+    "description": "Flank steak marinated in homemade teriyaki glaze, grilled to perfection and served with sesame-tossed soba noodles and grilled scallions.",
+    "price": 31,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Flank steak",
+      "Soy sauce",
+      "Mirin",
+      "Soba noodles",
+      "Sesame seeds",
+      "Scallions",
+      "Ginger"
+    ],
+    "allergens": [
+      "Soy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Rosemary Dijon Pork Tenderloin",
+    "description": "An exquisite pork tenderloin crusted with rosemary and Dijon mustard, oven-roasted to a golden brown. Served with apple cider jus and sweet potato puree.",
+    "price": 27,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Pork tenderloin",
+      "Dijon mustard",
+      "Rosemary",
+      "Apple cider",
+      "Sweet potatoes",
+      "Butter",
+      "Garlic"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Mustard Herb Lamb Steak",
+    "description": "Lamb steak grilled to juicy perfection, basted with a tangy mustard herb sauce. Presented with garlic mashed peas and toasted almond pilaf.",
+    "price": 39,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Lamb steak",
+      "Mustard",
+      "Thyme",
+      "Garlic",
+      "Green peas",
+      "Almonds",
+      "Rice pilaf"
+    ],
+    "allergens": [
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Horseradish Crusted Prime Rib",
+    "description": "A generous cut of prime rib crusted with tangy horseradish and fresh herbs, oven-roasted to perfection. Served with au jus and Yorkshire pudding.",
+    "price": 42,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Prime rib",
+      "Horseradish",
+      "Thyme",
+      "Rosemary",
+      "Beef stock",
+      "Flour",
+      "Eggs"
+    ],
+    "allergens": [
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Lemon Herb Grilled Venison",
+    "description": "Grilled venison steaks marinated in lemon and fresh herbs, served with wild mushroom risotto and braised red cabbage.",
+    "price": 40,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Venison steak",
+      "Lemon zest",
+      "Thyme",
+      "Mushrooms",
+      "Arborio rice",
+      "Red cabbage",
+      "Onions"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Jamaican Jerk Pork Chops",
+    "description": "Spice-rubbed pork chops grilled and served with a refreshing mango salsa and coconut-infused jasmine rice.",
+    "price": 29,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Pork chops",
+      "Jamaican jerk seasoning",
+      "Mango",
+      "Coconut milk",
+      "Jasmine rice",
+      "Red onions",
+      "Cilantro"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Cider-Braised Beef Cheeks",
+    "description": "Beef cheeks slowly braised in a rich cider reduction, served over creamy parsnip purée with charred Brussels sprouts.",
+    "price": 38,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Beef cheeks",
+      "Apple cider",
+      "Parsnips",
+      "Butter",
+      "Brussels sprouts",
+      "Garlic",
+      "Onions"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Hoisin-Glazed Rack of Lamb",
+    "description": "A full rack of lamb glazed with hoisin sauce, roasted to perfection with a sweet and spicy crust. Served with ginger mashed potatoes and sautéed snap peas.",
+    "price": 42,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Rack of lamb",
+      "Hoisin sauce",
+      "Ginger",
+      "Potatoes",
+      "Cream",
+      "Snap peas",
+      "Garlic"
+    ],
+    "allergens": [
+      "Soy",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Cocoa-Spiced Short Ribs",
+    "description": "Braised short ribs in a rich cocoa-infused sauce, served with roasted garlic polenta and a side of charred sweet corn.",
+    "price": 36,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Short ribs",
+      "Cocoa powder",
+      "Garlic",
+      "Polenta",
+      "Sweet corn",
+      "Thyme",
+      "Tomato paste"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Stuffed Veal Rollatini",
+    "description": "Rolled veal stuffed with spinach and provolone cheese, baked in a rich tomato basil sauce. Served with Parmesan risotto.",
+    "price": 37,
+    "category": "Steaks & Chops",
+    "ingredients": [
+      "Veal",
+      "Spinach",
+      "Provolone cheese",
+      "Tomato sauce",
+      "Basil",
+      "Arborio rice",
+      "Parmesan"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Lime & Cilantro Grilled Shrimp",
+    "description": "Juicy shrimp are marinated in a lime-cilantro blend, grilled to perfection, and served with a tangy avocado salsa. A light and refreshing appetizer that brings a taste of the coast to your table.",
+    "price": 15.99,
+    "category": "Seafood",
+    "ingredients": [
+      "Shrimp",
+      "Lime",
+      "Cilantro",
+      "Avocado",
+      "Tomato",
+      "Red Onion",
+      "Olive Oil",
+      "Salt",
+      "Pepper"
+    ],
+    "allergens": [
+      "Shellfish"
+    ]
+  },
+  {
+    "name": "Crab-Stuffed Salmon with Lemon Butter Sauce",
+    "description": "Succulent Atlantic salmon is generously stuffed with a rich crab mixture and finished with a silky lemon butter sauce. Served over a bed of wilted spinach for a luxurious experience.",
+    "price": 34.5,
+    "category": "Seafood",
+    "ingredients": [
+      "Salmon",
+      "Crab Meat",
+      "Cream Cheese",
+      "Breadcrumbs",
+      "Lemon",
+      "Butter",
+      "Spinach",
+      "Garlic",
+      "Parsley"
+    ],
+    "allergens": [
+      "Fish",
+      "Shellfish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Spicy Tuna Tartare Tower",
+    "description": "Layers of fresh ahi tuna, diced avocado, and mango salsa are stacked and topped with a spicy sriracha aioli. A bold and vibrant appetizer that plays with texture and heat.",
+    "price": 17,
+    "category": "Seafood",
+    "ingredients": [
+      "Ahi Tuna",
+      "Avocado",
+      "Mango",
+      "Sriracha",
+      "Aioli",
+      "Soy Sauce",
+      "Lemon",
+      "Scallions",
+      "Sesame Seeds"
+    ],
+    "allergens": [
+      "Fish",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Lobster Mac 'n' Cheese",
+    "description": "Tender chunks of lobster are folded into creamy, truffle-infused mac 'n' cheese, topped with a golden breadcrumb crust. An indulgent twist on a classic comfort dish.",
+    "price": 21,
+    "category": "Seafood",
+    "ingredients": [
+      "Lobster",
+      "Macaroni",
+      "Cheddar Cheese",
+      "Cream",
+      "Truffle Oil",
+      "Breadcrumbs",
+      "Butter",
+      "Garlic"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Miso-Glazed Black Cod",
+    "description": "This delicate black cod is marinated in a sweet and savory miso glaze, then oven-broiled until caramelized. Served with pickled ginger and jasmine rice for a touch of elegance.",
+    "price": 38,
+    "category": "Seafood",
+    "ingredients": [
+      "Black Cod",
+      "Miso Paste",
+      "Mirin",
+      "Soy Sauce",
+      "Ginger",
+      "Jasmine Rice",
+      "Rice Vinegar",
+      "Sugar"
+    ],
+    "allergens": [
+      "Fish",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Coconut-Crusted Mahi Mahi",
+    "description": "Crispy coconut-crusted mahi mahi is paired with a vibrant mango chutney and served with fragrant basmati rice. A tropical delight that transports you to island shores.",
+    "price": 28,
+    "category": "Seafood",
+    "ingredients": [
+      "Mahi Mahi",
+      "Coconut Flakes",
+      "Mango",
+      "Ginger",
+      "Garlic",
+      "Basmati Rice",
+      "Lime",
+      "Cilantro",
+      "Panko Breadcrumbs"
+    ],
+    "allergens": [
+      "Fish",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Garlic Herb Butter Scallops",
+    "description": "Seared to a golden brown, our scallops are bathed in a sumptuous garlic herb butter sauce and served with a side of roasted asparagus. A dish for the true seafood enthusiast.",
+    "price": 32,
+    "category": "Seafood",
+    "ingredients": [
+      "Scallops",
+      "Butter",
+      "Parsley",
+      "Garlic",
+      "Lemon",
+      "Asparagus",
+      "Olive Oil",
+      "Salt",
+      "Pepper"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Seafood Paella",
+    "description": "A classic Spanish dish with a twist, our paella is cooked to perfection with saffron-infused rice, mussels, clams, shrimp, and chorizo. Bursting with flavors and vibrant color.",
+    "price": 39.5,
+    "category": "Seafood",
+    "ingredients": [
+      "Rice",
+      "Mussels",
+      "Clams",
+      "Shrimp",
+      "Chorizo",
+      "Saffron",
+      "Bell Peppers",
+      "Tomatoes",
+      "Onions",
+      "Garlic"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Fish"
+    ]
+  },
+  {
+    "name": "Ahi Poke Bowl",
+    "description": "A fresh, healthy choice featuring yellowfin tuna tossed with soy sauce, sesame oil, and seaweed salad. Served on a bed of sushi rice with edamame, radish, and avocado.",
+    "price": 19,
+    "category": "Seafood",
+    "ingredients": [
+      "Yellowfin Tuna",
+      "Sushi Rice",
+      "Seaweed Salad",
+      "Soy Sauce",
+      "Sesame Oil",
+      "Edamame",
+      "Radish",
+      "Avocado",
+      "Cucumber"
+    ],
+    "allergens": [
+      "Fish",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Pan-Seared Red Snapper with Tomato Basil Relish",
+    "description": "Crispy-skinned red snapper is skillfully pan-seared and accompanied by a vibrant tomato basil relish, drizzled with olive oil and balsamic reduction. A beautifully balanced dish.",
+    "price": 36.75,
+    "category": "Seafood",
+    "ingredients": [
+      "Red Snapper",
+      "Tomatoes",
+      "Basil",
+      "Balsamic Vinegar",
+      "Olive Oil",
+      "Garlic",
+      "Shallots",
+      "Salt",
+      "Pepper"
+    ],
+    "allergens": [
+      "Fish"
+    ]
+  },
+  {
+    "name": "Clam Chowder in Sourdough Bowl",
+    "description": "A creamy New England-style clam chowder, rich with tender clams, potatoes, and a hint of thyme. Served piping hot in a freshly baked sourdough bread bowl for that perfect rustic touch.",
+    "price": 16.5,
+    "category": "Seafood",
+    "ingredients": [
+      "Clams",
+      "Potatoes",
+      "Celery",
+      "Onions",
+      "Thyme",
+      "Cream",
+      "Sourdough Bread",
+      "Butter",
+      "Salt"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Chili Lime Grilled Octopus",
+    "description": "Tender octopus is marinated in a zesty chili lime sauce and grilled to perfection, creating a smoky flavor that's complemented by a papaya and jicama salad.",
+    "price": 22,
+    "category": "Seafood",
+    "ingredients": [
+      "Octopus",
+      "Lime",
+      "Chili Powder",
+      "Garlic",
+      "Papaya",
+      "Jicama",
+      "Cilantro",
+      "Olive Oil",
+      "Salt"
+    ],
+    "allergens": [
+      ""
+    ]
+  },
+  {
+    "name": "Sesame-Crusted Tuna Steak",
+    "description": "A pan-seared tuna steak encrusted with black and white sesame seeds is served with a ginger soy reduction and wilted bok choy, creating a dish that's both crunchy and tender.",
+    "price": 28.5,
+    "category": "Seafood",
+    "ingredients": [
+      "Tuna Steak",
+      "Sesame Seeds",
+      "Ginger",
+      "Soy Sauce",
+      "Bok Choy",
+      "Garlic",
+      "Scallions",
+      "Rice Vinegar"
+    ],
+    "allergens": [
+      "Fish",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Herb-Crusted Halibut",
+    "description": "Baked halibut coated in a fragrant herb crust is topped with a lemon beurre blanc and served with roasted baby potatoes, offering a dish of elegance and comfort.",
+    "price": 35,
+    "category": "Seafood",
+    "ingredients": [
+      "Halibut",
+      "Parsley",
+      "Breadcrumbs",
+      "Lemon",
+      "Butter",
+      "Thyme",
+      "Baby Potatoes",
+      "Garlic",
+      "Olive Oil"
+    ],
+    "allergens": [
+      "Fish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Thai Red Curry Shrimp Skewers",
+    "description": "Succulent shrimp are marinated in a rich Thai red curry and grilled on skewers, served with coconut jasmine rice and a side of sweet chili dipping sauce.",
+    "price": 24,
+    "category": "Seafood",
+    "ingredients": [
+      "Shrimp",
+      "Red Curry Paste",
+      "Coconut Milk",
+      "Jasmine Rice",
+      "Chili Sauce",
+      "Lime",
+      "Cilantro",
+      "Garlic",
+      "Ginger"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Ginger-Soy Steamed Sea Bass",
+    "description": "A delicate balance of ginger, soy, and sesame gently steams this flaky sea bass to perfection, served with a side of sautéed baby bok choy and steamed jasmine rice.",
+    "price": 40,
+    "category": "Seafood",
+    "ingredients": [
+      "Sea Bass",
+      "Ginger",
+      "Soy Sauce",
+      "Sesame Oil",
+      "Bok Choy",
+      "Jasmine Rice",
+      "Scallions",
+      "Garlic"
+    ],
+    "allergens": [
+      "Fish",
+      "Soy"
+    ]
+  },
+  {
+    "name": "Crispy Calamari with Lemon Aioli",
+    "description": "Lightly breaded calamari rings are fried to crispy golden perfection and served with a tangy lemon aioli and a sprinkle of parmesan cheese for that satisfying crunch.",
+    "price": 17.5,
+    "category": "Seafood",
+    "ingredients": [
+      "Calamari",
+      "Breadcrumbs",
+      "Parmesan Cheese",
+      "Lemon",
+      "Garlic",
+      "Mayonnaise",
+      "Olive Oil",
+      "Parsley"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Shrimp & Grits",
+    "description": "A Southern classic with jumbo shrimp simmered in a rich Creole sauce served on a bed of creamy cheddar grits. Finished with a sprinkle of scallions for a traditional touch.",
+    "price": 27,
+    "category": "Seafood",
+    "ingredients": [
+      "Shrimp",
+      "Grits",
+      "Cheddar Cheese",
+      "Tomatoes",
+      "Bell Peppers",
+      "Scallions",
+      "Creole Spices",
+      "Garlic",
+      "Butter"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Alaskan King Crab Legs",
+    "description": "Experience the luxury of Alaskan king crab with legs perfectly steamed and served with drawn butter and a slice of lemon. A simple yet exquisite taste of the sea.",
+    "price": 39.99,
+    "category": "Seafood",
+    "ingredients": [
+      "King Crab Legs",
+      "Butter",
+      "Lemon",
+      "Parsley"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Italian Seafood Risotto",
+    "description": "Arborio rice perfectly cooked with mussels, clams, and shrimp in a fragrant seafood broth, finished with parmesan cheese and a hint of saffron.",
+    "price": 29.95,
+    "category": "Seafood",
+    "ingredients": [
+      "Arborio Rice",
+      "Mussels",
+      "Clams",
+      "Shrimp",
+      "Parmesan Cheese",
+      "Saffron",
+      "Garlic",
+      "Onion",
+      "Seafood Broth"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Baked Clams Oreganata",
+    "description": "Fresh clams are topped with a mixture of breadcrumbs, garlic, lemon, and oregano, then baked until golden brown and aromatic. Perfect for sharing or enjoying alone.",
+    "price": 16.5,
+    "category": "Seafood",
+    "ingredients": [
+      "Clams",
+      "Breadcrumbs",
+      "Garlic",
+      "Lemon",
+      "Oregano",
+      "Parsley",
+      "Olive Oil",
+      "Lemon Zest"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Fish Tacos with Mango Salsa",
+    "description": "Grilled white fish in soft corn tortillas with a zesty mango salsa, topped with cilantro lime slaw for a refreshing twist on a classic Mexican street food.",
+    "price": 16,
+    "category": "Seafood",
+    "ingredients": [
+      "White Fish",
+      "Corn Tortillas",
+      "Mango",
+      "Cabbage",
+      "Cilantro",
+      "Lime",
+      "Avocado",
+      "Red Onion",
+      "Jalapeño"
+    ],
+    "allergens": [
+      "Fish"
+    ]
+  },
+  {
+    "name": "Lemon Dill Poached Trout",
+    "description": "Delicate trout fillets are poached in a lemon-dill broth, accompanied by baby carrots and fingerling potatoes. A seasonal favorite that captures the essence of fresh herbs.",
+    "price": 33,
+    "category": "Seafood",
+    "ingredients": [
+      "Trout",
+      "Lemon",
+      "Dill",
+      "Carrots",
+      "Fingerling Potatoes",
+      "White Wine",
+      "Butter",
+      "Shallots"
+    ],
+    "allergens": [
+      "Fish",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Tempura Soft Shell Crab",
+    "description": "Crispy tempura batter encases tender soft shell crab, served with a ponzu dipping sauce and a side of pickled ginger, perfectly marrying texture and flavor.",
+    "price": 21,
+    "category": "Seafood",
+    "ingredients": [
+      "Soft Shell Crab",
+      "Tempura Batter",
+      "Ponzu Sauce",
+      "Pickled Ginger",
+      "Rice Flour",
+      "Water",
+      "Eggs"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Coquilles St. Jacques",
+    "description": "An exquisite scallop dish where tender sea scallops are baked in a rich, creamy sauce with mushrooms and topped with a touch of Gruyère cheese for a refined finish.",
+    "price": 31,
+    "category": "Seafood",
+    "ingredients": [
+      "Scallops",
+      "Mushrooms",
+      "Cream",
+      "Gruyère Cheese",
+      "Breadcrumbs",
+      "Butter",
+      "White Wine",
+      "Parsley"
+    ],
+    "allergens": [
+      "Shellfish",
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Tuscan Truffle Bianca",
+    "description": "Indulge in decadence with our white sauce pizza featuring truffle oil, creamy ricotta, and fresh mozzarella. Finished with arugula and a hint of lemon zest, roasted garlic elevates this Italian classic.",
+    "price": 22.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "truffle oil",
+      "white sauce",
+      "ricotta cheese",
+      "fresh mozzarella",
+      "arugula",
+      "lemon zest",
+      "roasted garlic"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Spicy Sausage & Honey",
+    "description": "Experience the perfect balance of sweet and spicy with our Italian sausage pizza, topped with fresh jalapenos and drizzled with a rich honey glaze. Baked to perfection, it's a delight for the adventurous palate.",
+    "price": 19.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "Italian sausage",
+      "jalapenos",
+      "honey",
+      "tomato sauce",
+      "mozzarella cheese",
+      "shallots"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Mediterranean Veggie Delight",
+    "description": "A rich, colorful array of sun-dried tomatoes, artichoke hearts, Kalamata olives, and roasted red peppers atop a herbed olive oil base. Topped with creamy feta and oregano for a taste of the Mediterranean.",
+    "price": 18.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "sun-dried tomatoes",
+      "artichoke hearts",
+      "Kalamata olives",
+      "roasted red peppers",
+      "olive oil",
+      "feta cheese",
+      "oregano"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "BBQ Pork & Pineapple Fusion",
+    "description": "A smoky BBQ base supports tender pulled pork, juicy pineapple chunks, and red onions, all melted together under a layer of aged cheddar. A fusion of sweet, savory, and tangy flavors.",
+    "price": 21.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "BBQ sauce",
+      "pulled pork",
+      "pineapple chunks",
+      "red onions",
+      "aged cheddar",
+      "cilantro"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Wild Mushroom & Goat Cheese",
+    "description": "Savor the earthy flavors of sautéed wild mushrooms, combined with creamy goat cheese and a sprinkle of fresh thyme. A garlic-infused oil base elevates this gourmet creation.",
+    "price": 23.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "wild mushrooms",
+      "goat cheese",
+      "garlic oil",
+      "mozzarella cheese",
+      "fresh thyme",
+      "red pepper flakes"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Four Cheese Quattro Formaggi",
+    "description": "A cheese lover's dream with a harmonious blend of mozzarella, gorgonzola, parmesan, and fontina cheeses. Enhanced with a touch of rosemary and cracked black pepper for added depth.",
+    "price": 20.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "mozzarella cheese",
+      "gorgonzola cheese",
+      "parmesan cheese",
+      "fontina cheese",
+      "rosemary",
+      "cracked black pepper"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Southern BBQ Chicken",
+    "description": "Grilled chicken breast is nestled atop a tangy BBQ sauce, accented by smoked gouda, caramelized onions, and fresh cilantro. A hearty and flavorful homage to Southern cuisine.",
+    "price": 22.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "grilled chicken breast",
+      "BBQ sauce",
+      "smoked gouda",
+      "caramelized onions",
+      "fresh cilantro",
+      "green onions"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Margherita Napoletana",
+    "description": "A timeless classic with San Marzano tomatoes, fresh basil, and buffalo mozzarella. Baked in our stone oven, this traditional Margherita embodies the essence of Naples.",
+    "price": 18.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "San Marzano tomatoes",
+      "fresh basil",
+      "buffalo mozzarella",
+      "extra virgin olive oil",
+      "sea salt",
+      "crushed garlic"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Pesto Chicken & Artichoke",
+    "description": "Tender chicken breast and artichoke hearts are paired with a basil pesto base, and topped with mozzarella and sun-dried tomatoes for a vibrant and aromatic treat.",
+    "price": 21.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "chicken breast",
+      "artichoke hearts",
+      "basil pesto",
+      "mozzarella cheese",
+      "sun-dried tomatoes",
+      "pine nuts"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Buffalo Blue Cheese Explosion",
+    "description": "For the bold palate, spicy buffalo sauce, grilled chicken, and red onions are topped with a drizzle of creamy blue cheese dressing, creating a fiery and creamy combination.",
+    "price": 21.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "buffalo sauce",
+      "grilled chicken",
+      "red onions",
+      "blue cheese dressing",
+      "mozzarella cheese",
+      "celery bits"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Greek Gyro Pizza",
+    "description": "Inspired by the classic Greek gyro, this pizza features tender lamb, tzatziki sauce, feta cheese, and cucumbers, all layered over a garlic-infused olive oil base.",
+    "price": 23.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "lamb slices",
+      "tzatziki sauce",
+      "feta cheese",
+      "cucumbers",
+      "red onions",
+      "olive oil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Prosciutto & Fig Bianco",
+    "description": "The sweet and savory union of figs and prosciutto is highlighted with gorgonzola and arugula on a white sauce base. Every bite is a taste of rustic elegance.",
+    "price": 24.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "figs",
+      "prosciutto",
+      "gorgonzola cheese",
+      "arugula",
+      "white sauce",
+      "balsamic vinegar reduction"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Ahi Tuna & Wasabi Magic",
+    "description": "An innovative twist with seared Ahi tuna, wasabi aioli, and pickled ginger. This pizza is crowned with sesame seeds and scallions for a unique, sushi-inspired experience.",
+    "price": 26.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "Ahi tuna",
+      "wasabi aioli",
+      "pickled ginger",
+      "sesame seeds",
+      "scallions",
+      "mozzarella cheese"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Fish",
+      "Sesame"
+    ]
+  },
+  {
+    "name": "Pepperoni & Hot Honey",
+    "description": "Crispy pepperoni with melted mozzarella and parmesan are invigorated by a drizzle of hot honey, creating a spicy-sweet masterpiece that surprises and delights.",
+    "price": 18.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "pepperoni",
+      "mozzarella cheese",
+      "parmesan cheese",
+      "hot honey",
+      "tomato sauce",
+      "basil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Shrimp Scampi Flatcrust",
+    "description": "Tender shrimp sautéed in garlic butter atop a thin crust with lemon zest, parsley, and a touch of chili flakes for a seafood lover's delight.",
+    "price": 25.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "shrimp",
+      "garlic butter",
+      "lemon zest",
+      "parsley",
+      "chili flakes",
+      "mozzarella cheese"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Shellfish"
+    ]
+  },
+  {
+    "name": "Spinach & Ricotta Calzone",
+    "description": "Our folded pizza offers creamy ricotta, fresh spinach, and sun-dried tomatoes wrapped in a golden crust. A hint of nutmeg adds a subtle warmth.",
+    "price": 19.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "ricotta cheese",
+      "fresh spinach",
+      "sun-dried tomatoes",
+      "nutmeg",
+      "parmesan cheese",
+      "olive oil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Korean Bulgogi Fusion",
+    "description": "Sweet and savory bulgogi beef, kimchi, and mozzarella come together on this unique pizza. Finished with a sprinkle of green onions for a Korean twist.",
+    "price": 24.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "bulgogi beef",
+      "kimchi",
+      "mozzarella cheese",
+      "green onions",
+      "sesame seeds",
+      "gochujang sauce"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Soy",
+      "Sesame"
+    ]
+  },
+  {
+    "name": "Hawaiian Luau",
+    "description": "A modern take on tradition, this pizza features ham, fresh pineapple, and jalapenos, all harmonizing with melted mozzarella over a classic tomato sauce.",
+    "price": 19.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "ham",
+      "fresh pineapple",
+      "jalapenos",
+      "mozzarella cheese",
+      "tomato sauce",
+      "red onions"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Smoked Salmon & Dill Cream",
+    "description": "Inspired by the classic bagel, this pizza features smoked salmon, capers, and a luscious dill cream on a crispy base for a sophisticated culinary experience.",
+    "price": 27.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "smoked salmon",
+      "dill cream",
+      "capers",
+      "red onions",
+      "cream cheese",
+      "lemon slices"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Fish"
+    ]
+  },
+  {
+    "name": "Bacon & Pear Balsamic",
+    "description": "The perfect pairing of bacon and fresh pears is enhanced with mozzarella and crushed walnuts, finished with a balsamic reduction drizzle for a sweet, smoky finish.",
+    "price": 23.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "bacon",
+      "fresh pears",
+      "mozzarella cheese",
+      "crushed walnuts",
+      "balsamic reduction",
+      "thyme"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Ranch Chicken & Bacon",
+    "description": "This pizza melds tangy ranch, crispy bacon, and juicy grilled chicken under a melty layer of cheddar and mozzarella, offering irresistible flavors.",
+    "price": 22.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "ranch dressing",
+      "crispy bacon",
+      "grilled chicken",
+      "cheddar cheese",
+      "mozzarella cheese",
+      "green onions"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Spicy Thai Basil Chicken",
+    "description": "Spicy Thai chicken, crunchy peanuts, and fresh basil create an exotic, fiery taste with melted cheese and a hint of lime on a thin, crisp crust.",
+    "price": 23.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "Thai chicken",
+      "peanuts",
+      "fresh basil",
+      "mozzarella cheese",
+      "lime wedges",
+      "red chili"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Peanuts"
+    ]
+  },
+  {
+    "name": "Eggplant Parmigiana",
+    "description": "Roasted eggplant, layered with tomato sauce, mozzarella, and parmesan, is baked to golden perfection with a sprinkle of oregano for a vegetarian take on a classic Italian dish.",
+    "price": 20.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "roasted eggplant",
+      "tomato sauce",
+      "mozzarella cheese",
+      "parmesan cheese",
+      "oregano",
+      "basil"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Mexican Fiesta",
+    "description": "South-of-the-border spices enrich ground beef, black beans, and jalapenos, all topped with cheddar and mozzarella for a lively, flavorful feast.",
+    "price": 22.49,
+    "category": "Pizzas",
+    "ingredients": [
+      "ground beef",
+      "black beans",
+      "jalapenos",
+      "cheddar cheese",
+      "mozzarella cheese",
+      "sour cream"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Caramelized Onion & Brie",
+    "description": "Rich and creamy brie meets deeply caramelized onions and thyme on this gourmet pizza. A perfect balance of savory and sweet, ideal for cheese connoisseurs.",
+    "price": 24.99,
+    "category": "Pizzas",
+    "ingredients": [
+      "brie cheese",
+      "caramelized onions",
+      "thyme",
+      "mozzarella cheese",
+      "white sauce",
+      "black pepper"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Velvet Raspberry Swirl Cheesecake",
+    "description": "Indulge in the decadent layers of our Velvet Raspberry Swirl Cheesecake, featuring a velvety smooth cream cheese filling infused with raspberry swirls. Each slice rests upon a buttery Graham cracker crust, topped with fresh raspberries and a light dusting of powdered sugar.",
+    "price": 11.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cream Cheese",
+      "Raspberries",
+      "Sugar",
+      "Eggs",
+      "Graham Crackers",
+      "Butter",
+      "Powdered Sugar"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Lemon Meringue Key Lime Pie",
+    "description": "A tangy twist on a classic, our Lemon Meringue Key Lime Pie starts with a crisp graham crust, layered with a luscious key lime custard, and topped with a fluffy lemon meringue. Lightly toasted to perfection, it's a perfect harmony of sweet and sour.",
+    "price": 10.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Key Lime Juice",
+      "Graham Crackers",
+      "Eggs",
+      "Sugar",
+      "Lemons",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Salted Caramel Chocolate Truffle",
+    "description": "This rich chocolate delight features a dense chocolate ganache center, enrobed in a smooth salted caramel glaze. Dusted with cocoa powder and topped with a sprinkle of sea salt for a perfect balance of flavors.",
+    "price": 9,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Dark Chocolate",
+      "Heavy Cream",
+      "Sugar",
+      "Sea Salt",
+      "Cocoa Powder",
+      "Caramel"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Banana Foster Bread Pudding",
+    "description": "Our Banana Foster Bread Pudding combines caramelized banana slices with a rich custard-soaked brioche, finished with a drizzle of rum caramel sauce. Served warm, it’s a comforting dessert with a delightful tropical touch.",
+    "price": 9.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Bananas",
+      "Brioche",
+      "Cream",
+      "Eggs",
+      "Brown Sugar",
+      "Rum",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Matcha Green Tea Tiramisu",
+    "description": "Experience the fusion of Italian and Japanese flavors in this Matcha Green Tea Tiramisu. Layered with matcha-infused mascarpone and delicate ladyfingers, it offers a unique, earthy flavor with a creamy texture.",
+    "price": 13,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Mascarpone Cheese",
+      "Matcha Powder",
+      "Ladyfingers",
+      "Sugar",
+      "Eggs",
+      "Cream"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Hazelnut Praline Cheesecake",
+    "description": "This indulgent cheesecake is wrapped in a crunchy hazelnut praline crust, filled with creamy hazelnut-infused cheese, and topped with toasted hazelnuts and a rich chocolate drizzle. A nutty delight for all dessert lovers.",
+    "price": 12,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cream Cheese",
+      "Hazelnuts",
+      "Sugar",
+      "Dark Chocolate",
+      "Eggs",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Saffron and Honey Panna Cotta",
+    "description": "Delight in the luxurious flavors of our Saffron and Honey Panna Cotta. Smooth and creamy, this Italian classic is infused with fragrant saffron and topped with a golden drizzle of wildflower honey.",
+    "price": 11,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cream",
+      "Sugar",
+      "Honey",
+      "Saffron",
+      "Gelatin",
+      "Vanilla"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Triple Layer Chocolate Decadence",
+    "description": "Dive into a chocolate lover's dream with our Triple Layer Chocolate Decadence. Featuring layers of dark, milk, and white chocolate mousse, each bite is a silky, rich indulgence topped with chocolate shavings.",
+    "price": 10.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Dark Chocolate",
+      "Milk Chocolate",
+      "White Chocolate",
+      "Cream",
+      "Eggs",
+      "Sugar"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Pineapple Coconut Upside-Down Cake",
+    "description": "This tropical treat features a moist coconut cake, caramelized pineapple rings, and a hint of rum, baked to golden perfection. Served warm with a scoop of vanilla ice cream for the ultimate island experience.",
+    "price": 9,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Pineapple",
+      "Coconut",
+      "Rum",
+      "Eggs",
+      "Brown Sugar",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Spiced Apple Bourbon Crème Brûlée",
+    "description": "Warm up with our Spiced Apple Bourbon Crème Brûlée, where smooth custard meets the caramelized crunch of brûléed sugar, topped with bourbon-infused spiced apples for a hint of fall in every bite.",
+    "price": 12,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cream",
+      "Eggs",
+      "Sugar",
+      "Apples",
+      "Bourbon",
+      "Cinnamon"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Vanilla Bean Blackberry Shortcake",
+    "description": "An elegant twist on a classic, our Vanilla Bean Blackberry Shortcake features layers of fresh vanilla bean whipped cream, fluffy shortcake biscuits, and plump blackberries. A drizzle of blackberry coulis adds the perfect finishing touch.",
+    "price": 10,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Vanilla Beans",
+      "Blackberries",
+      "Cream",
+      "Sugar",
+      "Flour",
+      "Eggs"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Red Velvet Cheesecake Brownie",
+    "description": "A rich and decadent fusion of red velvet and cheesecake layers over a fudgy brownie base. Finished with a luscious cream cheese frosting, every bite is a symphony of flavors and textures.",
+    "price": 11.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cream Cheese",
+      "Cocoa Powder",
+      "Flour",
+      "Eggs",
+      "Sugar",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Mango Passionfruit Sorbet",
+    "description": "Cool down with our refreshing Mango Passionfruit Sorbet. With no dairy, this zesty treat features ripe mangoes and tart passionfruit blended to create a light, tropical escape perfect for any palate.",
+    "price": 8,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Mangoes",
+      "Passionfruit",
+      "Sugar",
+      "Lemon Juice"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Cherry Almond Clafoutis",
+    "description": "A French classic, reinvented. Our Cherry Almond Clafoutis features sweet cherries suspended in an almond-flavored custard, creating a light, fluffy texture. A delightful finish dusted with powdered sugar.",
+    "price": 9,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cherries",
+      "Almond Flour",
+      "Sugar",
+      "Eggs",
+      "Cream",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "White Chocolate Raspberry Tart",
+    "description": "This elegant tart features a crisp pastry shell filled with smooth white chocolate ganache and fresh raspberries. A delicate balance of sweet and tart, it’s finished with raspberry coulis drizzle.",
+    "price": 12,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "White Chocolate",
+      "Raspberries",
+      "Flour",
+      "Butter",
+      "Sugar",
+      "Eggs"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Crème Caramel with Espresso",
+    "description": "A sophisticated dessert, our Crème Caramel is enriched with a hint of espresso, creating a smooth and aromatic dessert experience. The subtle coffee notes perfectly complement the caramelized sugar topping.",
+    "price": 10,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cream",
+      "Sugar",
+      "Eggs",
+      "Espresso",
+      "Vanilla"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Peach Bourbon Cobbler",
+    "description": "Indulge in the comforting warmth of our Peach Bourbon Cobbler, with juicy peaches and a splash of bourbon enveloped in a golden, buttery crust. Served with a scoop of vanilla ice cream for ultimate satisfaction.",
+    "price": 10.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Peaches",
+      "Bourbon",
+      "Flour",
+      "Sugar",
+      "Butter",
+      "Vanilla Ice Cream"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Pistachio Baklava Cheesecake",
+    "description": "A fusion of Middle Eastern and classic flavors, the Pistachio Baklava Cheesecake combines creamy cheesecake with layers of phyllo pastry and pistachios, drizzled with honey syrup.",
+    "price": 13,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cream Cheese",
+      "Phyllo Dough",
+      "Pistachios",
+      "Honey",
+      "Sugar",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Balsamic Fig and Mascarpone Tart",
+    "description": "This sophisticated tart combines sweet figs caramelized in balsamic vinegar with a creamy mascarpone filling. Nestled in a buttery crust, it’s a delightful balance of sweet and savory flavors.",
+    "price": 12.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Figs",
+      "Mascarpone Cheese",
+      "Balsamic Vinegar",
+      "Flour",
+      "Sugar",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Cinnamon Roll Bread Pudding",
+    "description": "A comforting dessert, our Cinnamon Roll Bread Pudding is made with chunks of cinnamon rolls soaked in a rich custard and baked until golden. Finished with a creamy vanilla glaze for added sweetness.",
+    "price": 9.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cinnamon Rolls",
+      "Eggs",
+      "Cream",
+      "Sugar",
+      "Vanilla",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Dark Chocolate Gingerbread Mousse",
+    "description": "Indulge in the festive flavors of our Dark Chocolate Gingerbread Mousse. Delicately spiced gingerbread crumbs are layered with a silky dark chocolate mousse, creating a perfect blend of sweet and spice.",
+    "price": 11,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Dark Chocolate",
+      "Gingerbread",
+      "Cream",
+      "Sugar",
+      "Spices",
+      "Eggs"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Blueberry Lavender Cheesecake",
+    "description": "Our Blueberry Lavender Cheesecake offers a floral aroma with its lavender-infused cheesecake base, complemented by a topping of fresh blueberries and a hint of lemon zest.",
+    "price": 11.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Cream Cheese",
+      "Blueberries",
+      "Lavender",
+      "Sugar",
+      "Lemon Zest",
+      "Graham Crackers"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten"
+    ]
+  },
+  {
+    "name": "Pumpkin Spice Soufflé",
+    "description": "Light and airy, our Pumpkin Spice Soufflé is a seasonal delight, bursting with the warm spices of fall. Topped with a dusting of powdered sugar and served with a dollop of whipped cream.",
+    "price": 12,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Pumpkin Puree",
+      "Eggs",
+      "Sugar",
+      "Spices",
+      "Cream",
+      "Powdered Sugar"
+    ],
+    "allergens": [
+      "Dairy",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Classic Crêpe Suzette",
+    "description": "This French classic dazzles with delicate crêpes flamed in a rich orange sauce. A touch of Grand Marnier elevates the experience with citrusy notes, finished with a light dusting of sugar.",
+    "price": 10.5,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Sugar",
+      "Butter",
+      "Oranges",
+      "Grand Marnier"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Roasted Pear and Almond Tart",
+    "description": "Our Roasted Pear and Almond Tart features tender, caramelized pears nestled in an almond-frangipane filling. The flaky pastry shell adds a delightful crunch to this exquisite dessert.",
+    "price": 12,
+    "category": "Cheesecakes & Desserts",
+    "ingredients": [
+      "Pears",
+      "Almond Flour",
+      "Flour",
+      "Sugar",
+      "Eggs",
+      "Butter"
+    ],
+    "allergens": [
+      "Dairy",
+      "Gluten",
+      "Eggs",
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Citrus Burst Cooler",
+    "description": "A refreshing blend of freshly squeezed oranges, zesty lemons, and sweet limes mixed with sparkling water. Perfectly chilled to provide an invigorating burst of citrus flavors.",
+    "price": 6.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Oranges",
+      "Lemons",
+      "Limes",
+      "Sparkling Water",
+      "Mint Leaves",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Classic Mojito",
+    "description": "Enjoy a timeless classic made with muddled fresh mint leaves and zesty lime, combined with a splash of white rum and topped with soda water. Light and refreshing with every sip.",
+    "price": 8,
+    "category": "Beverages",
+    "ingredients": [
+      "Mint Leaves",
+      "Lime Wedges",
+      "White Rum",
+      "Soda Water",
+      "Sugar",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Tropical Passion Smoothie",
+    "description": "Dive into a creamy blend of ripe mangoes, juicy pineapples, and a hint of coconut cream, blended to smooth perfection. Served chilled for the ultimate tropical escape.",
+    "price": 7,
+    "category": "Beverages",
+    "ingredients": [
+      "Mango",
+      "Pineapple",
+      "Coconut Cream",
+      "Orange Juice",
+      "Yogurt",
+      "Ice Cubes"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Ginger Pear Fizz",
+    "description": "This bubbly delight combines fresh pear puree with a kick of ginger syrup and topped with ginger ale, garnished with a pear slice for an elegant touch.",
+    "price": 6,
+    "category": "Beverages",
+    "ingredients": [
+      "Pear Puree",
+      "Ginger Syrup",
+      "Ginger Ale",
+      "Lemon Juice",
+      "Pear Slice",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Berry Bliss Iced Tea",
+    "description": "Sip on a revitalizing blend of brewed black tea, infused with mixed berries and a hint of honey, served over ice. A sweet and tangy delight perfect for any day.",
+    "price": 5,
+    "category": "Beverages",
+    "ingredients": [
+      "Black Tea",
+      "Mixed Berries",
+      "Honey",
+      "Lemon Juice",
+      "Ice Cubes",
+      "Mint Leaves"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Caramel Coffee Shake",
+    "description": "Indulge in a rich blend of espresso and creamy caramel, swirled into a cold shake with vanilla ice cream, topped with whipped cream and a drizzle of caramel sauce.",
+    "price": 8.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Espresso",
+      "Caramel Sauce",
+      "Vanilla Ice Cream",
+      "Milk",
+      "Whipped Cream",
+      "Ice Cubes"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Spiced Chai Latte",
+    "description": "A comforting blend of spices and black tea, steamed with frothy milk for an aromatic chai latte experience. Perfectly balanced with a hint of sweetness.",
+    "price": 6.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Black Tea",
+      "Milk",
+      "Cinnamon",
+      "Cardamom",
+      "Ginger",
+      "Sugar",
+      "Cloves"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Pomegranate Lime Spritzer",
+    "description": "A sparkling fusion of pomegranate juice and fresh lime, topped with club soda for a refreshingly tart spritzer. Perfectly delightful and energizing.",
+    "price": 6,
+    "category": "Beverages",
+    "ingredients": [
+      "Pomegranate Juice",
+      "Lime Juice",
+      "Club Soda",
+      "Mint Leaves",
+      "Pomegranate Seeds",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Lavender Lemonade",
+    "description": "Experience the calming influence of lavender paired with tart lemonade. This soothing beverage offers a delicate balance of floral notes and citrus zing.",
+    "price": 5.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Lemon Juice",
+      "Lavender Syrup",
+      "Water",
+      "Sugar",
+      "Lemon Slices",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Raspberry Basil Refresher",
+    "description": "A vibrant mix of raspberries and fresh basil, muddled together and combined with lemon-lime soda for a refreshing burst of flavor.",
+    "price": 5.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Raspberries",
+      "Basil Leaves",
+      "Lemon-Lime Soda",
+      "Lemon Juice",
+      "Ice Cubes",
+      "Sugar"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Matcha Green Tea Latte",
+    "description": "A creamy blend of finely ground matcha green tea and steamed milk, providing a smooth and rich taste with a subtle hint of sweetness.",
+    "price": 7.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Matcha Powder",
+      "Milk",
+      "Sugar",
+      "Water",
+      "Whipped Cream",
+      "Ice"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Vanilla Hazelnut Cold Brew",
+    "description": "Our slow-steeped cold brew coffee infused with sweet vanilla and nutty hazelnut flavors, served over ice for a smooth, refreshing taste.",
+    "price": 7,
+    "category": "Beverages",
+    "ingredients": [
+      "Cold Brew Coffee",
+      "Vanilla Syrup",
+      "Hazelnut Syrup",
+      "Ice Cubes",
+      "Cream"
+    ],
+    "allergens": [
+      "Tree Nuts",
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Mango Pineapple Refresher",
+    "description": "A vibrant tropical combination of mango and pineapple juices, blended with a hint of coconut water and served over ice for a refreshing island escape.",
+    "price": 6.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Mango Juice",
+      "Pineapple Juice",
+      "Coconut Water",
+      "Lime Juice",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Cucumber Mint Mojito",
+    "description": "Discover a spa-inspired twist on the classic mojito with fresh cucumber and mint, combined with lime and sparkling water for a refreshing experience.",
+    "price": 8,
+    "category": "Beverages",
+    "ingredients": [
+      "Cucumber Slices",
+      "Mint Leaves",
+      "Lime Juice",
+      "Sparkling Water",
+      "Sugar",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Chocolate Almond Smoothie",
+    "description": "A velvety smoothie made with dark chocolate, almond milk, and banana, topped with sliced almonds for a decadent yet healthy treat.",
+    "price": 8,
+    "category": "Beverages",
+    "ingredients": [
+      "Dark Chocolate",
+      "Almond Milk",
+      "Banana",
+      "Almond Slices",
+      "Ice Cubes",
+      "Vanilla Extract"
+    ],
+    "allergens": [
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Orange Vanilla Cream Soda",
+    "description": "Our nostalgic cream soda offers an orange twist with a creamy vanilla finish. It’s a fizzy and fun nod to childhood flavors.",
+    "price": 5.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Orange Juice",
+      "Vanilla Syrup",
+      "Club Soda",
+      "Cream",
+      "Ice Cubes"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Strawberry Mint Lemonade",
+    "description": "Freshly muddled strawberries and mint blend with lemon juice, creating a refreshingly cool lemonade that balances tart and sweet perfectly.",
+    "price": 5.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Strawberries",
+      "Mint Leaves",
+      "Lemon Juice",
+      "Water",
+      "Sugar",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Iced Caramel Macchiato",
+    "description": "A layered cold coffee drink, with vanilla syrup, rich espresso, and creamy milk, topped with a drizzling of caramel that adds a sweet touch.",
+    "price": 7.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Espresso",
+      "Milk",
+      "Vanilla Syrup",
+      "Caramel Sauce",
+      "Ice Cubes"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Hot Belgian Chocolate",
+    "description": "Indulge in smooth, creamy Belgian chocolate melted into steamed milk, topped with whipped cream and chocolate shavings for a luxurious treat.",
+    "price": 6.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Belgian Chocolate",
+      "Milk",
+      "Whipped Cream",
+      "Chocolate Shavings",
+      "Sugar",
+      "Vanilla Extract"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Peach Bellini Punch",
+    "description": "A bubbly peach Bellini mocktail combining peach puree, sparkling apple cider, and a touch of lime, served over ice for a festive flair.",
+    "price": 7,
+    "category": "Beverages",
+    "ingredients": [
+      "Peach Puree",
+      "Sparkling Apple Cider",
+      "Lime Juice",
+      "Mint Leaves",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Iced Honey Lavender Latte",
+    "description": "An aromatic blend of custom-roasted espresso with floral hints of lavender and sweet honey, crafted into a chilled latte for afternoon elegance.",
+    "price": 7.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Espresso",
+      "Lavender Syrup",
+      "Honey",
+      "Milk",
+      "Ice Cubes",
+      "Vanilla Extract"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Spicy Jalapeño Margarita",
+    "description": "Ignite your taste buds with our jalapeño-infused margarita, balanced with fresh lime and agave nectar, delivering a fiery kick with each sip.",
+    "price": 9,
+    "category": "Beverages",
+    "ingredients": [
+      "Tequila",
+      "Jalapeño Slices",
+      "Lime Juice",
+      "Agave Nectar",
+      "Triple Sec",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  },
+  {
+    "name": "Coconut Almond Iced Coffee",
+    "description": "Dive into this tropical iced coffee brewed with coconut milk and almond essence, perfectly sweetened and served over ice for a refreshing pick-me-up.",
+    "price": 7,
+    "category": "Beverages",
+    "ingredients": [
+      "Coffee",
+      "Coconut Milk",
+      "Almond Extract",
+      "Sugar",
+      "Ice Cubes"
+    ],
+    "allergens": [
+      "Tree Nuts"
+    ]
+  },
+  {
+    "name": "Cherry Cola Float",
+    "description": "Relive the past with our old-fashioned cherry cola float, featuring cherry syrup, cola, and creamy vanilla ice cream topped with whipped cream and cherries.",
+    "price": 6.5,
+    "category": "Beverages",
+    "ingredients": [
+      "Cherry Syrup",
+      "Cola",
+      "Vanilla Ice Cream",
+      "Whipped Cream",
+      "Cherries",
+      "Ice Cubes"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "name": "Watermelon Basil Splash",
+    "description": "A refreshing fusion of juicy watermelon and fresh basil, slightly sweetened and mixed with soda water, delivering a hint of summer with each sip.",
+    "price": 5,
+    "category": "Beverages",
+    "ingredients": [
+      "Watermelon",
+      "Basil Leaves",
+      "Soda Water",
+      "Lime Juice",
+      "Sugar",
+      "Ice Cubes"
+    ],
+    "allergens": []
+  }
+]
