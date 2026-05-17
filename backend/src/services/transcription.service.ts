@@ -1,6 +1,8 @@
 import { AssemblyAI } from 'assemblyai';
 import '../config/env';
 
+const ASSEMBLYAI_SPEECH_MODELS = ['universal-3-pro', 'universal-2'] as const;
+
 let assemblyClient: AssemblyAI | null = null;
 
 function getAssemblyClient(): AssemblyAI {
@@ -23,6 +25,7 @@ export async function transcribeAudioBuffer(audioBuffer: Buffer): Promise<string
 
   const transcript = await client.transcripts.transcribe({
     audio: audioBuffer,
+    speech_models: [...ASSEMBLYAI_SPEECH_MODELS],
     // AssemblyAI infers format from bytes; m4a from Expo is supported
   });
 

@@ -98,11 +98,12 @@ server.post('/transcribe', async (request, reply) => {
 
 const start = async () => {
   try {
+    const port = process.env.PORT ? Number(process.env.PORT) : 3000;
     await server.listen({
-      port: process.env.PORT ? Number(process.env.PORT) : 3000,
+      port,
       host: '0.0.0.0',
     });
-    console.log(`🚀 Intelligent Bistro API is running on http://localhost:3000`);
+    console.log(`🚀 Intelligent Bistro API is running on http://0.0.0.0:${port}`);
   } catch (err) {
     server.log.error(err);
     process.exit(1);

@@ -1,44 +1,49 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, ScrollView, SafeAreaView } from './src/components/styled';
+import { Alert, KeyboardAvoidingView, Platform, StyleSheet } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { View, Text, SafeAreaView } from './src/components/styled';
 import { useCartStore } from './src/store/useCartStore';
-import { MENU_ITEMS } from './src/constants/menu';
 import { streamChatOrder } from './src/services/chatStream';
 import type { ChatMessage } from './src/types/chat';
 import { CartBadge } from './src/components/CartBadge';
 import { CartModal } from './src/components/CartModal';
 import { AiCommandBar } from './src/components/AiCommandBar';
+import { MenuList } from './src/components/MenuList';
+import { ResponsiveShell } from './src/components/ResponsiveShell';
 import { useVoiceOrder } from './src/hooks/useVoiceOrder';
 
-export default function App() {
+function BistroApp() {
   const [prompt, setPrompt] = useState('');
   const [cartOpen, setCartOpen] = useState(false);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
 
-  const {
-    items,
-    isAiThinking,
-    aiMessage,
-    streamingMessage,
-    setAiStatus,
-    appendStreamingMessage,
-    resetStreamingMessage,
-    processAiActions,
-  } = useCartStore();
-
-  const cartCount = items.reduce((sum, item) => sum + item.quantity, 0);
+  const cartCount = useCartStore((state) =>
+    state.items.reduce((sum, item) => sum + item.quantity, 0)
+  );
 
   const submitOrder = useCallback(
     async (message: string) => {
       const trimmed = message.trim();
+      const isAiThinking = useCartStore.getState().isAiThinking;
       if (!trimmed || isAiThinking) return;
 
       const outbound: ChatMessage[] = [...chatMessages, { role: 'user', content: trimmed }];
+
+      const {
+        setAiStatus,
+        resetStreamingMessage,
+        appendStreamingMessage,
+        processAiActions,
+      } = useCartStore.getState();
 
       setAiStatus(true, null);
       resetStreamingMessage();
       setChatMessages(outbound);
 
-      await streamChatOrder(outbound, items, {
+      const cartItems = useCartStore.getState().items;
+
+      await streamChatOrder(outbound, cartItems, {
         onToken: (token) => appendStreamingMessage(token),
         onFinalActions: (actions) => {
           processAiActions({ actions, conversationalResponse: '' });
@@ -57,15 +62,7 @@ export default function App() {
         },
       });
     },
-    [
-      chatMessages,
-      items,
-      isAiThinking,
-      setAiStatus,
-      resetStreamingMessage,
-      appendStreamingMessage,
-      processAiActions,
-    ]
+    [chatMessages]
   );
 
   const handleAiSubmit = useCallback(async () => {
@@ -83,57 +80,73 @@ export default function App() {
     [submitOrder]
   );
 
-  const handleVoiceError = useCallback(
-    (message: string) => {
-      setAiStatus(false, message);
-    },
-    [setAiStatus]
-  );
+  const handleVoiceLocalError = useCallback((message: string) => {
+    const { setAiStatus, resetStreamingMessage } = useCartStore.getState();
+    setAiStatus(false, null);
+    resetStreamingMessage();
+    Alert.alert('Error', message);
+  }, []);
 
   const {
     recordingState,
     startRecording,
-    finishRecording,
+    stopRecording,
     discardRecording,
   } = useVoiceOrder({
     onTranscript: handleVoiceTranscript,
-    onError: handleVoiceError,
+    onLocalError: handleVoiceLocalError,
   });
 
   return (
-    <SafeAreaView className="flex-1 bg-bistro-light">
-      <View className="px-6 py-4 flex-row justify-between items-center bg-white border-b border-gray-200">
-        <Text className="text-2xl font-bold text-bistro-dark">The Bistro</Text>
-        <CartBadge cartCount={cartCount} onPress={() => setCartOpen(true)} />
-      </View>
-
-      <ScrollView className="flex-1 px-4 pt-4">
-        {MENU_ITEMS.map((item) => (
-          <View key={item.id} className="bg-white p-4 rounded-xl mb-4 shadow-sm border border-gray-100">
-            <View className="flex-row justify-between">
-              <Text className="text-lg font-bold text-bistro-dark">{item.name}</Text>
-              <Text className="text-lg font-bold text-bistro-gold">${item.price.toFixed(2)}</Text>
-            </View>
-            <Text className="text-gray-500 mt-1">{item.description}</Text>
-          </View>
-        ))}
-        <View className="h-32" />
-      </ScrollView>
-
-      <AiCommandBar
-        prompt={prompt}
-        setPrompt={setPrompt}
-        onSubmit={handleAiSubmit}
-        isAiThinking={isAiThinking}
-        aiMessage={aiMessage}
-        streamingMessage={streamingMessage}
-        recordingState={recordingState}
-        onMicPressIn={startRecording}
-        onMicPressOut={finishRecording}
-        onCancelRecording={discardRecording}
+    <SafeAreaView className="flex-1 items-center">
+      <LinearGradient
+        colors={['#FAF8F5', '#F5F0E6', '#ECEAE8']}
+        locations={[0, 0.55, 1]}
+        start={{ x: 0.1, y: 0 }}
+        end={{ x: 0.9, y: 1 }}
+        style={StyleSheet.absoluteFill}
       />
 
-      <CartModal visible={cartOpen} onClose={() => setCartOpen(false)} />
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={styles.keyboardRoot}
+      >
+        <ResponsiveShell>
+          <View className="px-6 py-4 flex-row justify-between items-center bg-white/30 border-b border-white/40">
+            <Text className="text-2xl font-bold text-bistro-dark">The Bistro</Text>
+            <CartBadge cartCount={cartCount} onPress={() => setCartOpen(true)} />
+          </View>
+
+          <MenuList />
+
+          <AiCommandBar
+            prompt={prompt}
+            setPrompt={setPrompt}
+            onSubmit={handleAiSubmit}
+            recordingState={recordingState}
+            onStartRecording={startRecording}
+            onStopRecording={stopRecording}
+            onCancelRecording={discardRecording}
+          />
+
+          <CartModal visible={cartOpen} onClose={() => setCartOpen(false)} />
+        </ResponsiveShell>
+      </KeyboardAvoidingView>
     </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  keyboardRoot: {
+    flex: 1,
+    width: '100%',
+  },
+});
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <BistroApp />
+    </SafeAreaProvider>
   );
 }

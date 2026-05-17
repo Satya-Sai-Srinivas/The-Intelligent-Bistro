@@ -1,137 +1,193 @@
 import React from 'react';
-import { ActivityIndicator, Platform } from 'react-native';
+import { ActivityIndicator, Platform, StyleSheet } from 'react-native';
+import { Feather } from '@expo/vector-icons';
+import { BlurView } from 'expo-blur';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated from 'react-native-reanimated';
-import { View, Text, TextInput, TouchableOpacity, KeyboardAvoidingView } from './styled';
+import { View, Text, TextInput, TouchableOpacity } from './styled';
 import { useAiThinkingPulse } from '../hooks/useAiThinkingPulse';
+import { useRecordingPulse } from '../hooks/useRecordingPulse';
+import { useCartStore } from '../store/useCartStore';
 import type { VoiceRecordingState } from '../hooks/useVoiceOrder';
+
+const useNativeBlur = Platform.OS === 'ios';
 
 interface AiCommandBarProps {
   prompt: string;
   setPrompt: (text: string) => void;
   onSubmit: () => void;
-  isAiThinking: boolean;
-  aiMessage: string | null;
-  streamingMessage: string;
   recordingState: VoiceRecordingState;
-  onMicPressIn: () => void;
-  onMicPressOut: () => void;
-  onCancelRecording: () => void;
+  onStartRecording: () => void;
+  onStopRecording: () => void;
+  onCancelRecording?: () => void;
 }
 
 export function AiCommandBar({
   prompt,
   setPrompt,
   onSubmit,
-  isAiThinking,
-  aiMessage,
-  streamingMessage,
   recordingState,
-  onMicPressIn,
-  onMicPressOut,
+  onStartRecording,
+  onStopRecording,
   onCancelRecording,
 }: AiCommandBarProps) {
-  const pulseStyle = useAiThinkingPulse(isAiThinking);
+  const insets = useSafeAreaInsets();
+  const isAiThinking = useCartStore((state) => state.isAiThinking);
+  const aiMessage = useCartStore((state) => state.aiMessage);
+  const streamingMessage = useCartStore((state) => state.streamingMessage);
+  const isAiActive = isAiThinking || Boolean(streamingMessage);
+  const aiPulseStyle = useAiThinkingPulse(isAiActive && recordingState !== 'recording');
   const isRecording = recordingState === 'recording';
+  const recordingPulseStyle = useRecordingPulse(isRecording);
   const isTranscribing = recordingState === 'transcribing';
-  const isBusy = isAiThinking || isRecording || isTranscribing;
+  const isBusy = isAiThinking || isTranscribing;
 
   const displayMessage =
-    isAiThinking && streamingMessage
-      ? streamingMessage
-      : aiMessage;
+    isAiThinking && streamingMessage ? streamingMessage : aiMessage;
+
+  const handleMicPress = () => {
+    if (isRecording) {
+      onStopRecording();
+    } else {
+      onStartRecording();
+    }
+  };
+
+  const shellContent = (
+    <>
+      {displayMessage ? (
+        <View className="bg-white/50 p-3 rounded-2xl mb-3 min-h-[48px] border border-white/60">
+          <Text className="text-bistro-dark text-sm italic">
+            &ldquo;{displayMessage}
+            {isAiThinking ? <Text className="text-bistro-gold">|</Text> : null}&rdquo;
+          </Text>
+        </View>
+      ) : null}
+
+      {isTranscribing ? (
+        <View className="flex-row items-center justify-center py-4">
+          <ActivityIndicator color="#D4AF37" />
+          <Text className="text-bistro-dark font-medium ml-3">
+            Transcribing your order...
+          </Text>
+        </View>
+      ) : (
+        <View className="flex-row items-center">
+          <Animated.View style={isRecording ? recordingPulseStyle : undefined}>
+            <TouchableOpacity
+              onPress={handleMicPress}
+              disabled={isBusy}
+              className={`mr-2 p-4 rounded-xl items-center justify-center ${
+                isRecording ? 'bg-red-500' : isBusy ? 'bg-gray-200' : 'bg-bistro-gold'
+              }`}
+              activeOpacity={0.85}
+            >
+              {isRecording ? (
+                <Feather name="square" size={18} color="#FFFFFF" />
+              ) : (
+                <Feather
+                  name="mic"
+                  size={22}
+                  color={isBusy ? '#9CA3AF' : '#1A1A1A'}
+                />
+              )}
+            </TouchableOpacity>
+          </Animated.View>
+
+          {isRecording && onCancelRecording ? (
+            <TouchableOpacity
+              onPress={onCancelRecording}
+              className="mr-2 px-2 py-1"
+              activeOpacity={0.8}
+            >
+              <Text className="text-red-600 text-sm font-semibold">Cancel</Text>
+            </TouchableOpacity>
+          ) : null}
+
+          <TextInput
+            className="flex-1 bg-white/50 p-4 rounded-xl text-base text-bistro-dark border border-white/60"
+            placeholder={
+              isRecording
+                ? 'Listening...'
+                : 'e.g. Add a burger and truffle fries...'
+            }
+            placeholderTextColor="#9CA3AF"
+            value={prompt}
+            onChangeText={setPrompt}
+            onSubmitEditing={onSubmit}
+            editable={!isBusy && !isRecording}
+          />
+          <TouchableOpacity
+            className={`ml-3 p-4 rounded-xl items-center justify-center ${
+              isBusy || isRecording ? 'bg-gray-400' : 'bg-bistro-dark'
+            }`}
+            onPress={onSubmit}
+            disabled={isBusy || isRecording}
+          >
+            {isAiThinking ? (
+              <ActivityIndicator color="#fff" />
+            ) : (
+              <Text className="text-white font-bold">Order</Text>
+            )}
+          </TouchableOpacity>
+        </View>
+      )}
+    </>
+  );
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      className="absolute bottom-0 w-full px-4 pb-8 pt-4"
+    <View
+      style={[
+        styles.footerContainer,
+        { paddingBottom: insets.bottom + 12 },
+      ]}
     >
       <Animated.View
         style={[
-          pulseStyle,
-          {
-            borderWidth: isAiThinking ? 2 : 0,
-            borderRadius: 16,
-            shadowColor: '#D4AF37',
-            shadowOffset: { width: 0, height: 0 },
-            shadowRadius: 12,
-            shadowOpacity: isAiThinking ? 0.6 : 0,
-          },
+          aiPulseStyle,
+          styles.outerShell,
+          isAiActive && recordingState !== 'recording' && styles.outerShellActive,
         ]}
       >
-        <View className="bg-white border-t border-gray-200 shadow-lg rounded-2xl px-4 pt-4 pb-2">
-          {displayMessage ? (
-            <View className="bg-blue-50 p-3 rounded-lg mb-3 min-h-[48px]">
-              <Text className="text-blue-800 text-sm italic">
-                &ldquo;{displayMessage}
-                {isAiThinking ? <Text className="text-bistro-gold">|</Text> : null}&rdquo;
-              </Text>
-            </View>
-          ) : null}
-
-          {isRecording ? (
-            <View className="flex-row items-center justify-between py-2">
-              <View className="flex-row items-center flex-1">
-                <View className="w-3 h-3 rounded-full bg-red-500 mr-3" />
-                <Text className="text-base font-semibold text-bistro-dark">
-                  Recording...
-                </Text>
-              </View>
-              <TouchableOpacity
-                onPress={onCancelRecording}
-                className="flex-row items-center bg-red-50 border border-red-200 px-4 py-3 rounded-xl"
-                activeOpacity={0.8}
-              >
-                <Text className="text-red-600 font-bold mr-1">🗑</Text>
-                <Text className="text-red-600 font-bold">Cancel</Text>
-              </TouchableOpacity>
-            </View>
-          ) : isTranscribing ? (
-            <View className="flex-row items-center justify-center py-4">
-              <ActivityIndicator color="#D4AF37" />
-              <Text className="text-bistro-dark font-medium ml-3">
-                Transcribing your order...
-              </Text>
-            </View>
-          ) : (
-            <View className="flex-row items-center">
-              <TouchableOpacity
-                onPressIn={onMicPressIn}
-                onPressOut={onMicPressOut}
-                disabled={isBusy}
-                className={`mr-2 p-4 rounded-xl items-center justify-center ${
-                  isBusy ? 'bg-gray-200' : 'bg-bistro-gold'
-                }`}
-                activeOpacity={0.85}
-              >
-                <Text className="text-lg">🎤</Text>
-              </TouchableOpacity>
-
-              <TextInput
-                className="flex-1 bg-gray-100 p-4 rounded-xl text-base text-bistro-dark"
-                placeholder="e.g. Add a burger and truffle fries..."
-                placeholderTextColor="#9CA3AF"
-                value={prompt}
-                onChangeText={setPrompt}
-                onSubmitEditing={onSubmit}
-                editable={!isBusy}
-              />
-              <TouchableOpacity
-                className={`ml-3 p-4 rounded-xl items-center justify-center ${
-                  isBusy ? 'bg-gray-400' : 'bg-bistro-dark'
-                }`}
-                onPress={onSubmit}
-                disabled={isBusy}
-              >
-                {isAiThinking ? (
-                  <ActivityIndicator color="#fff" />
-                ) : (
-                  <Text className="text-white font-bold">Order</Text>
-                )}
-              </TouchableOpacity>
-            </View>
-          )}
-        </View>
+        {useNativeBlur ? (
+          <BlurView intensity={80} tint="light" style={styles.glassShell}>
+            <View className="bg-white/25 px-4 pt-4 pb-3">{shellContent}</View>
+          </BlurView>
+        ) : (
+          <View className="rounded-3xl overflow-hidden border border-white/50 bg-white/70">
+            <View className="px-4 pt-4 pb-3">{shellContent}</View>
+          </View>
+        )}
       </Animated.View>
-    </KeyboardAvoidingView>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  footerContainer: {
+    width: '100%',
+    paddingHorizontal: 16,
+    paddingTop: 8,
+  },
+  glassShell: {
+    borderRadius: 24,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.5)',
+  },
+  outerShell: {
+    borderRadius: 24,
+    borderWidth: 0,
+    shadowColor: '#1A1A1A',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.15,
+    shadowRadius: 20,
+    elevation: 8,
+  },
+  outerShellActive: {
+    borderWidth: 2,
+    shadowColor: '#D4AF37',
+    shadowOpacity: 0.35,
+    shadowRadius: 16,
+  },
+});

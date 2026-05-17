@@ -26,6 +26,10 @@ interface CartState {
   processAiActions: (payload: AiOrderPayload) => void;
 }
 
+export const selectItemQuantity =
+  (itemId: string) => (state: CartState) =>
+    state.items.find((i) => i.itemId === itemId)?.quantity ?? 0;
+
 export const useCartStore = create<CartState>((set, get) => ({
   items: [],
   isAiThinking: false,
