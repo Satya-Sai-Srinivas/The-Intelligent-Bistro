@@ -1,5 +1,6 @@
-import React, { useCallback, useEffect } from 'react';
-import { Dimensions, Pressable, StyleSheet } from 'react-native';
+import React, { useCallback, useEffect, useState } from 'react';
+import { Alert, Dimensions, Platform, Pressable, StyleSheet } from 'react-native';
+import { useStripe } from '@stripe/stripe-react-native';
 import Animated, {
   runOnJS,
   useAnimatedStyle,
@@ -9,6 +10,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { View, Text, TouchableOpacity, ScrollView } from './styled';
 import { useCartStore } from '../store/useCartStore';
+import { createPaymentIntent } from '../services/payment';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SHEET_HEIGHT = SCREEN_HEIGHT * 0.75;
@@ -22,6 +24,8 @@ export function CartModal({ visible, onClose }: CartModalProps) {
   const items = useCartStore((s) => s.items);
   const updateQuantity = useCartStore((s) => s.updateQuantity);
   const clearCart = useCartStore((s) => s.clearCart);
+  const { initPaymentSheet, presentPaymentSheet } = useStripe();
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
 
   const translateY = useSharedValue(SHEET_HEIGHT);
 
@@ -54,6 +58,62 @@ export function CartModal({ visible, onClose }: CartModalProps) {
     opacity: 1 - translateY.value / SHEET_HEIGHT,
   }));
 
+  const checkout = useCallback(async () => {
+    if (items.length === 0 || total <= 0 || isCheckingOut) {
+      return;
+    }
+
+    setIsCheckingOut(true);
+
+    try {
+      const amountCents = Math.round(total * 100);
+      const { clientSecret } = await createPaymentIntent(amountCents, 'usd');
+
+      const { error: initError } = await initPaymentSheet({
+        paymentIntentClientSecret: clientSecret,
+        merchantDisplayName: 'The Intelligent Bistro',
+        returnURL: 'intelligentbistro://stripe-redirect',
+      });
+
+      if (initError) {
+        Alert.alert('Payment Error', initError.message);
+        return;
+      }
+
+      const { error: presentError } = await presentPaymentSheet();
+
+      if (presentError) {
+        if (presentError.code !== 'Canceled') {
+          Alert.alert('Payment Error', presentError.message);
+        }
+        return;
+      }
+
+      Alert.alert('Success', 'Payment complete!', [
+        {
+          text: 'OK',
+          onPress: () => {
+            clearCart();
+            animateClose();
+          },
+        },
+      ]);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Checkout failed.';
+      Alert.alert('Payment Error', message);
+    } finally {
+      setIsCheckingOut(false);
+    }
+  }, [
+    items.length,
+    total,
+    isCheckingOut,
+    initPaymentSheet,
+    presentPaymentSheet,
+    clearCart,
+    animateClose,
+  ]);
+
   if (!visible) {
     return null;
   }
@@ -62,6 +122,8 @@ export function CartModal({ visible, onClose }: CartModalProps) {
     clearCart();
     animateClose();
   };
+
+  const cartEmpty = items.length === 0;
 
   return (
     <View style={StyleSheet.absoluteFill} className="z-50">
@@ -85,7 +147,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
         </View>
 
         <ScrollView className="flex-1 px-6 pt-2">
-          {items.length === 0 ? (
+          {cartEmpty ? (
             <Text className="text-gray-500 text-center mt-8">
               Your cart is empty. Ask the AI to add something!
             </Text>
@@ -145,15 +207,30 @@ export function CartModal({ visible, onClose }: CartModalProps) {
             </Text>
           </View>
           <TouchableOpacity
-            onPress={handleClearCart}
-            disabled={items.length === 0}
-            className={`py-4 rounded-xl items-center ${
-              items.length === 0 ? 'bg-gray-200' : 'bg-red-50 border border-red-200'
+            onPress={checkout}
+            disabled={cartEmpty || isCheckingOut}
+            className={`py-4 rounded-xl items-center mb-3 ${
+              cartEmpty || isCheckingOut ? 'bg-gray-200' : 'bg-bistro-gold'
             }`}
           >
             <Text
               className={`font-bold ${
-                items.length === 0 ? 'text-gray-400' : 'text-red-600'
+                cartEmpty || isCheckingOut ? 'text-gray-400' : 'text-white'
+              }`}
+            >
+              {isCheckingOut ? 'Processing...' : 'Pay Now'}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={handleClearCart}
+            disabled={cartEmpty}
+            className={`py-4 rounded-xl items-center ${
+              cartEmpty ? 'bg-gray-200' : 'bg-red-50 border border-red-200'
+            }`}
+          >
+            <Text
+              className={`font-bold ${
+                cartEmpty ? 'text-gray-400' : 'text-red-600'
               }`}
             >
               Clear Cart

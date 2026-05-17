@@ -6,6 +6,7 @@ import { serializerCompiler, validatorCompiler, ZodTypeProvider } from 'fastify-
 import { ChatRequestSchema, ChatRequest } from './types/schema';
 import { streamOrderIntent, type ChatStreamEvent } from './services/ai.service';
 import { transcribeAudioBuffer } from './services/transcription.service';
+import { paymentRoutes } from './routes/payment';
 
 const server = Fastify({
   logger: true,
@@ -98,6 +99,8 @@ server.post('/transcribe', async (request, reply) => {
 
 const start = async () => {
   try {
+    await server.register(paymentRoutes);
+
     const port = process.env.PORT ? Number(process.env.PORT) : 3000;
     await server.listen({
       port,

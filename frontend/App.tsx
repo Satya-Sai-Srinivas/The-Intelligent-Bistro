@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Alert, KeyboardAvoidingView, Platform, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { StripeProvider } from '@stripe/stripe-react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { View, Text, SafeAreaView } from './src/components/styled';
 import { useCartStore } from './src/store/useCartStore';
@@ -12,6 +13,9 @@ import { AiCommandBar } from './src/components/AiCommandBar';
 import { MenuList } from './src/components/MenuList';
 import { ResponsiveShell } from './src/components/ResponsiveShell';
 import { useVoiceOrder } from './src/hooks/useVoiceOrder';
+
+const STRIPE_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY?.trim() ?? '';
+const STRIPE_MERCHANT_ID = 'merchant.com.theintelligentbistro';
 
 function BistroApp() {
   const [prompt, setPrompt] = useState('');
@@ -144,9 +148,20 @@ const styles = StyleSheet.create({
 });
 
 export default function App() {
+  if (!STRIPE_PUBLISHABLE_KEY) {
+    throw new Error(
+      'Missing EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY. Add it to frontend/.env (see .env.example).'
+    );
+  }
+
   return (
-    <SafeAreaProvider>
-      <BistroApp />
-    </SafeAreaProvider>
+    <StripeProvider
+      publishableKey={STRIPE_PUBLISHABLE_KEY}
+      merchantIdentifier={STRIPE_MERCHANT_ID}
+    >
+      <SafeAreaProvider>
+        <BistroApp />
+      </SafeAreaProvider>
+    </StripeProvider>
   );
 }

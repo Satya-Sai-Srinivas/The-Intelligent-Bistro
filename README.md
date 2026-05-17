@@ -32,6 +32,7 @@ flowchart TB
   subgraph server [Fastify API - backend]
     CHAT["POST /chat"]
     TRANS["POST /transcribe"]
+    PAY["POST /create-payment-intent"]
     RAG[RAG Service]
     AI[OpenAI Chat]
     AAI[AssemblyAI]
@@ -45,6 +46,7 @@ flowchart TB
   SBS -->|match_menu_items RPC| DB
   API --> CHAT
   API --> TRANS
+  API --> PAY
 ```
 
 | Layer | Role |
@@ -112,11 +114,12 @@ The-Intelligent-Bistro/
 
 - **Node.js** 20 or newer
 - **npm**
-- [Expo Go](https://expo.dev/go) or a dev build for mobile testing
+- [Expo Go](https://expo.dev/go) for menu/AI testing, or a **development build** for Stripe checkout (Payment Sheet does not run in Expo Go)
 - Accounts / API keys for:
   - [Supabase](https://supabase.com) (Postgres + pgvector)
   - [OpenAI](https://platform.openai.com)
   - [AssemblyAI](https://www.assemblyai.com) (voice transcription)
+  - [Stripe](https://stripe.com) (test-mode keys for Payment Sheet checkout)
 
 ---
 
@@ -158,6 +161,7 @@ Copy from `backend/.env.example`:
 | `ASSEMBLYAI_API_KEY` | Voice transcription |
 | `SUPABASE_URL` | Project URL |
 | `SUPABASE_SERVICE_ROLE_KEY` | Service role (or `SUPABASE_KEY`) |
+| `STRIPE_SECRET_KEY` | Stripe secret key (`sk_test_...`) for `/create-payment-intent` |
 | `PORT` | API port (default `3000`) |
 
 ### Frontend (`frontend/.env`)
@@ -169,8 +173,20 @@ Copy from `frontend/.env.example`:
 | `EXPO_PUBLIC_SUPABASE_URL` | Supabase project URL |
 | `EXPO_PUBLIC_SUPABASE_ANON_KEY` | Public anon key (menu reads only) |
 | `EXPO_PUBLIC_API_URL` | Backend base URL (see networking below) |
+| `EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key (`pk_test_...`) for Payment Sheet |
 
 Restart the Expo dev server after changing `.env` files.
+
+### Stripe checkout (dev build required)
+
+Payment Sheet uses `@stripe/stripe-react-native` native modules. After setting Stripe keys in both `.env` files and starting the backend:
+
+```bash
+cd frontend
+npx expo run:ios    # or: npx expo run:android
+```
+
+Use test card `4242 4242 4242 4242` in the sheet. The backend exposes `POST /create-payment-intent` with body `{ "amount": <cents>, "currency": "usd" }`.
 
 ---
 

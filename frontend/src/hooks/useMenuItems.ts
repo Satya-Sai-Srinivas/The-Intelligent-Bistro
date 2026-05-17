@@ -9,6 +9,7 @@ interface MenuRow {
   price: number;
   category?: string | null;
   ingredients?: string[] | null;
+  image_url?: string | null;
 }
 
 function mapRow(row: MenuRow): MenuItem {
@@ -19,7 +20,7 @@ function mapRow(row: MenuRow): MenuItem {
     price: Number(row.price),
     category: row.category ?? undefined,
     ingredients: row.ingredients ?? undefined,
-    imageUrl: null,
+    imageUrl: row.image_url ?? null,
   };
 }
 
@@ -34,7 +35,7 @@ export function useMenuItems() {
 
     const { data, error: fetchError } = await supabase
       .from('menu_items')
-      .select('id, name, description, price, category, ingredients')
+      .select('id, name, description, price, category, ingredients, image_url')
       .order('name');
 
     if (fetchError) {
