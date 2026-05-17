@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 
 const UNSPLASH_SEARCH_URL = 'https://api.unsplash.com/search/photos';
 const DELAY_MS = 2000;
-const BATCH_LIMIT = 5;
+const BATCH_LIMIT = 45;
 
 interface MenuItemRow {
   id: string;
