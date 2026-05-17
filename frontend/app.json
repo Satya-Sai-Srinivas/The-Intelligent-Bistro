@@ -40,6 +40,14 @@
     },
     "plugins": [
       [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "2.2.20"
+          }
+        }
+      ],
+      [
         "expo-audio",
         {
           "microphonePermission": "The Bistro needs microphone access so you can place orders by voice."

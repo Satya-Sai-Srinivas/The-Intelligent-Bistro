@@ -4,6 +4,8 @@ import { createClient } from '@supabase/supabase-js';
 const UNSPLASH_SEARCH_URL = 'https://api.unsplash.com/search/photos';
 const DELAY_MS = 2000;
 const BATCH_LIMIT = 45;
+const FALLBACK_IMAGE_URL =
+  'https://images.unsplash.com/photo-1495195134817-a1a2807e9c13?auto=format&fit=crop&w=800&q=80';
 
 interface MenuItemRow {
   id: string;
@@ -86,7 +88,6 @@ async function main(): Promise<void> {
   console.log(`Processing ${items.length} menu item(s) (max ${BATCH_LIMIT} per run)...\n`);
 
   let updated = 0;
-  let skipped = 0;
   let failed = 0;
 
   for (let i = 0; i < items.length; i++) {
@@ -97,8 +98,21 @@ async function main(): Promise<void> {
       const imageUrl = await searchUnsplashImage(item.name, accessKey);
 
       if (!imageUrl) {
-        console.warn(`${progress} ⚠ No Unsplash results for: ${item.name}`);
-        skipped += 1;
+        console.warn(
+          `${progress} ⚠ No Unsplash results for: ${item.name} — using fallback image`
+        );
+
+        const { error: updateError } = await supabaseAdmin
+          .from('menu_items')
+          .update({ image_url: FALLBACK_IMAGE_URL })
+          .eq('id', item.id);
+
+        if (updateError) {
+          throw new Error(updateError.message);
+        }
+
+        console.log(`${progress} ✅ Updated ${item.name} with fallback image`);
+        updated += 1;
       } else {
         const { error: updateError } = await supabaseAdmin
           .from('menu_items')
@@ -124,7 +138,6 @@ async function main(): Promise<void> {
 
   console.log('\n--- Summary ---');
   console.log(`Updated: ${updated}`);
-  console.log(`Skipped (no results): ${skipped}`);
   console.log(`Failed:  ${failed}`);
 
   if (updated === 0 && failed > 0) {
