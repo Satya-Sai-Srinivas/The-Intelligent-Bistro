@@ -122,7 +122,7 @@ export function MenuList() {
     []
   );
 
-  const listHeader = useMemo(() => {
+  const renderCategoryBackBar = useCallback(() => {
     if (!selectedCategory) return null;
 
     const backButton = (
@@ -133,19 +133,17 @@ export function MenuList() {
     );
 
     return (
-      <View className="mb-4 self-start">
-        <Pressable onPress={handleBack}>
-          {useNativeBlur ? (
-            <BlurView intensity={50} tint="light" style={styles.backPillBlur}>
-              {backButton}
-            </BlurView>
-          ) : (
-            <View className="rounded-full px-4 py-2 border border-white/60 bg-white/50">
-              {backButton}
-            </View>
-          )}
-        </Pressable>
-      </View>
+      <Pressable onPress={handleBack} style={styles.backPillPressable}>
+        {useNativeBlur ? (
+          <BlurView intensity={50} tint="light" style={styles.backPillBlur}>
+            {backButton}
+          </BlurView>
+        ) : (
+          <View className="rounded-full px-4 py-2 border border-white/60 bg-white/50">
+            {backButton}
+          </View>
+        )}
+      </Pressable>
     );
   }, [selectedCategory, handleBack]);
 
@@ -175,19 +173,21 @@ export function MenuList() {
           style={styles.list}
         />
       ) : (
-        <FlatList
-          key={`items-${numColumns}-${selectedCategory}`}
-          data={filteredItems}
-          renderItem={renderMenuItem}
-          keyExtractor={menuKeyExtractor}
-          numColumns={numColumns}
-          {...FLAT_LIST_PERF}
-          columnWrapperStyle={columnWrapperStyle}
-          contentContainerStyle={styles.contentContainer}
-          ListHeaderComponent={listHeader}
-          ListEmptyComponent={filteredEmpty}
-          style={styles.list}
-        />
+        <View style={styles.itemViewContainer}>
+          <View style={styles.stickyBackBar}>{renderCategoryBackBar()}</View>
+          <FlatList
+            key={`items-${numColumns}-${selectedCategory}`}
+            data={filteredItems}
+            renderItem={renderMenuItem}
+            keyExtractor={menuKeyExtractor}
+            numColumns={numColumns}
+            {...FLAT_LIST_PERF}
+            columnWrapperStyle={columnWrapperStyle}
+            contentContainerStyle={styles.contentContainer}
+            ListEmptyComponent={filteredEmpty}
+            style={styles.listFlex}
+          />
+        </View>
       )}
     </AnimatedView>
   );
@@ -196,6 +196,24 @@ export function MenuList() {
 const styles = StyleSheet.create({
   list: {
     flex: 1,
+  },
+  itemViewContainer: {
+    flex: 1,
+  },
+  listFlex: {
+    flex: 1,
+  },
+  stickyBackBar: {
+    paddingHorizontal: 16,
+    paddingTop: 8,
+    paddingBottom: 8,
+    zIndex: 10,
+    backgroundColor: 'rgba(250, 248, 245, 0.92)',
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255, 255, 255, 0.4)',
+  },
+  backPillPressable: {
+    alignSelf: 'flex-start',
   },
   contentContainer: {
     paddingHorizontal: 16,
