@@ -24,6 +24,8 @@
     "retry": "Tippen zum Wiederholen",
     "noCategories": "Keine Kategorien gefunden.",
     "noItemsInCategory": "Keine Artikel in dieser Kategorie.",
+    "noSearchResults": "Nicht auf der Speisekarte gefunden?",
+    "noSearchResultsHint": "Kein Stress — die KI hilft weiter. Tippen Sie auf Bestellen, wenn Sie soweit sind.",
     "addToCart": "In den Warenkorb"
   },
   "cart": {
@@ -48,7 +50,7 @@
   "ai": {
     "transcribing": "Ihre Bestellung wird transkribiert...",
     "listening": "Zuhören...",
-    "placeholder": "z. B. Burger und Trüffelpommes hinzufügen...",
+    "placeholder": "Menü durchsuchen oder die KI fragen...",
     "order": "Bestellen",
     "cancel": "Abbrechen"
   },

@@ -24,6 +24,8 @@
     "retry": "Toca para reintentar",
     "noCategories": "No se encontraron categorías.",
     "noItemsInCategory": "No hay artículos en esta categoría.",
+    "noSearchResults": "¿No está en el menú?",
+    "noSearchResultsHint": "Tranquilo — la IA te ayuda. Pulsa Pedir cuando estés listo.",
     "addToCart": "Añadir al carrito"
   },
   "cart": {
@@ -48,7 +50,7 @@
   "ai": {
     "transcribing": "Transcribiendo tu pedido...",
     "listening": "Escuchando...",
-    "placeholder": "ej. Añade una hamburguesa y patatas trufadas...",
+    "placeholder": "Buscar en el menú o preguntar a la IA...",
     "order": "Pedir",
     "cancel": "Cancelar"
   },

@@ -127,7 +127,7 @@ function BistroApp() {
             </View>
           </View>
 
-          <MenuList />
+          <MenuList searchQuery={prompt} />
 
           <AiCommandBar
             prompt={prompt}

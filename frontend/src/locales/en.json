@@ -24,6 +24,8 @@
     "retry": "Tap to retry",
     "noCategories": "No categories found.",
     "noItemsInCategory": "No items in this category.",
+    "noSearchResults": "Didn't find that on the menu?",
+    "noSearchResultsHint": "No worries — AI's got you. Hit Order when you're ready.",
     "addToCart": "Add to cart"
   },
   "cart": {
@@ -48,7 +50,7 @@
   "ai": {
     "transcribing": "Transcribing your order...",
     "listening": "Listening...",
-    "placeholder": "e.g. Add a burger and truffle fries...",
+    "placeholder": "Search the menu or ask the AI...",
     "order": "Order",
     "cancel": "Cancel"
   },

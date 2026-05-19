@@ -35,7 +35,21 @@ function getNumColumns(width: number): number {
   return 3;
 }
 
-export function MenuList() {
+function itemMatchesSearch(item: MenuItem, query: string): boolean {
+  const q = query.trim().toLowerCase();
+  if (!q) return false;
+
+  const haystacks: string[] = [item.name, item.description];
+  if (item.translations) {
+    for (const translation of Object.values(item.translations)) {
+      haystacks.push(translation.name, translation.description);
+    }
+  }
+
+  return haystacks.some((s) => s?.toLowerCase().includes(q));
+}
+
+export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
   const { t } = useTranslation();
   const { width } = useWindowDimensions();
   const { items, loading: itemsLoading, error: itemsError, refetch: refetchItems } =
@@ -67,10 +81,16 @@ export function MenuList() {
     return counts;
   }, [items]);
 
+  const trimmedSearch = searchQuery.trim();
+  const isSearching = trimmedSearch.length > 0;
+
   const filteredItems = useMemo(() => {
+    if (isSearching) {
+      return items.filter((item) => itemMatchesSearch(item, trimmedSearch));
+    }
     if (!selectedCategory) return [];
     return items.filter((item) => item.category === selectedCategory);
-  }, [items, selectedCategory]);
+  }, [items, selectedCategory, trimmedSearch, isSearching]);
 
   const handleSelectCategory = useCallback((category: string) => {
     setSelectedCategory(category);
@@ -132,11 +152,25 @@ export function MenuList() {
 
   const filteredEmpty = useMemo(
     () => (
-      <View className="py-12 items-center">
-        <Text className="text-gray-500">{t('menu.noItemsInCategory')}</Text>
+      <View className="py-12 px-6 items-center">
+        {isSearching ? (
+          <>
+            <Text className="text-gray-500 text-center">
+              {t('menu.noSearchResults', "Didn't find that on the menu?")}
+            </Text>
+            <Text className="text-gray-400 text-center text-sm italic mt-2">
+              {t(
+                'menu.noSearchResultsHint',
+                "No worries — AI's got you. Hit Order when you're ready."
+              )}
+            </Text>
+          </>
+        ) : (
+          <Text className="text-gray-500">{t('menu.noItemsInCategory')}</Text>
+        )}
       </View>
     ),
-    [t]
+    [isSearching, t]
   );
 
   const renderCategoryBackBar = useCallback(() => {
@@ -178,7 +212,20 @@ export function MenuList() {
 
   return (
     <AnimatedView layout={LinearTransition.springify().damping(18)} style={styles.list}>
-      {selectedCategory === null ? (
+      {isSearching ? (
+        <FlatList
+          key={`search-${numColumns}`}
+          data={filteredItems}
+          renderItem={renderMenuItem}
+          keyExtractor={menuKeyExtractor}
+          numColumns={numColumns}
+          {...FLAT_LIST_PERF}
+          columnWrapperStyle={columnWrapperStyle}
+          contentContainerStyle={styles.contentContainer}
+          ListEmptyComponent={filteredEmpty}
+          style={styles.list}
+        />
+      ) : selectedCategory === null ? (
         <FlatList
           key={`categories-${numColumns}`}
           data={categories}

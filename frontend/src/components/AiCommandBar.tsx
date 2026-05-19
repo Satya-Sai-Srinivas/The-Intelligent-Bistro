@@ -107,7 +107,9 @@ export function AiCommandBar({
           <TextInput
             className="flex-1 bg-white/50 p-4 rounded-xl text-base text-bistro-dark border border-white/60"
             placeholder={
-              isRecording ? t('ai.listening') : t('ai.placeholder')
+              isRecording
+                ? t('ai.listening')
+                : t('ai.placeholder', 'Search the menu or ask the AI...')
             }
             placeholderTextColor="#9CA3AF"
             value={prompt}

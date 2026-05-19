@@ -24,6 +24,8 @@
     "retry": "点击重试",
     "noCategories": "未找到分类。",
     "noItemsInCategory": "该分类下暂无菜品。",
+    "noSearchResults": "菜单里没找到这个？",
+    "noSearchResultsHint": "别担心——AI 来帮你。准备好了就点「下单」。",
     "addToCart": "加入购物车"
   },
   "cart": {
@@ -48,7 +50,7 @@
   "ai": {
     "transcribing": "正在转录您的订单...",
     "listening": "正在聆听...",
-    "placeholder": "例如：加一份汉堡和黑松露薯条...",
+    "placeholder": "搜索菜单或向 AI 提问...",
     "order": "下单",
     "cancel": "取消"
   },

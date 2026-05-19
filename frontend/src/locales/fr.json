@@ -24,6 +24,8 @@
     "retry": "Appuyez pour réessayer",
     "noCategories": "Aucune catégorie trouvée.",
     "noItemsInCategory": "Aucun article dans cette catégorie.",
+    "noSearchResults": "Pas trouvé dans le menu ?",
+    "noSearchResultsHint": "Pas de souci — l'IA s'en occupe. Appuyez sur Commander quand vous êtes prêt.",
     "addToCart": "Ajouter au panier"
   },
   "cart": {
@@ -48,7 +50,7 @@
   "ai": {
     "transcribing": "Transcription de votre commande...",
     "listening": "Écoute...",
-    "placeholder": "ex. Ajoutez un burger et des frites à la truffe...",
+    "placeholder": "Rechercher le menu ou demander à l'IA...",
     "order": "Commander",
     "cancel": "Annuler"
   },
