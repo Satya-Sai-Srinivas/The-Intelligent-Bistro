@@ -1,5 +1,6 @@
 import React from 'react';
 import { ActivityIndicator, Platform, StyleSheet } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { Feather } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -31,6 +32,7 @@ export function AiCommandBar({
   onStopRecording,
   onCancelRecording,
 }: AiCommandBarProps) {
+  const { t } = useTranslation();
   const insets = useSafeAreaInsets();
   const isAiThinking = useCartStore((state) => state.isAiThinking);
   const aiMessage = useCartStore((state) => state.aiMessage);
@@ -67,9 +69,7 @@ export function AiCommandBar({
       {isTranscribing ? (
         <View className="flex-row items-center justify-center py-4">
           <ActivityIndicator color="#D4AF37" />
-          <Text className="text-bistro-dark font-medium ml-3">
-            Transcribing your order...
-          </Text>
+          <Text className="text-bistro-dark font-medium ml-3">{t('ai.transcribing')}</Text>
         </View>
       ) : (
         <View className="flex-row items-center">
@@ -100,16 +100,14 @@ export function AiCommandBar({
               className="mr-2 px-2 py-1"
               activeOpacity={0.8}
             >
-              <Text className="text-red-600 text-sm font-semibold">Cancel</Text>
+              <Text className="text-red-600 text-sm font-semibold">{t('ai.cancel')}</Text>
             </TouchableOpacity>
           ) : null}
 
           <TextInput
             className="flex-1 bg-white/50 p-4 rounded-xl text-base text-bistro-dark border border-white/60"
             placeholder={
-              isRecording
-                ? 'Listening...'
-                : 'e.g. Add a burger and truffle fries...'
+              isRecording ? t('ai.listening') : t('ai.placeholder')
             }
             placeholderTextColor="#9CA3AF"
             value={prompt}
@@ -127,7 +125,7 @@ export function AiCommandBar({
             {isAiThinking ? (
               <ActivityIndicator color="#fff" />
             ) : (
-              <Text className="text-white font-bold">Order</Text>
+              <Text className="text-white font-bold">{t('ai.order')}</Text>
             )}
           </TouchableOpacity>
         </View>

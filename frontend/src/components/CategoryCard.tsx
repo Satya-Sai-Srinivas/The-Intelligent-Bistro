@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Platform, Pressable, StyleSheet } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { BlurView } from 'expo-blur';
 import Animated, {
   useAnimatedStyle,
@@ -7,6 +8,7 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 import { View, Text } from './styled';
+import { translateCategory } from '../utils/categoryI18n';
 
 const AnimatedView = Animated.createAnimatedComponent(View);
 
@@ -20,6 +22,7 @@ const SPRING_CONFIG = { damping: 15, stiffness: 150 };
 const useNativeBlur = Platform.OS === 'ios';
 
 function CategoryCardComponent({ category, itemCount, onPress }: CategoryCardProps) {
+  const { t } = useTranslation();
   const scale = useSharedValue(1);
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -36,9 +39,11 @@ function CategoryCardComponent({ category, itemCount, onPress }: CategoryCardPro
 
   const cardContent = (
     <View className="bg-white/40 p-5 min-h-[100px] justify-center">
-      <Text className="text-lg font-bold text-bistro-dark">{category}</Text>
+      <Text className="text-lg font-bold text-bistro-dark">
+        {translateCategory(category, t)}
+      </Text>
       <Text className="text-sm text-bistro-gold mt-1 font-semibold">
-        {itemCount} {itemCount === 1 ? 'item' : 'items'}
+        {t('categories.itemCount', { count: itemCount })}
       </Text>
     </View>
   );

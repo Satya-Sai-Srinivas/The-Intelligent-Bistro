@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "Das Bistro"
+  },
+  "categories": {
+    "appetizers": "Vorspeisen",
+    "salads": "Salate",
+    "burgersAndSandwiches": "Burger & Sandwiches",
+    "pasta": "Pasta",
+    "chickenDishes": "Hühnchengerichte",
+    "steaksAndChops": "Steaks & Koteletts",
+    "seafood": "Meeresfrüchte",
+    "pizzas": "Pizzen",
+    "cheesecakesAndDesserts": "Käsekuchen & Desserts",
+    "beverages": "Getränke",
+    "itemCount_one": "{{count}} Artikel",
+    "itemCount_other": "{{count}} Artikel"
+  },
+  "menu": {
+    "loading": "Menü wird geladen...",
+    "retry": "Tippen zum Wiederholen",
+    "noCategories": "Keine Kategorien gefunden.",
+    "noItemsInCategory": "Keine Artikel in dieser Kategorie.",
+    "addToCart": "In den Warenkorb"
+  },
+  "cart": {
+    "label": "Warenkorb",
+    "badge": "Warenkorb: {{count}}",
+    "yourCart": "Ihr Warenkorb",
+    "title": "Ihr Warenkorb",
+    "empty": "Ihr Warenkorb ist leer. Bitten Sie die KI, etwas hinzuzufügen!",
+    "total": "Gesamt",
+    "checkout": "Jetzt bezahlen",
+    "payNow": "Jetzt bezahlen",
+    "clearCart": "Warenkorb leeren",
+    "clear": "Warenkorb leeren",
+    "processing": "Wird verarbeitet...",
+    "close": "Schließen",
+    "paymentError": "Zahlungsfehler",
+    "successTitle": "Erfolg",
+    "paymentSuccess": "Zahlung abgeschlossen!",
+    "checkoutFailed": "Zahlung fehlgeschlagen.",
+    "ok": "OK"
+  },
+  "ai": {
+    "transcribing": "Ihre Bestellung wird transkribiert...",
+    "listening": "Zuhören...",
+    "placeholder": "z. B. Burger und Trüffelpommes hinzufügen...",
+    "order": "Bestellen",
+    "cancel": "Abbrechen"
+  },
+  "language": {
+    "title": "Sprache",
+    "changeAccessibility": "Sprache ändern"
+  },
+  "common": {
+    "error": "Fehler"
+  }
+}

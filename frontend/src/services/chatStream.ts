@@ -2,6 +2,7 @@ import EventSource, { type EventSourceEvent } from 'react-native-sse';
 import { API_BASE_URL } from '../config/api';
 import type { ChatMessage } from '../types/chat';
 import type { AiOrderPayload, OrderAction } from '../types/cart';
+import { applyUiAction } from '../utils/applyUiAction';
 
 export type BistroSseEvents = 'token' | 'final_action' | 'action' | 'error';
 
@@ -23,6 +24,43 @@ export interface StreamChatCallbacks {
 function parseJsonData(data: string | null): unknown {
   if (!data) return null;
   return JSON.parse(data);
+}
+
+function normalizeCartForApi(cart: CartItemPayload[]): CartItemPayload[] {
+  return cart.map((item) => ({
+    ...item,
+    itemId: String(item.itemId),
+  }));
+}
+
+function parseHttpErrorMessage(rawBody: string): string | null {
+  try {
+    const body = JSON.parse(rawBody) as {
+      error?: string;
+      message?: string | string[];
+    };
+    if (typeof body.message === 'string' && body.message.length > 0) {
+      return body.message;
+    }
+    if (Array.isArray(body.message) && body.message.length > 0) {
+      return body.message.join(', ');
+    }
+    if (body.error && body.error !== 'Bad Request') {
+      return body.error;
+    }
+    if (body.error) {
+      return body.message
+        ? Array.isArray(body.message)
+          ? body.message.join(', ')
+          : String(body.message)
+        : body.error;
+    }
+  } catch {
+    if (rawBody.length > 0 && rawBody.length < 200) {
+      return rawBody;
+    }
+  }
+  return null;
 }
 
 function isXhrError(
@@ -53,7 +91,7 @@ export function streamChatOrder(
         'Content-Type': 'application/json',
         Accept: 'text/event-stream',
       },
-      body: JSON.stringify({ messages, currentCart }),
+      body: JSON.stringify({ messages, currentCart: normalizeCartForApi(currentCart) }),
       pollingInterval: 0,
     });
 
@@ -96,6 +134,7 @@ export function streamChatOrder(
       receivedTerminalEvent = true;
       try {
         const payload = parseJsonData(event.data) as AiOrderPayload;
+        applyUiAction(payload.ui_action);
         callbacks.onAssistantComplete(payload);
       } catch {
         callbacks.onError('AI returned invalid cart data.');
@@ -139,13 +178,9 @@ export function streamChatOrder(
       if (isXhrError(event)) {
         let errorMessage = 'Sorry, the kitchen is a bit overwhelmed right now.';
         if (event.xhrStatus >= 400 && event.message) {
-          try {
-            const body = JSON.parse(event.message) as { error?: string };
-            if (body?.error) errorMessage = String(body.error);
-          } catch {
-            if (event.message.length < 200) {
-              errorMessage = event.message;
-            }
+          const parsed = parseHttpErrorMessage(event.message);
+          if (parsed) {
+            errorMessage = parsed;
           }
         }
         callbacks.onError(errorMessage);

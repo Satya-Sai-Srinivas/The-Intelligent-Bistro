@@ -26,20 +26,40 @@ export const AI_ORDER_RESPONSE_JSON_SCHEMA = {
             enum: ['ADD', 'REMOVE', 'UPDATE_QUANTITY', 'NONE'],
             description: 'Cart operation to perform.',
           },
-          itemName: {
+          itemId: {
             type: ['string', 'null'],
-            description: 'Menu item name (e.g. "Classic Burger"). Null when not applicable.',
+            description:
+              'The exact ID of the menu item from the retrieved context. Null when not applicable.',
           },
           quantity: {
             type: ['number', 'null'],
             description: 'Item count for ADD/UPDATE_QUANTITY. Null when not applicable.',
           },
         },
-        required: ['actionType', 'itemName', 'quantity'],
+        required: ['actionType', 'itemId', 'quantity'],
         additionalProperties: false,
       },
     },
+    ui_action: {
+      type: ['object', 'null'],
+      description:
+        'Optional UI directive. Set when the user speaks a foreign language or requests a language change.',
+      properties: {
+        type: {
+          type: 'string',
+          enum: ['change_language'],
+          description: 'UI action type.',
+        },
+        languageCode: {
+          type: 'string',
+          description:
+            'ISO 639-1 language code: en, fr, de, zh, te, es, hi, kn, ta, ml.',
+        },
+      },
+      required: ['type', 'languageCode'],
+      additionalProperties: false,
+    },
   },
-  required: ['reasoning', 'conversationalResponse', 'actions'],
+  required: ['reasoning', 'conversationalResponse', 'actions', 'ui_action'],
   additionalProperties: false,
 } as const;

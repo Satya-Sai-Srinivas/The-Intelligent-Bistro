@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "द बिस्ट्रो"
+  },
+  "categories": {
+    "appetizers": "ऐपेटाइज़र",
+    "salads": "सलाद",
+    "burgersAndSandwiches": "बर्गर और सैंडविच",
+    "pasta": "पास्ता",
+    "chickenDishes": "चिकन व्यंजन",
+    "steaksAndChops": "स्टेक और चॉप",
+    "seafood": "समुद्री भोजन",
+    "pizzas": "पिज़्ज़ा",
+    "cheesecakesAndDesserts": "चीज़केक और मिठाई",
+    "beverages": "पेय",
+    "itemCount_one": "{{count}} आइटम",
+    "itemCount_other": "{{count}} आइटम"
+  },
+  "menu": {
+    "loading": "मेनू लोड हो रहा है...",
+    "retry": "पुनः प्रयास के लिए टैप करें",
+    "noCategories": "कोई श्रेणी नहीं मिली।",
+    "noItemsInCategory": "इस श्रेणी में कोई आइटम नहीं।",
+    "addToCart": "कार्ट में जोड़ें"
+  },
+  "cart": {
+    "label": "कार्ट",
+    "badge": "कार्ट: {{count}}",
+    "yourCart": "आपकी कार्ट",
+    "title": "आपकी कार्ट",
+    "empty": "आपकी कार्ट खाली है। AI से कुछ जोड़ने को कहें!",
+    "total": "कुल",
+    "checkout": "अभी भुगतान करें",
+    "payNow": "अभी भुगतान करें",
+    "clearCart": "कार्ट खाली करें",
+    "clear": "कार्ट खाली करें",
+    "processing": "प्रोसेस हो रहा है...",
+    "close": "बंद करें",
+    "paymentError": "भुगतान त्रुटि",
+    "successTitle": "सफलता",
+    "paymentSuccess": "भुगतान पूर्ण!",
+    "checkoutFailed": "चेकआउट विफल।",
+    "ok": "ठीक है"
+  },
+  "ai": {
+    "transcribing": "आपका ऑर्डर ट्रांसक्राइब हो रहा है...",
+    "listening": "सुन रहे हैं...",
+    "placeholder": "उदा. बर्गर और ट्रफल फ्राइज़ जोड़ें...",
+    "order": "ऑर्डर",
+    "cancel": "रद्द करें"
+  },
+  "language": {
+    "title": "भाषा",
+    "changeAccessibility": "भाषा बदलें"
+  },
+  "common": {
+    "error": "त्रुटि"
+  }
+}

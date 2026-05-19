@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "Le Bistro"
+  },
+  "categories": {
+    "appetizers": "Entrées",
+    "salads": "Salades",
+    "burgersAndSandwiches": "Burgers et sandwichs",
+    "pasta": "Pâtes",
+    "chickenDishes": "Plats de poulet",
+    "steaksAndChops": "Steaks et côtelettes",
+    "seafood": "Fruits de mer",
+    "pizzas": "Pizzas",
+    "cheesecakesAndDesserts": "Cheesecakes et desserts",
+    "beverages": "Boissons",
+    "itemCount_one": "{{count}} article",
+    "itemCount_other": "{{count}} articles"
+  },
+  "menu": {
+    "loading": "Chargement du menu...",
+    "retry": "Appuyez pour réessayer",
+    "noCategories": "Aucune catégorie trouvée.",
+    "noItemsInCategory": "Aucun article dans cette catégorie.",
+    "addToCart": "Ajouter au panier"
+  },
+  "cart": {
+    "label": "Panier",
+    "badge": "Panier : {{count}}",
+    "yourCart": "Votre panier",
+    "title": "Votre panier",
+    "empty": "Votre panier est vide. Demandez à l'IA d'ajouter quelque chose !",
+    "total": "Total",
+    "checkout": "Payer",
+    "payNow": "Payer",
+    "clearCart": "Vider le panier",
+    "clear": "Vider le panier",
+    "processing": "Traitement...",
+    "close": "Fermer",
+    "paymentError": "Erreur de paiement",
+    "successTitle": "Succès",
+    "paymentSuccess": "Paiement effectué !",
+    "checkoutFailed": "Échec du paiement.",
+    "ok": "OK"
+  },
+  "ai": {
+    "transcribing": "Transcription de votre commande...",
+    "listening": "Écoute...",
+    "placeholder": "ex. Ajoutez un burger et des frites à la truffe...",
+    "order": "Commander",
+    "cancel": "Annuler"
+  },
+  "language": {
+    "title": "Langue",
+    "changeAccessibility": "Changer de langue"
+  },
+  "common": {
+    "error": "Erreur"
+  }
+}

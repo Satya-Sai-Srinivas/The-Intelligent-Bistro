@@ -10,7 +10,9 @@ import Animated, {
 } from 'react-native-reanimated';
 import { View, Text } from './styled';
 import { selectItemQuantity, useCartStore } from '../store/useCartStore';
+import { useLanguageStore } from '../store/useLanguageStore';
 import type { MenuItem } from '../types/menu';
+import { getMenuItemDisplayFields } from '../utils/menuLocale';
 
 const AnimatedView = Animated.createAnimatedComponent(View);
 
@@ -23,7 +25,10 @@ const useNativeBlur = Platform.OS === 'ios';
 const HIT_SLOP = { top: 8, bottom: 8, left: 8, right: 8 };
 
 function MenuItemCardComponent({ item }: MenuItemCardProps) {
-  const quantity = useCartStore(selectItemQuantity(item.id));
+  const currentLanguage = useLanguageStore((s) => s.currentLanguage);
+  const { name, description } = getMenuItemDisplayFields(item, currentLanguage);
+  const itemId = String(item.id);
+  const quantity = useCartStore(selectItemQuantity(itemId));
   const addItem = useCartStore((s) => s.addItem);
   const updateQuantity = useCartStore((s) => s.updateQuantity);
   const scale = useSharedValue(1);
@@ -41,14 +46,14 @@ function MenuItemCardComponent({ item }: MenuItemCardProps) {
   };
 
   const handleAdd = useCallback(() => {
-    addItem({ itemId: item.id, quantity: 1, price: item.price });
-  }, [addItem, item.id, item.price]);
+    addItem({ itemId, quantity: 1, price: item.price });
+  }, [addItem, itemId, item.price]);
 
   const handleDecrement = useCallback(() => {
     if (quantity > 0) {
-      updateQuantity(item.id, quantity - 1);
+      updateQuantity(itemId, quantity - 1);
     }
-  }, [updateQuantity, item.id, quantity]);
+  }, [updateQuantity, itemId, quantity]);
 
   const cardContent = (
     <View className="bg-white/40 p-4">
@@ -62,10 +67,10 @@ function MenuItemCardComponent({ item }: MenuItemCardProps) {
         />
       ) : null}
       <View className="flex-row justify-between items-start">
-        <Text className="text-lg font-bold text-bistro-dark flex-1 pr-2">{item.name}</Text>
+        <Text className="text-lg font-bold text-bistro-dark flex-1 pr-2">{name}</Text>
         <Text className="text-lg font-bold text-bistro-gold">${item.price.toFixed(2)}</Text>
       </View>
-      <Text className="text-gray-500 mt-1">{item.description}</Text>
+      <Text className="text-gray-500 mt-1">{description}</Text>
 
       <View className="flex-row items-center self-start mt-3 rounded-full border border-white/60 bg-white/50 overflow-hidden">
         {quantity > 0 ? (

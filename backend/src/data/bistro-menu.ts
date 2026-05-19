@@ -1,5 +1,5 @@
 /**
- * Static menu for AI system prompt (names must match cart itemName values).
+ * Legacy static menu sample (production ordering uses Supabase + RAG item IDs).
  */
 export const BISTRO_MENU_JSON = [
   {

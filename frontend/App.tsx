@@ -1,13 +1,15 @@
 import React, { useCallback, useState } from 'react';
 import { Alert, KeyboardAvoidingView, Platform, StyleSheet } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { LinearGradient } from 'expo-linear-gradient';
-import { StripeProvider } from '@stripe/stripe-react-native';
+import { StripeProvider } from './src/lib/stripe';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { View, Text, SafeAreaView } from './src/components/styled';
 import { useCartStore } from './src/store/useCartStore';
 import { streamChatOrder } from './src/services/chatStream';
 import type { ChatMessage } from './src/types/chat';
 import { CartBadge } from './src/components/CartBadge';
+import { LanguageSelector } from './src/components/LanguageSelector';
 import { CartModal } from './src/components/CartModal';
 import { AiCommandBar } from './src/components/AiCommandBar';
 import { MenuList } from './src/components/MenuList';
@@ -18,6 +20,7 @@ const STRIPE_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY?.t
 const STRIPE_MERCHANT_ID = 'merchant.com.theintelligentbistro';
 
 function BistroApp() {
+  const { t } = useTranslation();
   const [prompt, setPrompt] = useState('');
   const [cartOpen, setCartOpen] = useState(false);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
@@ -88,8 +91,8 @@ function BistroApp() {
     const { setAiStatus, resetStreamingMessage } = useCartStore.getState();
     setAiStatus(false, null);
     resetStreamingMessage();
-    Alert.alert('Error', message);
-  }, []);
+    Alert.alert(t('common.error'), message);
+  }, [t]);
 
   const {
     recordingState,
@@ -117,8 +120,11 @@ function BistroApp() {
       >
         <ResponsiveShell>
           <View className="px-6 py-4 flex-row justify-between items-center bg-white/30 border-b border-white/40">
-            <Text className="text-2xl font-bold text-bistro-dark">The Bistro</Text>
-            <CartBadge cartCount={cartCount} onPress={() => setCartOpen(true)} />
+            <Text className="text-2xl font-bold text-bistro-dark">{t('header.title')}</Text>
+            <View className="flex-row items-center gap-3">
+              <LanguageSelector />
+              <CartBadge cartCount={cartCount} onPress={() => setCartOpen(true)} />
+            </View>
           </View>
 
           <MenuList />

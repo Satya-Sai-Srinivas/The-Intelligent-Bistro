@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Alert, Dimensions, Platform, Pressable, StyleSheet } from 'react-native';
-import { useStripe } from '@stripe/stripe-react-native';
+import { Alert, Dimensions, Pressable, StyleSheet } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { useStripe } from '../lib/stripe';
 import Animated, {
   runOnJS,
   useAnimatedStyle,
@@ -9,6 +10,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { View, Text, TouchableOpacity, ScrollView } from './styled';
+import { useMenuItems } from '../hooks/useMenuItems';
 import { useCartStore } from '../store/useCartStore';
 import { createPaymentIntent } from '../services/payment';
 
@@ -21,6 +23,8 @@ interface CartModalProps {
 }
 
 export function CartModal({ visible, onClose }: CartModalProps) {
+  const { items: menuItems } = useMenuItems();
+  const { t, i18n } = useTranslation();
   const items = useCartStore((s) => s.items);
   const updateQuantity = useCartStore((s) => s.updateQuantity);
   const clearCart = useCartStore((s) => s.clearCart);
@@ -30,6 +34,19 @@ export function CartModal({ visible, onClose }: CartModalProps) {
   const translateY = useSharedValue(SHEET_HEIGHT);
 
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  const getItemName = useCallback(
+    (id: string) => {
+      const menuItem = menuItems.find((m) => m.id === String(id));
+      if (!menuItem) return id;
+      return (
+        menuItem.translations?.[i18n.language]?.name ??
+        menuItem.name ??
+        id
+      );
+    },
+    [menuItems, i18n.language]
+  );
 
   const finishClose = useCallback(() => {
     onClose();
@@ -76,7 +93,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
       });
 
       if (initError) {
-        Alert.alert('Payment Error', initError.message);
+        Alert.alert(t('cart.paymentError'), initError.message);
         return;
       }
 
@@ -84,14 +101,14 @@ export function CartModal({ visible, onClose }: CartModalProps) {
 
       if (presentError) {
         if (presentError.code !== 'Canceled') {
-          Alert.alert('Payment Error', presentError.message);
+          Alert.alert(t('cart.paymentError'), presentError.message);
         }
         return;
       }
 
-      Alert.alert('Success', 'Payment complete!', [
+      Alert.alert(t('cart.successTitle'), t('cart.paymentSuccess'), [
         {
-          text: 'OK',
+          text: t('cart.ok'),
           onPress: () => {
             clearCart();
             animateClose();
@@ -99,8 +116,9 @@ export function CartModal({ visible, onClose }: CartModalProps) {
         },
       ]);
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Checkout failed.';
-      Alert.alert('Payment Error', message);
+      const message =
+        err instanceof Error ? err.message : t('cart.checkoutFailed');
+      Alert.alert(t('cart.paymentError'), message);
     } finally {
       setIsCheckingOut(false);
     }
@@ -112,6 +130,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
     presentPaymentSheet,
     clearCart,
     animateClose,
+    t,
   ]);
 
   if (!visible) {
@@ -127,7 +146,11 @@ export function CartModal({ visible, onClose }: CartModalProps) {
 
   return (
     <View style={StyleSheet.absoluteFill} className="z-50">
-      <Pressable style={StyleSheet.absoluteFill} onPress={animateClose}>
+      <Pressable
+        style={StyleSheet.absoluteFill}
+        onPress={animateClose}
+        accessibilityLabel={t('cart.close')}
+      >
         <Animated.View
           style={[StyleSheet.absoluteFill, styles.backdrop, backdropStyle]}
         />
@@ -140,7 +163,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
         </View>
 
         <View className="px-6 pb-3 flex-row justify-between items-center border-b border-gray-100">
-          <Text className="text-xl font-bold text-bistro-dark">Your Cart</Text>
+          <Text className="text-xl font-bold text-bistro-dark">{t('cart.title')}</Text>
           <Text className="text-lg font-bold text-bistro-gold">
             ${total.toFixed(2)}
           </Text>
@@ -148,9 +171,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
 
         <ScrollView className="flex-1 px-6 pt-2">
           {cartEmpty ? (
-            <Text className="text-gray-500 text-center mt-8">
-              Your cart is empty. Ask the AI to add something!
-            </Text>
+            <Text className="text-gray-500 text-center mt-8">{t('cart.empty')}</Text>
           ) : (
             items.map((item) => (
               <View
@@ -160,7 +181,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
                 <View className="flex-row justify-between items-start">
                   <View className="flex-1 pr-4">
                     <Text className="text-base font-bold text-bistro-dark">
-                      {item.itemId}
+                      {getItemName(item.itemId)}
                     </Text>
                     {item.notes ? (
                       <Text className="text-sm text-gray-500 mt-1 italic">
@@ -201,7 +222,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
 
         <View className="px-6 pb-8 pt-4 border-t border-gray-100">
           <View className="flex-row justify-between items-center mb-4">
-            <Text className="text-lg font-bold text-bistro-dark">Total</Text>
+            <Text className="text-lg font-bold text-bistro-dark">{t('cart.total')}</Text>
             <Text className="text-xl font-bold text-bistro-gold">
               ${total.toFixed(2)}
             </Text>
@@ -218,7 +239,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
                 cartEmpty || isCheckingOut ? 'text-gray-400' : 'text-white'
               }`}
             >
-              {isCheckingOut ? 'Processing...' : 'Pay Now'}
+              {isCheckingOut ? t('cart.processing') : t('cart.payNow')}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -233,7 +254,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
                 cartEmpty ? 'text-gray-400' : 'text-red-600'
               }`}
             >
-              Clear Cart
+              {t('cart.clear')}
             </Text>
           </TouchableOpacity>
         </View>

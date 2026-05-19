@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "ది బిస్ట్రో"
+  },
+  "categories": {
+    "appetizers": "అపెటైజర్లు",
+    "salads": "సలాడ్లు",
+    "burgersAndSandwiches": "బర్గర్లు & సాండ్‌విచ్‌లు",
+    "pasta": "పాస్తా",
+    "chickenDishes": "చికెన్ వంటకాలు",
+    "steaksAndChops": "స్టీక్‌లు & చాప్‌లు",
+    "seafood": "సముద్ర ఆహారం",
+    "pizzas": "పిజ్జాలు",
+    "cheesecakesAndDesserts": "చీజ్‌కేక్‌లు & డెజర్ట్‌లు",
+    "beverages": "పానీయాలు",
+    "itemCount_one": "{{count}} అంశం",
+    "itemCount_other": "{{count}} అంశాలు"
+  },
+  "menu": {
+    "loading": "మెనూ లోడ్ అవుతోంది...",
+    "retry": "మళ్లీ ప్రయత్నించడానికి నొక్కండి",
+    "noCategories": "వర్గాలు కనుగొనబడలేదు.",
+    "noItemsInCategory": "ఈ వర్గంలో అంశాలు లేవు.",
+    "addToCart": "కార్ట్‌కు జోడించండి"
+  },
+  "cart": {
+    "label": "కార్ట్",
+    "badge": "కార్ట్: {{count}}",
+    "yourCart": "మీ కార్ట్",
+    "title": "మీ కార్ట్",
+    "empty": "మీ కార్ట్ ఖాళీగా ఉంది. AI ని ఏదైనా జోడించమని అడగండి!",
+    "total": "మొత్తం",
+    "checkout": "ఇప్పుడు చెల్లించండి",
+    "payNow": "ఇప్పుడు చెల్లించండి",
+    "clearCart": "కార్ట్ ఖాళీ చేయండి",
+    "clear": "కార్ట్ ఖాళీ చేయండి",
+    "processing": "ప్రాసెస్ అవుతోంది...",
+    "close": "మూసివేయి",
+    "paymentError": "చెల్లింపు లోపం",
+    "successTitle": "విజయం",
+    "paymentSuccess": "చెల్లింపు పూర్తయింది!",
+    "checkoutFailed": "చెక్అవుట్ విఫలమైంది.",
+    "ok": "సరే"
+  },
+  "ai": {
+    "transcribing": "మీ ఆర్డర్ ట్రాన్స్‌క్రైబ్ అవుతోంది...",
+    "listening": "వింటున్నాము...",
+    "placeholder": "ఉదా. బర్గర్ మరియు ట్రఫుల్ ఫ్రైస్ జోడించండి...",
+    "order": "ఆర్డర్",
+    "cancel": "రద్దు"
+  },
+  "language": {
+    "title": "భాష",
+    "changeAccessibility": "భాష మార్చండి"
+  },
+  "common": {
+    "error": "లోపం"
+  }
+}

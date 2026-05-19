@@ -1,4 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   ActivityIndicator,
   FlatList,
@@ -15,6 +16,7 @@ import { useMenuItems } from '../hooks/useMenuItems';
 import type { MenuItem } from '../types/menu';
 import { CategoryCard } from './CategoryCard';
 import { MenuItemCard } from './MenuItemCard';
+import { translateCategory } from '../utils/categoryI18n';
 
 const AnimatedView = Animated.createAnimatedComponent(View);
 const useNativeBlur = Platform.OS === 'ios';
@@ -33,6 +35,7 @@ function getNumColumns(width: number): number {
 }
 
 export function MenuList() {
+  const { t } = useTranslation();
   const { width } = useWindowDimensions();
   const { items, loading, error, refetch } = useMenuItems();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -86,10 +89,10 @@ export function MenuList() {
     () => (
       <View className="py-12 items-center">
         <ActivityIndicator color="#D4AF37" size="large" />
-        <Text className="text-bistro-dark mt-4">Loading menu...</Text>
+        <Text className="text-bistro-dark mt-4">{t('menu.loading')}</Text>
       </View>
     ),
-    []
+    [t]
   );
 
   const errorEmpty = useMemo(
@@ -97,29 +100,29 @@ export function MenuList() {
       <View className="py-12 px-4 items-center">
         <Text className="text-red-600 text-center mb-2">{error}</Text>
         <Text className="text-bistro-gold font-semibold" onPress={refetch}>
-          Tap to retry
+          {t('menu.retry')}
         </Text>
       </View>
     ),
-    [error, refetch]
+    [error, refetch, t]
   );
 
   const categoryEmpty = useMemo(
     () => (
       <View className="py-12 items-center">
-        <Text className="text-gray-500">No categories found.</Text>
+        <Text className="text-gray-500">{t('menu.noCategories')}</Text>
       </View>
     ),
-    []
+    [t]
   );
 
   const filteredEmpty = useMemo(
     () => (
       <View className="py-12 items-center">
-        <Text className="text-gray-500">No items in this category.</Text>
+        <Text className="text-gray-500">{t('menu.noItemsInCategory')}</Text>
       </View>
     ),
-    []
+    [t]
   );
 
   const renderCategoryBackBar = useCallback(() => {
@@ -128,7 +131,9 @@ export function MenuList() {
     const backButton = (
       <View className="flex-row items-center">
         <Ionicons name="chevron-back" size={22} color="#1A1A1A" />
-        <Text className="text-base font-bold text-bistro-dark ml-1">{selectedCategory}</Text>
+        <Text className="text-base font-bold text-bistro-dark ml-1">
+          {translateCategory(selectedCategory, t)}
+        </Text>
       </View>
     );
 
@@ -145,7 +150,7 @@ export function MenuList() {
         )}
       </Pressable>
     );
-  }, [selectedCategory, handleBack]);
+  }, [selectedCategory, handleBack, t]);
 
   if (loading) {
     return loadingEmpty;

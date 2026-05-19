@@ -1,12 +1,14 @@
 import OpenAI from 'openai';
 import { getSupabaseClient } from '../lib/supabase';
 import type { ChatRequest } from '../types/schema';
+import { normalizeMenuItemId } from '../utils/menuItemId';
 
 const EMBEDDING_MODEL = 'text-embedding-3-small';
 const MATCH_THRESHOLD = 0.3;
 const MATCH_COUNT = 5;
 
 export interface MatchedMenuItem {
+  id: string;
   name: string;
   price: number;
   ingredients?: string[] | null;
@@ -14,6 +16,12 @@ export interface MatchedMenuItem {
   description?: string | null;
   category?: string | null;
   similarity?: number;
+}
+
+export interface RetrievedMenuContext {
+  items: MatchedMenuItem[];
+  context: string;
+  allowedItemIds: Set<string>;
 }
 
 let openaiClient: OpenAI | null = null;
@@ -37,6 +45,26 @@ export function getLastUserMessage(messages: ChatRequest['messages']): string {
     throw new Error('Last message must be from the user');
   }
   return last.content;
+}
+
+function normalizeMatchedRow(row: Record<string, unknown>): MatchedMenuItem | null {
+  const id = normalizeMenuItemId(row.id as string | number | null | undefined);
+  if (!id) return null;
+
+  const name = typeof row.name === 'string' ? row.name : String(row.name ?? '');
+  const price = Number(row.price);
+  if (!name || Number.isNaN(price)) return null;
+
+  return {
+    id,
+    name,
+    price,
+    ingredients: (row.ingredients as string[] | null | undefined) ?? null,
+    allergens: (row.allergens as string[] | null | undefined) ?? null,
+    description: (row.description as string | null | undefined) ?? null,
+    category: (row.category as string | null | undefined) ?? null,
+    similarity: typeof row.similarity === 'number' ? row.similarity : undefined,
+  };
 }
 
 export async function embedQuery(text: string): Promise<number[]> {
@@ -66,7 +94,10 @@ export async function retrieveMenuItems(queryText: string): Promise<MatchedMenuI
     throw new Error(`match_menu_items failed: ${error.message}`);
   }
 
-  return (data ?? []) as MatchedMenuItem[];
+  const rows = (data ?? []) as Record<string, unknown>[];
+  return rows
+    .map((row) => normalizeMatchedRow(row))
+    .filter((item): item is MatchedMenuItem => item != null);
 }
 
 function formatList(value: string[] | null | undefined): string {
@@ -79,15 +110,25 @@ export function formatRetrievedContext(items: MatchedMenuItem[]): string {
   return items
     .map(
       (item) =>
-        `Item: ${item.name} | Price: $${Number(item.price).toFixed(2)} | Ingredients: ${formatList(item.ingredients)} | Allergens: ${formatList(item.allergens)}`
+        `ID: ${item.id} | Name: ${item.name} | Price: $${item.price.toFixed(2)} | Ingredients: ${formatList(item.ingredients)} | Allergens: ${formatList(item.allergens)}`
     )
     .join('\n');
+}
+
+export async function buildRetrievedMenuContextForQuery(
+  queryText: string
+): Promise<RetrievedMenuContext> {
+  const items = await retrieveMenuItems(queryText);
+  return {
+    items,
+    context: formatRetrievedContext(items),
+    allowedItemIds: new Set(items.map((item) => item.id)),
+  };
 }
 
 export async function buildRetrievedMenuContext(
   messages: ChatRequest['messages']
 ): Promise<string> {
-  const query = getLastUserMessage(messages);
-  const items = await retrieveMenuItems(query);
-  return formatRetrievedContext(items);
+  const { context } = await buildRetrievedMenuContextForQuery(getLastUserMessage(messages));
+  return context;
 }

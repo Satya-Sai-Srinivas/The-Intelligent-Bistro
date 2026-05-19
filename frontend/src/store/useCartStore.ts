@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { getMenuItemPrice, resolveMenuItemId } from '../constants/menu';
+import { getMenuItemPrice } from '../constants/menu';
 import type { AiOrderPayload } from '../types/cart';
 
 export interface CartItem {
@@ -38,35 +38,39 @@ export const useCartStore = create<CartState>((set, get) => ({
 
   addItem: (newItem) =>
     set((state) => {
-      const existingItem = state.items.find((i) => i.itemId === newItem.itemId);
+      const normalizedItem = { ...newItem, itemId: String(newItem.itemId) };
+      const existingItem = state.items.find((i) => i.itemId === normalizedItem.itemId);
       if (existingItem) {
         return {
           items: state.items.map((i) =>
-            i.itemId === newItem.itemId
+            i.itemId === normalizedItem.itemId
               ? {
                   ...i,
-                  quantity: i.quantity + newItem.quantity,
-                  notes: newItem.notes || i.notes,
+                  quantity: i.quantity + normalizedItem.quantity,
+                  notes: normalizedItem.notes || i.notes,
                 }
               : i
           ),
         };
       }
-      return { items: [...state.items, newItem] };
+      return { items: [...state.items, normalizedItem] };
     }),
 
   removeItem: (itemId) =>
     set((state) => ({
-      items: state.items.filter((i) => i.itemId !== itemId),
+      items: state.items.filter((i) => i.itemId !== String(itemId)),
     })),
 
   updateQuantity: (itemId, quantity) =>
-    set((state) => ({
-      items:
-        quantity > 0
-          ? state.items.map((i) => (i.itemId === itemId ? { ...i, quantity } : i))
-          : state.items.filter((i) => i.itemId !== itemId),
-    })),
+    set((state) => {
+      const id = String(itemId);
+      return {
+        items:
+          quantity > 0
+            ? state.items.map((i) => (i.itemId === id ? { ...i, quantity } : i))
+            : state.items.filter((i) => i.itemId !== id),
+      };
+    }),
 
   clearCart: () => set({ items: [] }),
 
@@ -84,30 +88,34 @@ export const useCartStore = create<CartState>((set, get) => ({
   resetStreamingMessage: () => set({ streamingMessage: '' }),
 
   processAiActions: (payload) => {
-    const { addItem, removeItem, updateQuantity } = get();
+    const { items, addItem, removeItem, updateQuantity } = get();
 
     for (const action of payload.actions) {
-      if (action.actionType === 'NONE' || !action.itemName) continue;
+      if (action.actionType === 'NONE' || !action.itemId) continue;
 
-      const resolved = resolveMenuItemId(action.itemName);
-      const itemId = resolved ?? action.itemName.trim();
+      const itemId = String(action.itemId).trim();
       if (!itemId) continue;
 
+      const inCart = items.some((item) => item.itemId === itemId);
+
       switch (action.actionType) {
-        case 'ADD':
-          addItem({
-            itemId,
-            quantity: action.quantity ?? 1,
-            price: getMenuItemPrice(itemId),
-          });
+        case 'ADD': {
+          const price = getMenuItemPrice(itemId);
+          if (price == null) continue;
+
+          const quantity = action.quantity ?? 1;
+          if (quantity < 1) continue;
+
+          addItem({ itemId, quantity, price });
           break;
+        }
         case 'REMOVE':
+          if (!inCart) continue;
           removeItem(itemId);
           break;
         case 'UPDATE_QUANTITY':
-          if (action.quantity != null) {
-            updateQuantity(itemId, action.quantity);
-          }
+          if (!inCart || action.quantity == null || action.quantity < 0) continue;
+          updateQuantity(itemId, action.quantity);
           break;
       }
     }

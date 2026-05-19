@@ -26,6 +26,7 @@ export async function transcribeAudioBuffer(audioBuffer: Buffer): Promise<string
   const transcript = await client.transcripts.transcribe({
     audio: audioBuffer,
     speech_models: [...ASSEMBLYAI_SPEECH_MODELS],
+    language_detection: true,
     // AssemblyAI infers format from bytes; m4a from Expo is supported
   });
 

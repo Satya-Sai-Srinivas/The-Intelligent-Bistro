@@ -7,7 +7,11 @@ import {
   ChatRequest,
   type OrderAction,
 } from '../types/schema';
-import { buildRetrievedMenuContext } from './rag.service';
+import { normalizeMenuItemId } from '../utils/menuItemId';
+import {
+  buildRetrievedMenuContextForQuery,
+  getLastUserMessage,
+} from './rag.service';
 
 const CHAT_MODEL = 'gpt-4o-mini';
 
@@ -47,8 +51,9 @@ Response format (JSON only):
 2. "conversationalResponse" — Polite, concise reply for the customer.
 3. "actions" — Array of cart operations. Each entry has:
    - actionType: ADD | REMOVE | UPDATE_QUANTITY | NONE
-   - itemName: exact menu item name (string) or null when not applicable
+   - itemId: exact menu item ID (string) from RETRIEVED CONTEXT or null when not applicable
    - quantity: number or null when not applicable
+4. "ui_action" — null, or { type: "change_language", languageCode: "<iso>" } when switching app language (see LANGUAGE below)
 
 EXPLICIT CONSENT: You must NEVER add an item to the actions array unless the user has explicitly requested it or confirmed a prior suggestion in this conversation (e.g., clear "yes", "add it", "sure", "please add that"). If you are suggesting an alternative, proposing an upsell, asking "would you like…?", or offering a swap that the user has not yet accepted, the actions array MUST be [] (empty). Do not use ADD for unsolicited suggestions.
 
@@ -59,8 +64,8 @@ REASONING CHECK: In your reasoning field, you must explicitly state: "Did the us
 Rules:
 - Compound requests need multiple action objects only when the user explicitly asked for multiple items or quantities in the same turn (e.g. burger + fries, each clearly requested or confirmed).
 - Chat-only, pure acknowledgment, or any reply that only suggests/asks without a firm user order change: use actions: [] or, if appropriate, a single NONE entry with nulls — never ADD something the user did not request or confirm.
-- If the user asks for something not in RETRIEVED CONTEXT, decline politely in conversationalResponse and use an empty actions array.
-- itemName must match menu names from RETRIEVED CONTEXT exactly, not internal IDs.
+- NO GUESSING: If the user asks for an item that is not explicitly listed in the RETRIEVED CONTEXT, decline politely in conversationalResponse and output actions: []. Do not attempt to find a "close enough" match unless explicitly asking the user for confirmation first.
+- itemId must be an exact ID string present in RETRIEVED CONTEXT; never invent names or IDs.
 - Always be polite and concise in conversationalResponse.
 
 MEMORY: Review the conversation history. If the user uses pronouns (e.g., "make it three", "remove that"), infer the target item from previous turns. Still apply EXPLICIT CONSENT: only mutate the cart if the combined history shows a clear request or confirmation.
@@ -69,23 +74,75 @@ AMBIGUITY: If a request is vague (e.g., "I want a sandwich"), DO NOT guess. Outp
 
 DIETARY LOGIC: You must use your reasoning field to cross-reference the user's requested items against any stated allergies or dietary preferences found in the conversation history (e.g., gluten-free, nut allergy, vegetarian). If an item violates a constraint, refuse it by outputting an empty actions array and politely suggesting a safe alternative in the conversationalResponse. **That alternative is only text in conversationalResponse until the user explicitly confirms** — then and only then add the confirmed item via ADD in a later turn.
 
-UPSELLING: When the user's order seems complete, you may suggest a logical pairing from RETRIEVED CONTEXT only in conversationalResponse. **Never** put the suggested pairing in actions in the same turn. Follow TWO-STEP UPSELLING: wait for explicit user confirmation before any ADD for that suggestion. Only suggest items that fit any known dietary constraints.`;
+UPSELLING: When the user's order seems complete, you may suggest a logical pairing from RETRIEVED CONTEXT only in conversationalResponse. **Never** put the suggested pairing in actions in the same turn. Follow TWO-STEP UPSELLING: wait for explicit user confirmation before any ADD for that suggestion. Only suggest items that fit any known dietary constraints.
+
+LANGUAGE: If the user speaks a foreign language, explicitly asks to translate the menu, or requests a different language, you MUST detect their language, respond to them in that language, and output the ui_action field with type: "change_language" and the corresponding 2-letter ISO 639-1 language code (e.g. "es", "te", "hi", "fr", "zh"). Supported codes: en, fr, de, zh, te, es, hi, kn, ta, ml. When no language change is needed, set ui_action to null.`;
 }
 
-async function buildMessages(
-  chatRequest: ChatRequest
-): Promise<OpenAI.Chat.ChatCompletionMessageParam[]> {
-  const retrievedContext = await buildRetrievedMenuContext(chatRequest.messages);
-  return [
-    {
-      role: 'system',
-      content: buildSystemPrompt(chatRequest.currentCart, retrievedContext),
-    },
-    ...chatRequest.messages.map((m) => ({
-      role: m.role as 'user' | 'assistant',
-      content: m.content,
-    })),
-  ];
+function filterActionsToRetrievedContext(
+  actions: OrderAction[],
+  allowedItemIds: Set<string>,
+  currentCart: ChatRequest['currentCart']
+): OrderAction[] {
+  const cartIds = new Set(currentCart.map((c) => String(c.itemId)));
+
+  return actions.filter((action) => {
+    if (action.actionType === 'NONE') return true;
+
+    const itemId = normalizeMenuItemId(action.itemId);
+    if (!itemId) return false;
+
+    if (action.actionType === 'ADD') {
+      return allowedItemIds.has(itemId);
+    }
+
+    if (action.actionType === 'REMOVE' || action.actionType === 'UPDATE_QUANTITY') {
+      return allowedItemIds.has(itemId) || cartIds.has(itemId);
+    }
+
+    return false;
+  });
+}
+
+function logDroppedActions(original: OrderAction[], filtered: OrderAction[]): void {
+  if (process.env.NODE_ENV === 'production' || original.length === filtered.length) {
+    return;
+  }
+
+  const kept = new Set(filtered);
+  const dropped = original.filter((action) => !kept.has(action));
+  if (dropped.length > 0) {
+    console.warn('[ai.service] Dropped cart actions not allowed by retrieved context:', dropped);
+  }
+}
+
+async function prepareChatContext(chatRequest: ChatRequest): Promise<{
+  messages: OpenAI.Chat.ChatCompletionMessageParam[];
+  allowedItemIds: Set<string>;
+}> {
+  const { context, allowedItemIds } = await buildRetrievedMenuContextForQuery(
+    getLastUserMessage(chatRequest.messages)
+  );
+
+  if (allowedItemIds.size === 0 && process.env.NODE_ENV !== 'production') {
+    console.warn(
+      '[ai.service] RAG returned no menu item IDs — verify match_menu_items returns id.'
+    );
+  }
+
+  return {
+    allowedItemIds,
+    messages: [
+      {
+        role: 'system',
+        content: buildSystemPrompt(chatRequest.currentCart, context),
+      },
+      ...chatRequest.messages.map((m) => ({
+        role: m.role as 'user' | 'assistant',
+        content: m.content,
+      })),
+    ],
+  };
 }
 
 /** Parse partial streamed JSON and return the conversationalResponse string so far. */
@@ -131,10 +188,11 @@ export async function* streamOrderIntent(
   chatRequest: ChatRequest
 ): AsyncGenerator<ChatStreamEvent> {
   const openai = getOpenAIClient();
-  const messages = await buildMessages(chatRequest);
+  const { messages, allowedItemIds } = await prepareChatContext(chatRequest);
 
   const stream = await openai.chat.completions.create({
     model: CHAT_MODEL,
+    temperature: 0.1,
     messages,
     response_format: {
       type: 'json_schema',
@@ -183,13 +241,21 @@ export async function* streamOrderIntent(
     }
   }
 
-  yield { type: 'final_action', data: parsed.actions };
+  const actions = filterActionsToRetrievedContext(
+    parsed.actions,
+    allowedItemIds,
+    chatRequest.currentCart
+  );
+  logDroppedActions(parsed.actions, actions);
+
+  yield { type: 'final_action', data: actions };
 
   yield {
     type: 'action',
     data: {
       conversationalResponse: parsed.conversationalResponse,
-      actions: parsed.actions,
+      actions,
+      ui_action: parsed.ui_action ?? null,
     },
   };
 }

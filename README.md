@@ -305,6 +305,7 @@ Uses AssemblyAI with configured speech models (`universal-3-pro`, `universal-2`)
 | `npm run build` | Compile TypeScript → `dist/` |
 | `npm start` | Run compiled server |
 | `npm run seed` | Insert `menu.json` + embeddings |
+| `npm run seed-translations` | Translate menu names/descriptions into 9 locales via OpenAI (requires `translations` JSONB column; see `backend/sql/add_translations_column.sql`) |
 | `npm run generate-menu` | Generate `menu.json` via OpenAI |
 
 ---

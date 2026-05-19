@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "The Bistro"
+  },
+  "categories": {
+    "appetizers": "Appetizers",
+    "salads": "Salads",
+    "burgersAndSandwiches": "Burgers & Sandwiches",
+    "pasta": "Pasta",
+    "chickenDishes": "Chicken Dishes",
+    "steaksAndChops": "Steaks & Chops",
+    "seafood": "Seafood",
+    "pizzas": "Pizzas",
+    "cheesecakesAndDesserts": "Cheesecakes & Desserts",
+    "beverages": "Beverages",
+    "itemCount_one": "{{count}} item",
+    "itemCount_other": "{{count}} items"
+  },
+  "menu": {
+    "loading": "Loading menu...",
+    "retry": "Tap to retry",
+    "noCategories": "No categories found.",
+    "noItemsInCategory": "No items in this category.",
+    "addToCart": "Add to cart"
+  },
+  "cart": {
+    "label": "Cart",
+    "badge": "Cart: {{count}}",
+    "yourCart": "Your Cart",
+    "title": "Your Cart",
+    "empty": "Your cart is empty. Ask the AI to add something!",
+    "total": "Total",
+    "checkout": "Pay Now",
+    "payNow": "Pay Now",
+    "clearCart": "Clear Cart",
+    "clear": "Clear Cart",
+    "processing": "Processing...",
+    "close": "Close",
+    "paymentError": "Payment Error",
+    "successTitle": "Success",
+    "paymentSuccess": "Payment complete!",
+    "checkoutFailed": "Checkout failed.",
+    "ok": "OK"
+  },
+  "ai": {
+    "transcribing": "Transcribing your order...",
+    "listening": "Listening...",
+    "placeholder": "e.g. Add a burger and truffle fries...",
+    "order": "Order",
+    "cancel": "Cancel"
+  },
+  "language": {
+    "title": "Language",
+    "changeAccessibility": "Change language"
+  },
+  "common": {
+    "error": "Error"
+  }
+}

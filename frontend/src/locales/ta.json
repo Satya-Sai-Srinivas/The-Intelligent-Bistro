@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "த பிஸ்ட்ரோ"
+  },
+  "categories": {
+    "appetizers": "ஆரம்ப உணவுகள்",
+    "salads": "சாலட்கள்",
+    "burgersAndSandwiches": "பர்கர் & சாண்ட்விச்கள்",
+    "pasta": "பாஸ்தா",
+    "chickenDishes": "சிக்கன் உணவுகள்",
+    "steaksAndChops": "ஸ்டீக் & சாப்ஸ்",
+    "seafood": "கடல் உணவு",
+    "pizzas": "பீட்சாக்கள்",
+    "cheesecakesAndDesserts": "சீஸ்கேக் & இனிப்புகள்",
+    "beverages": "பானங்கள்",
+    "itemCount_one": "{{count}} உருப்படி",
+    "itemCount_other": "{{count}} உருப்படிகள்"
+  },
+  "menu": {
+    "loading": "மெனு ஏற்றப்படுகிறது...",
+    "retry": "மீண்டும் முயற்சிக்க தட்டவும்",
+    "noCategories": "வகைகள் எதுவும் கிடைக்கவில்லை.",
+    "noItemsInCategory": "இந்த வகையில் உருப்படிகள் இல்லை.",
+    "addToCart": "கார்டில் சேர்"
+  },
+  "cart": {
+    "label": "கார்ட்",
+    "badge": "கார்ட்: {{count}}",
+    "yourCart": "உங்கள் கார்ட்",
+    "title": "உங்கள் கார்ட்",
+    "empty": "உங்கள் கார்ட் காலியாக உள்ளது. AI ஐ ஏதாவது சேர்க்கச் சொல்லுங்கள்!",
+    "total": "மொத்தம்",
+    "checkout": "இப்போது செலுத்துங்கள்",
+    "payNow": "இப்போது செலுத்துங்கள்",
+    "clearCart": "கார்டை காலி செய்",
+    "clear": "கார்டை காலி செய்",
+    "processing": "செயலாக்குகிறது...",
+    "close": "மூடு",
+    "paymentError": "பணம் செலுத்தும் பிழை",
+    "successTitle": "வெற்றி",
+    "paymentSuccess": "பணம் செலுத்தப்பட்டது!",
+    "checkoutFailed": "செக்அவுட் தோல்வி.",
+    "ok": "சரி"
+  },
+  "ai": {
+    "transcribing": "உங்கள் ஆர்டர் டிரான்ஸ்கிரைப் செய்யப்படுகிறது...",
+    "listening": "கேட்கிறோம்...",
+    "placeholder": "எ.கா. பர்கர் மற்றும் ட்ரஃபிள் ஃப்ரைஸ் சேர்க்கவும்...",
+    "order": "ஆர்டர்",
+    "cancel": "ரத்து"
+  },
+  "language": {
+    "title": "மொழி",
+    "changeAccessibility": "மொழியை மாற்று"
+  },
+  "common": {
+    "error": "பிழை"
+  }
+}

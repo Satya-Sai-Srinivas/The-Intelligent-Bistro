@@ -6,4 +6,5 @@ export interface MenuItem {
   category?: string;
   ingredients?: string[];
   imageUrl?: string | null;
+  translations?: Record<string, { name: string; description: string }>;
 }

@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "ದ ಬಿಸ್ಟ್ರೋ"
+  },
+  "categories": {
+    "appetizers": "ಆರಂಭಿಕ ತಿಂಡಿಗಳು",
+    "salads": "ಸಲಾಡ್‌ಗಳು",
+    "burgersAndSandwiches": "ಬರ್ಗರ್ ಮತ್ತು ಸ್ಯಾಂಡ್‌ವಿಚ್‌ಗಳು",
+    "pasta": "ಪಾಸ್ತಾ",
+    "chickenDishes": "ಚಿಕನ್ ಖಾದ್ಯಗಳು",
+    "steaksAndChops": "ಸ್ಟೀಕ್ ಮತ್ತು ಚಾಪ್‌ಗಳು",
+    "seafood": "ಸಮುದ್ರ ಆಹಾರ",
+    "pizzas": "ಪಿಜ್ಜಾಗಳು",
+    "cheesecakesAndDesserts": "ಚೀಸ್‌ಕೇಕ್ ಮತ್ತು ಡೆಸರ್ಟ್‌ಗಳು",
+    "beverages": "ಪಾನೀಯಗಳು",
+    "itemCount_one": "{{count}} ಐಟಂ",
+    "itemCount_other": "{{count}} ಐಟಂಗಳು"
+  },
+  "menu": {
+    "loading": "ಮೆನು ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+    "retry": "ಮರುಪ್ರಯತ್ನಿಸಲು ಟ್ಯಾಪ್ ಮಾಡಿ",
+    "noCategories": "ಯಾವುದೇ ವರ್ಗಗಳು ಕಂಡುಬಂದಿಲ್ಲ.",
+    "noItemsInCategory": "ಈ ವರ್ಗದಲ್ಲಿ ಯಾವುದೇ ಐಟಂಗಳಿಲ್ಲ.",
+    "addToCart": "ಕಾರ್ಟ್‌ಗೆ ಸೇರಿಸಿ"
+  },
+  "cart": {
+    "label": "ಕಾರ್ಟ್",
+    "badge": "ಕಾರ್ಟ್: {{count}}",
+    "yourCart": "ನಿಮ್ಮ ಕಾರ್ಟ್",
+    "title": "ನಿಮ್ಮ ಕಾರ್ಟ್",
+    "empty": "ನಿಮ್ಮ ಕಾರ್ಟ್ ಖಾಲಿಯಾಗಿದೆ. AI ಗೆ ಏನಾದರೂ ಸೇರಿಸಲು ಹೇಳಿ!",
+    "total": "ಒಟ್ಟು",
+    "checkout": "ಈಗ ಪಾವತಿಸಿ",
+    "payNow": "ಈಗ ಪಾವತಿಸಿ",
+    "clearCart": "ಕಾರ್ಟ್ ಖಾಲಿ ಮಾಡಿ",
+    "clear": "ಕಾರ್ಟ್ ಖಾಲಿ ಮಾಡಿ",
+    "processing": "ಸಂಸ್ಕರಿಸಲಾಗುತ್ತಿದೆ...",
+    "close": "ಮುಚ್ಚಿ",
+    "paymentError": "ಪಾವತಿ ದೋಷ",
+    "successTitle": "ಯಶಸ್ಸು",
+    "paymentSuccess": "ಪಾವತಿ ಪೂರ್ಣಗೊಂಡಿದೆ!",
+    "checkoutFailed": "ಚೆಕ್‌ಔಟ್ ವಿಫಲವಾಗಿದೆ.",
+    "ok": "ಸರಿ"
+  },
+  "ai": {
+    "transcribing": "ನಿಮ್ಮ ಆರ್ಡರ್ ಟ್ರಾನ್ಸ್‌ಕ್ರೈಬ್ ಆಗುತ್ತಿದೆ...",
+    "listening": "ಕೇಳುತ್ತಿದ್ದೇವೆ...",
+    "placeholder": "ಉದಾ. ಬರ್ಗರ್ ಮತ್ತು ಟ್ರಫಲ್ ಫ್ರೈಸ್ ಸೇರಿಸಿ...",
+    "order": "ಆರ್ಡರ್",
+    "cancel": "ರದ್ದು"
+  },
+  "language": {
+    "title": "ಭಾಷೆ",
+    "changeAccessibility": "ಭಾಷೆ ಬದಲಾಯಿಸಿ"
+  },
+  "common": {
+    "error": "ದೋಷ"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "El Bistro"
+  },
+  "categories": {
+    "appetizers": "Aperitivos",
+    "salads": "Ensaladas",
+    "burgersAndSandwiches": "Hamburguesas y sándwiches",
+    "pasta": "Pasta",
+    "chickenDishes": "Platos de pollo",
+    "steaksAndChops": "Carnes y chuletas",
+    "seafood": "Mariscos",
+    "pizzas": "Pizzas",
+    "cheesecakesAndDesserts": "Cheesecakes y postres",
+    "beverages": "Bebidas",
+    "itemCount_one": "{{count}} artículo",
+    "itemCount_other": "{{count}} artículos"
+  },
+  "menu": {
+    "loading": "Cargando menú...",
+    "retry": "Toca para reintentar",
+    "noCategories": "No se encontraron categorías.",
+    "noItemsInCategory": "No hay artículos en esta categoría.",
+    "addToCart": "Añadir al carrito"
+  },
+  "cart": {
+    "label": "Carrito",
+    "badge": "Carrito: {{count}}",
+    "yourCart": "Tu carrito",
+    "title": "Tu carrito",
+    "empty": "Tu carrito está vacío. ¡Pide a la IA que añada algo!",
+    "total": "Total",
+    "checkout": "Pagar ahora",
+    "payNow": "Pagar ahora",
+    "clearCart": "Vaciar carrito",
+    "clear": "Vaciar carrito",
+    "processing": "Procesando...",
+    "close": "Cerrar",
+    "paymentError": "Error de pago",
+    "successTitle": "Éxito",
+    "paymentSuccess": "¡Pago completado!",
+    "checkoutFailed": "Error en el pago.",
+    "ok": "OK"
+  },
+  "ai": {
+    "transcribing": "Transcribiendo tu pedido...",
+    "listening": "Escuchando...",
+    "placeholder": "ej. Añade una hamburguesa y patatas trufadas...",
+    "order": "Pedir",
+    "cancel": "Cancelar"
+  },
+  "language": {
+    "title": "Idioma",
+    "changeAccessibility": "Cambiar idioma"
+  },
+  "common": {
+    "error": "Error"
+  }
+}

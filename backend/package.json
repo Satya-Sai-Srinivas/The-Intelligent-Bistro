@@ -9,6 +9,7 @@
     "start": "node dist/index.js",
     "seed": "tsx src/scripts/seedDatabase.ts",
     "seed-images": "tsx src/scripts/seedUnsplashImages.ts",
+    "seed-translations": "tsx src/scripts/seedTranslations.ts",
     "generate-menu": "tsx src/scripts/generateMenu.ts"
   },
   "dependencies": {

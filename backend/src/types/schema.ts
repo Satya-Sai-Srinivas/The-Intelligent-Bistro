@@ -15,25 +15,43 @@ export type MenuItem = z.infer<typeof MenuItemSchema>;
 
 // 2. The AI Order Response Schema
 // Enforced via OpenAI json_schema and validated with Zod at runtime.
+const nullableItemId = z.preprocess(
+  (value) => {
+    if (value == null) return null;
+    const normalized = String(value).trim();
+    return normalized.length > 0 ? normalized : null;
+  },
+  z.string().nullable()
+);
+
 export const OrderActionSchema = z.object({
   actionType: z.enum(['ADD', 'REMOVE', 'UPDATE_QUANTITY', 'NONE']),
-  itemName: z.string().nullable(),
+  itemId: nullableItemId,
   quantity: z.number().nullable(),
 });
 
 export type OrderAction = z.infer<typeof OrderActionSchema>;
 
+export const UiActionSchema = z.object({
+  type: z.literal('change_language'),
+  languageCode: z.string(),
+});
+
+export type UiAction = z.infer<typeof UiActionSchema>;
+
 export const AiOrderResponseSchema = z.object({
   reasoning: z.string().min(1),
   conversationalResponse: z.string().min(1),
   actions: z.array(OrderActionSchema),
+  ui_action: UiActionSchema.nullable(),
 });
 
 export type AiOrderResponse = z.infer<typeof AiOrderResponseSchema>;
 
-export const AiOrderClientPayloadSchema = AiOrderResponseSchema.pick({
-  conversationalResponse: true,
-  actions: true,
+export const AiOrderClientPayloadSchema = z.object({
+  conversationalResponse: z.string().min(1),
+  actions: z.array(OrderActionSchema),
+  ui_action: UiActionSchema.nullable(),
 });
 
 export type AiOrderClientPayload = z.infer<typeof AiOrderClientPayloadSchema>;
