@@ -11,7 +11,8 @@
     "seed-images": "tsx src/scripts/seedUnsplashImages.ts",
     "seed-translations": "tsx src/scripts/seedTranslations.ts",
     "generate-menu": "tsx src/scripts/generateMenu.ts",
-    "test": "jest"
+    "test": "jest",
+    "eval-ai": "tsx src/scripts/evaluateAi.ts"
   },
   "dependencies": {
     "@fastify/cors": "^11.2.0",

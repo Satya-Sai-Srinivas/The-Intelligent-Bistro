@@ -10,8 +10,15 @@ import {
 import { normalizeMenuItemId } from '../utils/menuItemId';
 import {
   buildRetrievedMenuContextForQuery,
+  formatRetrievedContext,
   getLastUserMessage,
+  type MatchedMenuItem,
 } from './rag.service';
+
+export type ProcessOrderIntentOptions = {
+  /** When set, skips live RAG and uses these items as RETRIEVED CONTEXT (eval/tests). */
+  retrievedItems?: MatchedMenuItem[];
+};
 
 const CHAT_MODEL = 'gpt-4o-mini';
 
@@ -116,13 +123,19 @@ function logDroppedActions(original: OrderAction[], filtered: OrderAction[]): vo
   }
 }
 
-async function prepareChatContext(chatRequest: ChatRequest): Promise<{
+async function prepareChatContext(
+  chatRequest: ChatRequest,
+  options?: ProcessOrderIntentOptions
+): Promise<{
   messages: OpenAI.Chat.ChatCompletionMessageParam[];
   allowedItemIds: Set<string>;
 }> {
-  const { context, allowedItemIds } = await buildRetrievedMenuContextForQuery(
-    getLastUserMessage(chatRequest.messages)
-  );
+  const { context, allowedItemIds } = options?.retrievedItems
+    ? {
+        context: formatRetrievedContext(options.retrievedItems),
+        allowedItemIds: new Set(options.retrievedItems.map((item) => item.id)),
+      }
+    : await buildRetrievedMenuContextForQuery(getLastUserMessage(chatRequest.messages));
 
   if (allowedItemIds.size === 0 && process.env.NODE_ENV !== 'production') {
     console.warn(
@@ -185,10 +198,11 @@ export type ChatStreamEvent =
   | { type: 'error'; data: string };
 
 export async function* streamOrderIntent(
-  chatRequest: ChatRequest
+  chatRequest: ChatRequest,
+  options?: ProcessOrderIntentOptions
 ): AsyncGenerator<ChatStreamEvent> {
   const openai = getOpenAIClient();
-  const { messages, allowedItemIds } = await prepareChatContext(chatRequest);
+  const { messages, allowedItemIds } = await prepareChatContext(chatRequest, options);
 
   const stream = await openai.chat.completions.create({
     model: CHAT_MODEL,
@@ -260,8 +274,11 @@ export async function* streamOrderIntent(
   };
 }
 
-export async function processOrderIntent(chatRequest: ChatRequest): Promise<AiOrderClientPayload> {
-  for await (const event of streamOrderIntent(chatRequest)) {
+export async function processOrderIntent(
+  chatRequest: ChatRequest,
+  options?: ProcessOrderIntentOptions
+): Promise<AiOrderClientPayload> {
+  for await (const event of streamOrderIntent(chatRequest, options)) {
     if (event.type === 'action') return event.data;
     if (event.type === 'error') throw new Error(event.data);
   }
