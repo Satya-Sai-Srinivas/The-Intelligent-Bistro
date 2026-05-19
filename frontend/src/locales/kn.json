@@ -13,6 +13,9 @@
     "pizzas": "ಪಿಜ್ಜಾಗಳು",
     "cheesecakesAndDesserts": "ಚೀಸ್‌ಕೇಕ್ ಮತ್ತು ಡೆಸರ್ಟ್‌ಗಳು",
     "beverages": "ಪಾನೀಯಗಳು",
+    "drinks": "ಪಾನೀಯಗಳು",
+    "mains": "ಮುಖ್ಯ ಖಾದ್ಯಗಳು",
+    "sides": "ಸೈಡ್ ಡಿಶ್‌ಗಳು",
     "itemCount_one": "{{count}} ಐಟಂ",
     "itemCount_other": "{{count}} ಐಟಂಗಳು"
   },

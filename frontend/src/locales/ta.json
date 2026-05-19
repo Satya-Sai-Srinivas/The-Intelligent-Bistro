@@ -13,6 +13,9 @@
     "pizzas": "பீட்சாக்கள்",
     "cheesecakesAndDesserts": "சீஸ்கேக் & இனிப்புகள்",
     "beverages": "பானங்கள்",
+    "drinks": "பானங்கள்",
+    "mains": "முதன்மை உணவுகள்",
+    "sides": "சைட் டிஷ்",
     "itemCount_one": "{{count}} உருப்படி",
     "itemCount_other": "{{count}} உருப்படிகள்"
   },

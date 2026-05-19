@@ -13,6 +13,9 @@
     "pizzas": "披萨",
     "cheesecakesAndDesserts": "芝士蛋糕与甜品",
     "beverages": "饮品",
+    "drinks": "饮品",
+    "mains": "主菜",
+    "sides": "配菜",
     "itemCount_one": "{{count}} 道菜",
     "itemCount_other": "{{count}} 道菜"
   },

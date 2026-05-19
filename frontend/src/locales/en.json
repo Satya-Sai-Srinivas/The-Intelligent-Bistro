@@ -13,6 +13,9 @@
     "pizzas": "Pizzas",
     "cheesecakesAndDesserts": "Cheesecakes & Desserts",
     "beverages": "Beverages",
+    "drinks": "Drinks",
+    "mains": "Mains",
+    "sides": "Sides",
     "itemCount_one": "{{count}} item",
     "itemCount_other": "{{count}} items"
   },

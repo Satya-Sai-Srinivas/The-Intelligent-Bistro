@@ -9,6 +9,12 @@ const CATEGORY_KEY_BY_DB_NAME: Record<string, string> = {
   Pizzas: 'pizzas',
   'Cheesecakes & Desserts': 'cheesecakesAndDesserts',
   Beverages: 'beverages',
+  Drinks: 'drinks',
+  Mains: 'mains',
+  Sides: 'sides',
+  drinks: 'drinks',
+  mains: 'mains',
+  sides: 'sides',
 };
 
 type TranslateFn = (

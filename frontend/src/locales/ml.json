@@ -13,6 +13,9 @@
     "pizzas": "പിസ്സകൾ",
     "cheesecakesAndDesserts": "ചീസ്കേക്കുകളും ഡെസേർട്ടുകളും",
     "beverages": "പാനീയങ്ങൾ",
+    "drinks": "പാനീയങ്ങൾ",
+    "mains": "പ്രധാന വിഭവങ്ങൾ",
+    "sides": "സൈഡ് ഡിഷ്",
     "itemCount_one": "{{count}} ഇനം",
     "itemCount_other": "{{count}} ഇനങ്ങൾ"
   },

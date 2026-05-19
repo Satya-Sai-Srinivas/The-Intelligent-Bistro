@@ -13,6 +13,9 @@
     "pizzas": "पिज़्ज़ा",
     "cheesecakesAndDesserts": "चीज़केक और मिठाई",
     "beverages": "पेय",
+    "drinks": "पेय",
+    "mains": "मुख्य व्यंजन",
+    "sides": "साइड डिश",
     "itemCount_one": "{{count}} आइटम",
     "itemCount_other": "{{count}} आइटम"
   },

@@ -13,6 +13,9 @@
     "pizzas": "పిజ్జాలు",
     "cheesecakesAndDesserts": "చీజ్‌కేక్‌లు & డెజర్ట్‌లు",
     "beverages": "పానీయాలు",
+    "drinks": "పానీయాలు",
+    "mains": "ప్రధాన వంటకాలు",
+    "sides": "సైడ్ డిష్‌లు",
     "itemCount_one": "{{count}} అంశం",
     "itemCount_other": "{{count}} అంశాలు"
   },

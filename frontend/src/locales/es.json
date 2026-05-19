@@ -13,6 +13,9 @@
     "pizzas": "Pizzas",
     "cheesecakesAndDesserts": "Cheesecakes y postres",
     "beverages": "Bebidas",
+    "drinks": "Bebidas",
+    "mains": "Platos principales",
+    "sides": "Acompañamientos",
     "itemCount_one": "{{count}} artículo",
     "itemCount_other": "{{count}} artículos"
   },
