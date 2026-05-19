@@ -228,6 +228,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
             </Text>
           </View>
           <TouchableOpacity
+            testID="cart-pay-now"
             onPress={checkout}
             disabled={cartEmpty || isCheckingOut}
             className={`py-4 rounded-xl items-center mb-3 ${

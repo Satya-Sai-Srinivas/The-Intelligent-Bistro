@@ -1,0 +1,38 @@
+appId: com.anonymous.frontend
+---
+# Menu happy path: category → add item → cart → checkout tap
+# Requires: seeded Supabase menu, app on simulator/device
+# Category/item steps use case-insensitive regex (see .maestro/README.md)
+
+- launchApp
+
+- assertVisible: "The Bistro"
+
+- assertNotVisible:
+    text: "(?i).*loading.*"
+
+- extendedWaitUntil:
+    visible:
+      text: "(?i).*burgers.*"
+    timeout: 30000
+
+- tapOn:
+    text: "(?i).*burgers.*"
+
+- assertVisible:
+    text: "(?i).*truffle.*"
+
+- tapOn:
+    text: "(?i).*add.*truffle.*"
+
+- tapOn:
+    id: "cart-badge"
+
+- assertVisible: "Your Cart"
+- assertVisible:
+    text: "(?i).*truffle.*"
+
+- tapOn:
+    id: "cart-pay-now"
+
+# Stripe Payment Sheet may appear here; full payment requires test keys.

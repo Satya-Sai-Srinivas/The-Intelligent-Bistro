@@ -16,6 +16,7 @@ export function CartBadge({ cartCount, onPress }: CartBadgeProps) {
   return (
     <Animated.View style={animatedStyle}>
       <TouchableOpacity
+        testID="cart-badge"
         onPress={onPress}
         className="bg-bistro-gold px-3 py-1 rounded-full"
         activeOpacity={0.8}

@@ -83,7 +83,13 @@ function MenuItemCardComponent({ item }: MenuItemCardProps) {
         <View className="px-3 py-2 min-w-[32px] items-center justify-center">
           <Text className="font-bold text-bistro-dark text-base">{quantity}</Text>
         </View>
-        <Pressable onPress={handleAdd} hitSlop={HIT_SLOP} style={styles.pillSegment}>
+        <Pressable
+          testID={`menu-add-${itemId}`}
+          accessibilityLabel={`Add ${name} to cart`}
+          onPress={handleAdd}
+          hitSlop={HIT_SLOP}
+          style={styles.pillSegment}
+        >
           <View className="flex-1 bg-bistro-gold/90 items-center justify-center">
             <Feather name="plus" size={18} color="#FFFFFF" />
           </View>

@@ -10,7 +10,8 @@
     "seed": "tsx src/scripts/seedDatabase.ts",
     "seed-images": "tsx src/scripts/seedUnsplashImages.ts",
     "seed-translations": "tsx src/scripts/seedTranslations.ts",
-    "generate-menu": "tsx src/scripts/generateMenu.ts"
+    "generate-menu": "tsx src/scripts/generateMenu.ts",
+    "test": "jest"
   },
   "dependencies": {
     "@fastify/cors": "^11.2.0",
@@ -26,7 +27,10 @@
   },
   "devDependencies": {
     "@ljharb/tsconfig": "^0.2.3",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.19.41",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.9",
     "tsx": "^4.22.0",
     "typescript": "^5.9.3"
   }
