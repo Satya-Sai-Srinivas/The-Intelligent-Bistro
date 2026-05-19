@@ -12,8 +12,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
 import Animated, { LinearTransition } from 'react-native-reanimated';
 import { Text, View } from './styled';
+import { useCategories } from '../hooks/useCategories';
 import { useMenuItems } from '../hooks/useMenuItems';
-import type { MenuItem } from '../types/menu';
+import type { Category, MenuItem } from '../types/menu';
 import { CategoryCard } from './CategoryCard';
 import { MenuItemCard } from './MenuItemCard';
 import { translateCategory } from '../utils/categoryI18n';
@@ -37,20 +38,33 @@ function getNumColumns(width: number): number {
 export function MenuList() {
   const { t } = useTranslation();
   const { width } = useWindowDimensions();
-  const { items, loading, error, refetch } = useMenuItems();
+  const { items, loading: itemsLoading, error: itemsError, refetch: refetchItems } =
+    useMenuItems();
+  const {
+    categories,
+    loading: categoriesLoading,
+    error: categoriesError,
+    refetch: refetchCategories,
+  } = useCategories();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const numColumns = getNumColumns(width);
 
-  const { categories, categoryCounts } = useMemo(() => {
+  const loading = itemsLoading || categoriesLoading;
+  const error = itemsError ?? categoriesError;
+  const refetch = useCallback(() => {
+    void refetchItems();
+    void refetchCategories();
+  }, [refetchItems, refetchCategories]);
+
+  const categoryCounts = useMemo(() => {
     const counts = new Map<string, number>();
+
     for (const item of items) {
       if (!item.category) continue;
       counts.set(item.category, (counts.get(item.category) ?? 0) + 1);
     }
-    const sorted = Array.from(counts.keys()).sort((a, b) =>
-      a.localeCompare(b, undefined, { sensitivity: 'base' })
-    );
-    return { categories: sorted, categoryCounts: counts };
+
+    return counts;
   }, [items]);
 
   const filteredItems = useMemo(() => {
@@ -72,10 +86,10 @@ export function MenuList() {
   );
 
   const renderCategory = useCallback(
-    ({ item: category }: { item: string }) => (
+    ({ item: category }: { item: Category }) => (
       <CategoryCard
         category={category}
-        itemCount={categoryCounts.get(category) ?? 0}
+        itemCount={categoryCounts.get(category.name) ?? 0}
         onPress={handleSelectCategory}
       />
     ),
@@ -83,7 +97,7 @@ export function MenuList() {
   );
 
   const menuKeyExtractor = useCallback((item: MenuItem) => item.id, []);
-  const categoryKeyExtractor = useCallback((category: string) => category, []);
+  const categoryKeyExtractor = useCallback((category: Category) => category.id, []);
 
   const loadingEmpty = useMemo(
     () => (

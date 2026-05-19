@@ -10,6 +10,7 @@
     "seed": "tsx src/scripts/seedDatabase.ts",
     "seed-images": "tsx src/scripts/seedUnsplashImages.ts",
     "seed-translations": "tsx src/scripts/seedTranslations.ts",
+    "seed-categories": "tsx src/scripts/seedCategories.ts",
     "generate-menu": "tsx src/scripts/generateMenu.ts",
     "test": "jest",
     "eval-ai": "tsx src/scripts/evaluateAi.ts"
