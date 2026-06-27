@@ -22,6 +22,7 @@
   "menu": {
     "loading": "Loading menu...",
     "retry": "Tap to retry",
+    "loadError": "Could not load the menu. Please try again.",
     "noCategories": "No categories found.",
     "noItemsInCategory": "No items in this category.",
     "noSearchResults": "Didn't find that on the menu?",

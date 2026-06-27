@@ -140,13 +140,13 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
   const errorEmpty = useMemo(
     () => (
       <View className="py-12 px-4 items-center">
-        <Text className="text-red-600 text-center mb-2">{error}</Text>
+        <Text className="text-red-600 text-center mb-2">{t('menu.loadError')}</Text>
         <Text className="text-bistro-gold font-semibold" onPress={refetch}>
           {t('menu.retry')}
         </Text>
       </View>
     ),
-    [error, refetch, t]
+    [refetch, t]
   );
 
   const categoryEmpty = useMemo(
