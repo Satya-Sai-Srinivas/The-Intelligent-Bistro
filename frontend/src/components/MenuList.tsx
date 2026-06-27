@@ -5,6 +5,7 @@ import {
   FlatList,
   Platform,
   Pressable,
+  RefreshControl,
   StyleSheet,
   useWindowDimensions,
 } from 'react-native';
@@ -61,6 +62,7 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
     refetch: refetchCategories,
   } = useCategories();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
   const numColumns = getNumColumns(width);
 
   const loading = itemsLoading || categoriesLoading;
@@ -68,6 +70,12 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
   const refetch = useCallback(() => {
     void refetchItems();
     void refetchCategories();
+  }, [refetchItems, refetchCategories]);
+
+  const handleRefresh = useCallback(async () => {
+    setRefreshing(true);
+    await Promise.all([refetchItems(), refetchCategories()]);
+    setRefreshing(false);
   }, [refetchItems, refetchCategories]);
 
   const categoryCounts = useMemo(() => {
@@ -215,6 +223,15 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
 
   const columnWrapperStyle = numColumns > 1 ? styles.columnWrapper : undefined;
 
+  const refreshControl = (
+    <RefreshControl
+      refreshing={refreshing}
+      onRefresh={handleRefresh}
+      tintColor="#D4AF37"
+      colors={['#D4AF37']}
+    />
+  );
+
   return (
     <AnimatedView layout={LinearTransition.springify().damping(18)} style={styles.list}>
       {isSearching ? (
@@ -232,6 +249,7 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
             columnWrapperStyle={columnWrapperStyle}
             contentContainerStyle={styles.contentContainer}
             ListEmptyComponent={filteredEmpty}
+            refreshControl={refreshControl}
             style={styles.listFlex}
           />
         </View>
@@ -246,6 +264,7 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
           columnWrapperStyle={columnWrapperStyle}
           contentContainerStyle={styles.contentContainer}
           ListEmptyComponent={categoryEmpty}
+          refreshControl={refreshControl}
           style={styles.list}
         />
       ) : (
@@ -261,6 +280,7 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
             columnWrapperStyle={columnWrapperStyle}
             contentContainerStyle={styles.contentContainer}
             ListEmptyComponent={filteredEmpty}
+            refreshControl={refreshControl}
             style={styles.listFlex}
           />
         </View>

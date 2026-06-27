@@ -13,6 +13,8 @@ export function CartBadge({ cartCount, onPress }: CartBadgeProps) {
   const { t } = useTranslation();
   const animatedStyle = useCartBadgeBounce(cartCount);
 
+  const displayCount = cartCount > 99 ? '99+' : cartCount;
+
   return (
     <Animated.View style={animatedStyle}>
       <TouchableOpacity
@@ -21,7 +23,7 @@ export function CartBadge({ cartCount, onPress }: CartBadgeProps) {
         className="bg-bistro-gold px-3 py-1 rounded-full"
         activeOpacity={0.8}
       >
-        <Text className="text-white font-bold">{t('cart.badge', { count: cartCount })}</Text>
+        <Text className="text-white font-bold">{t('cart.badge', { count: displayCount })}</Text>
       </TouchableOpacity>
     </Animated.View>
   );
