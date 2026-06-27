@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator, Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { Feather } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
@@ -17,6 +17,7 @@ interface AiCommandBarProps {
   prompt: string;
   setPrompt: (text: string) => void;
   onSubmit: () => void;
+  onCancelAi: () => void;
   recordingState: VoiceRecordingState;
   onStartRecording: () => void;
   onStopRecording: () => void;
@@ -27,6 +28,7 @@ export function AiCommandBar({
   prompt,
   setPrompt,
   onSubmit,
+  onCancelAi,
   recordingState,
   onStartRecording,
   onStopRecording,
@@ -117,19 +119,26 @@ export function AiCommandBar({
             onSubmitEditing={onSubmit}
             editable={!isBusy && !isRecording}
           />
-          <TouchableOpacity
-            className={`ml-3 p-4 rounded-xl items-center justify-center ${
-              isBusy || isRecording ? 'bg-gray-400' : 'bg-bistro-dark'
-            }`}
-            onPress={onSubmit}
-            disabled={isBusy || isRecording}
-          >
-            {isAiThinking ? (
-              <ActivityIndicator color="#fff" />
-            ) : (
+          {isAiThinking ? (
+            <TouchableOpacity
+              className="ml-3 p-4 rounded-xl items-center justify-center bg-red-500"
+              onPress={onCancelAi}
+              accessibilityLabel={t('ai.cancel')}
+              activeOpacity={0.85}
+            >
+              <Feather name="x" size={20} color="#fff" />
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity
+              className={`ml-3 p-4 rounded-xl items-center justify-center ${
+                isBusy || isRecording ? 'bg-gray-400' : 'bg-bistro-dark'
+              }`}
+              onPress={onSubmit}
+              disabled={isBusy || isRecording}
+            >
               <Text className="text-white font-bold">{t('ai.order')}</Text>
-            )}
-          </TouchableOpacity>
+            </TouchableOpacity>
+          )}
         </View>
       )}
     </>

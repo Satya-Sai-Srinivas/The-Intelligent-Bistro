@@ -116,9 +116,8 @@ export function CartModal({ visible, onClose }: CartModalProps) {
         },
       ]);
     } catch (err) {
-      const message =
-        err instanceof Error ? err.message : t('cart.checkoutFailed');
-      Alert.alert(t('cart.paymentError'), message);
+      console.error('[checkout]', err);
+      Alert.alert(t('cart.paymentError'), t('cart.checkoutFailed'));
     } finally {
       setIsCheckingOut(false);
     }

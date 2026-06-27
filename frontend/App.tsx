@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { Alert, KeyboardAvoidingView, Platform, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -29,6 +29,16 @@ function BistroApp() {
     state.items.reduce((sum, item) => sum + item.quantity, 0)
   );
 
+  const abortControllerRef = useRef<AbortController | null>(null);
+
+  const cancelAiRequest = useCallback(() => {
+    abortControllerRef.current?.abort();
+    abortControllerRef.current = null;
+    const { setAiStatus, resetStreamingMessage } = useCartStore.getState();
+    setAiStatus(false, null);
+    resetStreamingMessage();
+  }, []);
+
   const submitOrder = useCallback(
     async (message: string) => {
       const trimmed = message.trim();
@@ -50,12 +60,17 @@ function BistroApp() {
 
       const cartItems = useCartStore.getState().items;
 
+      abortControllerRef.current?.abort();
+      const controller = new AbortController();
+      abortControllerRef.current = controller;
+
       await streamChatOrder(outbound, cartItems, {
         onToken: (token) => appendStreamingMessage(token),
         onFinalActions: (actions) => {
           processAiActions({ actions, conversationalResponse: '' });
         },
         onAssistantComplete: (payload) => {
+          abortControllerRef.current = null;
           setAiStatus(false, payload.conversationalResponse);
           resetStreamingMessage();
           setChatMessages([
@@ -64,10 +79,11 @@ function BistroApp() {
           ]);
         },
         onError: (errorMessage) => {
+          abortControllerRef.current = null;
           setAiStatus(false, errorMessage);
           resetStreamingMessage();
         },
-      });
+      }, controller.signal);
     },
     [chatMessages]
   );
@@ -133,6 +149,7 @@ function BistroApp() {
             prompt={prompt}
             setPrompt={setPrompt}
             onSubmit={handleAiSubmit}
+            onCancelAi={cancelAiRequest}
             recordingState={recordingState}
             onStartRecording={startRecording}
             onStopRecording={stopRecording}

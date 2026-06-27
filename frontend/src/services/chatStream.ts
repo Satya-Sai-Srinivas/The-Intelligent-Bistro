@@ -79,7 +79,8 @@ function isXhrError(
 export function streamChatOrder(
   messages: ChatMessage[],
   currentCart: CartItemPayload[],
-  callbacks: StreamChatCallbacks
+  callbacks: StreamChatCallbacks,
+  signal?: AbortSignal
 ): Promise<void> {
   return new Promise((resolve) => {
     let settled = false;
@@ -98,10 +99,13 @@ export function streamChatOrder(
     const finish = () => {
       if (settled) return;
       settled = true;
+      signal?.removeEventListener('abort', finish);
       es.removeAllEventListeners();
       es.close();
       resolve();
     };
+
+    signal?.addEventListener('abort', finish);
 
     es.addEventListener('token', (event) => {
       if (event.type !== 'token' || !event.data) return;
