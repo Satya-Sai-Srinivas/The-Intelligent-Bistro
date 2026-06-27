@@ -13,7 +13,7 @@ function requireEnv(name: string): string {
 const stripe = new Stripe(requireEnv('STRIPE_SECRET_KEY'));
 
 const CreatePaymentIntentSchema = z.object({
-  amount: z.number().int().positive(),
+  amount: z.number().int().min(1).max(100000), // max $1000.00 in cents
   currency: z.string().min(3).max(3),
 });
 
@@ -44,9 +44,7 @@ export async function paymentRoutes(fastify: FastifyInstance): Promise<void> {
         return { clientSecret: paymentIntent.client_secret };
       } catch (error) {
         fastify.log.error(error);
-        const message =
-          error instanceof Error ? error.message : 'Failed to create payment intent.';
-        return reply.status(500).send({ error: message });
+        return reply.status(500).send({ error: 'Failed to create payment intent. Please try again.' });
       }
     }
   );

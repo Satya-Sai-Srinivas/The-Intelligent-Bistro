@@ -54,7 +54,6 @@ server.post(
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache, no-transform',
       Connection: 'keep-alive',
-      'Access-Control-Allow-Origin': '*',
     });
 
     try {
@@ -66,19 +65,35 @@ server.post(
       }
     } catch (error) {
       server.log.error(error);
-      const message = error instanceof Error ? error.message : 'Failed to process order intent.';
-      writeSseEvent(raw, { type: 'error', data: message });
+      writeSseEvent(raw, { type: 'error', data: 'Failed to process your order. Please try again.' });
     }
 
     raw.end();
   }
 );
 
+const ALLOWED_AUDIO_MIMES = new Set([
+  'audio/m4a',
+  'audio/x-m4a',
+  'audio/mpeg',
+  'audio/mp3',
+  'audio/wav',
+  'audio/wave',
+  'audio/ogg',
+  'audio/webm',
+  'audio/aac',
+  'video/webm', // some browsers report webm audio as video/webm
+]);
+
 server.post('/transcribe', async (request, reply) => {
   try {
     const file = await request.file();
     if (!file) {
       return reply.status(400).send({ error: 'No audio file provided.' });
+    }
+
+    if (!ALLOWED_AUDIO_MIMES.has(file.mimetype)) {
+      return reply.status(400).send({ error: 'Only audio files are accepted.' });
     }
 
     const audioBuffer = await file.toBuffer();
@@ -91,9 +106,12 @@ server.post('/transcribe', async (request, reply) => {
     return reply.send({ text });
   } catch (error) {
     server.log.error(error);
-    const message = error instanceof Error ? error.message : 'Transcription failed.';
-    const status = message.includes('ASSEMBLYAI_API_KEY') ? 503 : 500;
-    return reply.status(status).send({ error: message });
+    const isKeyMissing = error instanceof Error && error.message.includes('ASSEMBLYAI_API_KEY');
+    const status = isKeyMissing ? 503 : 500;
+    const clientMessage = isKeyMissing
+      ? 'The transcription service is temporarily unavailable.'
+      : 'Transcription failed. Please try again.';
+    return reply.status(status).send({ error: clientMessage });
   }
 });
 

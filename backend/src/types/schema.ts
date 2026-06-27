@@ -34,7 +34,7 @@ export type OrderAction = z.infer<typeof OrderActionSchema>;
 
 export const UiActionSchema = z.object({
   type: z.literal('change_language'),
-  languageCode: z.string(),
+  languageCode: z.enum(['en', 'fr', 'de', 'es', 'zh', 'hi', 'te', 'kn', 'ta', 'ml']),
 });
 
 export type UiAction = z.infer<typeof UiActionSchema>;
@@ -59,7 +59,7 @@ export type AiOrderClientPayload = z.infer<typeof AiOrderClientPayloadSchema>;
 // 3. Chat history message (from frontend)
 export const ChatMessageSchema = z.object({
   role: z.enum(['user', 'assistant']),
-  content: z.string().min(1),
+  content: z.string().min(1).max(10000),
 });
 
 export type ChatMessage = z.infer<typeof ChatMessageSchema>;
@@ -68,14 +68,14 @@ export type ChatMessage = z.infer<typeof ChatMessageSchema>;
 // This is what the React Native app will send to the Node backend.
 export const ChatRequestSchema = z
   .object({
-    messages: z.array(ChatMessageSchema).min(1),
+    messages: z.array(ChatMessageSchema).min(1).max(100),
     currentCart: z.array(
       z.object({
-        itemId: z.string(),
-        quantity: z.number(),
-        notes: z.string().optional(),
+        itemId: z.string().min(1).max(100),
+        quantity: z.number().int().min(0).max(100),
+        notes: z.string().max(500).optional(),
       })
-    ),
+    ).max(50),
   })
   .refine((body) => body.messages[body.messages.length - 1]?.role === 'user', {
     message: 'Last message must be from the user',
