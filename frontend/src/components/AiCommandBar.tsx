@@ -60,7 +60,7 @@ export function AiCommandBar({
   const shellContent = (
     <>
       {displayMessage ? (
-        <View className="bg-white/50 p-3 rounded-2xl mb-3 min-h-[48px] border border-white/60">
+        <View className="bg-white/50 p-3 rounded-2xl mb-3 min-h-[48px] max-h-[96px] overflow-hidden border border-white/60">
           <Text className="text-bistro-dark text-sm italic">
             &ldquo;{displayMessage}
             {isAiThinking ? <Text className="text-bistro-gold">|</Text> : null}&rdquo;
