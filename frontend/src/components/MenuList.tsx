@@ -213,18 +213,23 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
   return (
     <AnimatedView layout={LinearTransition.springify().damping(18)} style={styles.list}>
       {isSearching ? (
-        <FlatList
-          key={`search-${numColumns}`}
-          data={filteredItems}
-          renderItem={renderMenuItem}
-          keyExtractor={menuKeyExtractor}
-          numColumns={numColumns}
-          {...FLAT_LIST_PERF}
-          columnWrapperStyle={columnWrapperStyle}
-          contentContainerStyle={styles.contentContainer}
-          ListEmptyComponent={filteredEmpty}
-          style={styles.list}
-        />
+        <View style={styles.itemViewContainer}>
+          {selectedCategory ? (
+            <View style={styles.stickyBackBar}>{renderCategoryBackBar()}</View>
+          ) : null}
+          <FlatList
+            key={`search-${numColumns}`}
+            data={filteredItems}
+            renderItem={renderMenuItem}
+            keyExtractor={menuKeyExtractor}
+            numColumns={numColumns}
+            {...FLAT_LIST_PERF}
+            columnWrapperStyle={columnWrapperStyle}
+            contentContainerStyle={styles.contentContainer}
+            ListEmptyComponent={filteredEmpty}
+            style={styles.listFlex}
+          />
+        </View>
       ) : selectedCategory === null ? (
         <FlatList
           key={`categories-${numColumns}`}

@@ -45,7 +45,11 @@
     "successTitle": "Success",
     "paymentSuccess": "Payment complete!",
     "checkoutFailed": "Checkout failed.",
-    "ok": "OK"
+    "ok": "OK",
+    "clearConfirmTitle": "Clear Cart?",
+    "clearConfirmMessage": "This will remove all items from your order.",
+    "clearConfirmOk": "Clear",
+    "clearConfirmCancel": "Cancel"
   },
   "ai": {
     "transcribing": "Transcribing your order...",

@@ -138,8 +138,21 @@ export function CartModal({ visible, onClose }: CartModalProps) {
   }
 
   const handleClearCart = () => {
-    clearCart();
-    animateClose();
+    Alert.alert(
+      t('cart.clearConfirmTitle'),
+      t('cart.clearConfirmMessage'),
+      [
+        { text: t('cart.clearConfirmCancel'), style: 'cancel' },
+        {
+          text: t('cart.clearConfirmOk'),
+          style: 'destructive',
+          onPress: () => {
+            clearCart();
+            animateClose();
+          },
+        },
+      ]
+    );
   };
 
   const cartEmpty = items.length === 0;
