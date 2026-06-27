@@ -56,7 +56,9 @@
     "listening": "Listening...",
     "placeholder": "Search the menu or ask the AI...",
     "order": "Order",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "startVoiceOrder": "Start voice order",
+    "stopRecording": "Stop recording"
   },
   "language": {
     "title": "Language",

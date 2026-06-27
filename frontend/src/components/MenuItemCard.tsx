@@ -74,7 +74,12 @@ function MenuItemCardComponent({ item }: MenuItemCardProps) {
 
       <View className="flex-row items-center self-start mt-3 rounded-full border border-white/60 bg-white/50 overflow-hidden">
         {quantity > 0 ? (
-          <Pressable onPress={handleDecrement} hitSlop={HIT_SLOP} style={styles.pillSegment}>
+          <Pressable
+            onPress={handleDecrement}
+            accessibilityLabel={`Remove one ${name} from cart`}
+            hitSlop={HIT_SLOP}
+            style={styles.pillSegment}
+          >
             <View className="flex-1 bg-white/40 items-center justify-center">
               <Feather name="minus" size={18} color="#1A1A1A" />
             </View>

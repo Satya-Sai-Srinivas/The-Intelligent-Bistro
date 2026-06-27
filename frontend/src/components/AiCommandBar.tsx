@@ -79,6 +79,7 @@ export function AiCommandBar({
             <TouchableOpacity
               onPress={handleMicPress}
               disabled={isBusy}
+              accessibilityLabel={isRecording ? t('ai.stopRecording') : t('ai.startVoiceOrder')}
               className={`mr-2 p-4 rounded-xl items-center justify-center ${
                 isRecording ? 'bg-red-500' : isBusy ? 'bg-gray-200' : 'bg-bistro-gold'
               }`}

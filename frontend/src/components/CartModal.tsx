@@ -210,6 +210,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
                       onPress={() =>
                         updateQuantity(item.itemId, item.quantity - 1)
                       }
+                      accessibilityLabel={`Decrease ${getItemName(item.itemId)} quantity`}
                       className="w-9 h-9 rounded-full bg-gray-100 items-center justify-center"
                     >
                       <Text className="text-lg font-bold text-bistro-dark">−</Text>
@@ -221,6 +222,7 @@ export function CartModal({ visible, onClose }: CartModalProps) {
                       onPress={() =>
                         updateQuantity(item.itemId, item.quantity + 1)
                       }
+                      accessibilityLabel={`Increase ${getItemName(item.itemId)} quantity`}
                       className="w-9 h-9 rounded-full bg-bistro-dark items-center justify-center"
                     >
                       <Text className="text-lg font-bold text-white">+</Text>

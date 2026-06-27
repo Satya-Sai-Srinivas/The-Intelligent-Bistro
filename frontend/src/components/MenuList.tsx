@@ -186,7 +186,12 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
     );
 
     return (
-      <Pressable onPress={handleBack} style={styles.backPillPressable}>
+      <Pressable
+        onPress={handleBack}
+        style={styles.backPillPressable}
+        accessibilityLabel={`Back to categories from ${translateCategory(selectedCategory, t)}`}
+        accessibilityRole="button"
+      >
         {useNativeBlur ? (
           <BlurView intensity={50} tint="light" style={styles.backPillBlur}>
             {backButton}
