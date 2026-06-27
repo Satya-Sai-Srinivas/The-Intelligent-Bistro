@@ -74,8 +74,11 @@ export function MenuList({ searchQuery = '' }: { searchQuery?: string }) {
 
   const handleRefresh = useCallback(async () => {
     setRefreshing(true);
-    await Promise.all([refetchItems(), refetchCategories()]);
-    setRefreshing(false);
+    try {
+      await Promise.all([refetchItems(), refetchCategories()]);
+    } finally {
+      setRefreshing(false);
+    }
   }, [refetchItems, refetchCategories]);
 
   const categoryCounts = useMemo(() => {
